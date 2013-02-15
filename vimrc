@@ -55,7 +55,7 @@ set statusline+=%h
 	" no idea
 set statusline+=%w
 	" current git branch
-" set statusline+=\ %{GitBranch()}\ 
+set statusline+=\ %{fugitive#statusline()}\ 
 	" modified
 set statusline+=%m
 	" cursor coordinates
