@@ -1,0 +1,5 @@
+# ignore these
+vim/bundle
+
+# dont ignore these
+vim/bundle/vundle

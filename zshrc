@@ -1,7 +1,7 @@
 # where my zsh dir is
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/dotfiles_reloaded/oh-my-zsh
 
-source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/dotfiles_reloaded/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # plugins
 plugins=(git osx brew zsh-syntax-highlighting)

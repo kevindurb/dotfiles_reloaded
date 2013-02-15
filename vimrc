@@ -55,7 +55,7 @@ set statusline+=%h
 	" no idea
 set statusline+=%w
 	" current git branch
-set statusline+=\ %{GitBranch()}\ 
+" set statusline+=\ %{GitBranch()}\ 
 	" modified
 set statusline+=%m
 	" cursor coordinates
@@ -120,16 +120,16 @@ Bundle 'gmarik/vundle'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-autoclose'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-surround'
+Bundle 'Townk/vim-autoclose'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'kien/ctrl.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
 Bundle 'SirVer/ultisnips'
+Bundle 'jaredcobb/DBGp-Remote-Debugger-Interface'
 Bundle 'Align'
 Bundle 'SQLUtilities'
 
