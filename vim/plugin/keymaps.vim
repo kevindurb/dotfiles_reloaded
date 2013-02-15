@@ -14,8 +14,8 @@ nnoremap <C-l>				3zl
 nnoremap <C-h>				3zh
 
 " pane control
-nnoremap <leader>			:vsp<CR>
-nnoremap <leader>			:sp<CR>
+nnoremap <leader>v			:vsp<CR>
+nnoremap <leader>s			:sp<CR>
 
 " tagbar controls
 nnoremap <silent> <leader>= :TagbarToggle<CR>
