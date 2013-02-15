@@ -33,6 +33,9 @@ set list
 " spellcheck
 set spell spelllang=en_us
 
+" copy and paste in system clipboard
+set clipboard=unnamed
+
 " go back forever!
 set history=1000
 set undolevels=1000
@@ -43,29 +46,6 @@ set title
 " no more freaking bells!
 set visualbell
 set noerrorbells
-
-" status line
-set statusline=
-	" file name and path
-set statusline+=%F
-	" readonly
-set statusline+=%r
-	" no idea
-set statusline+=%h
-	" no idea
-set statusline+=%w
-	" current git branch
-set statusline+=\ %{fugitive#statusline()}\ 
-	" modified
-set statusline+=%m
-	" cursor coordinates
-set statusline+=%=[%04v,%04l]
-	" percent through buffer
-set statusline+=[%p%%]
-	" num lines in buffer
-set statusline+=[%L]
-	" enable statusline
-set laststatus=2
 
 " UTF-8 encoding
 set encoding=utf-8
@@ -96,9 +76,6 @@ let $PAGER=''
 " SQL Format
 let g:sqlutil_keyword_case = '\U'
 let g:sqlutil_align_comma = 1
-
-" copy and paste in system clipboard
-set clipboard=unnamed
 
 " debugging
 let g:debuggerMaxChildren = 128
