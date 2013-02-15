@@ -1,5 +1,6 @@
 # ignore these
 vim/bundle
+.DS_Store
 
 # dont ignore these
 vim/bundle/vundle
