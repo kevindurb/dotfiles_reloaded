@@ -109,6 +109,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'jaredcobb/DBGp-Remote-Debugger-Interface'
 Bundle 'Align'
 Bundle 'SQLUtilities'
+Bundle 'project.tar.gz'
 
 " finish off vundle setup
 filetype plugin indent on

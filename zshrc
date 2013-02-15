@@ -7,12 +7,14 @@ source $HOME/dotfiles_reloaded/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 plugins=(git osx brew zsh-syntax-highlighting vi-mode)
 
 # fix vi backspace
-if (($+terminfo[kbs])); then
-  bindkey -M viins $terminfo[kbs] backward-delete-char
-else
-  bindkey -M viins '^?' backward-delete-char
-  bindkey -M viins '^H' backward-delete-char
-fi
+# if (($+terminfo[kbs])); then
+#   bindkey -M viins $terminfo[kbs] backward-delete-char
+# else
+#   bindkey -M viins '^?' backward-delete-char
+#   bindkey -M viins '^H' backward-delete-char
+# fi
+zle -A .backward-kill-word vi-backward-kill-word
+zle -A .backward-delete-char vi-backward-delete-char
 
 # highlighting settings
 ZSH_HIGHLIGHT_STYLES[path]='bold'
