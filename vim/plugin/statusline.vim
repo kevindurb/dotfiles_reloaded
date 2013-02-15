@@ -27,7 +27,7 @@ hi User5 ctermbg=33  ctermfg=254
 	" change to green
 set statusline=%2*
 	" current git branch
-set statusline+=\ %{fugitive#statusline()}
+set statusline+=\ %{fugitive#statusline()[5:-3]}
 	" change to orange
 set statusline+=\ %3*
 	" file name and path
@@ -52,7 +52,7 @@ set statusline+=\ %p%%
 	" switch to blue
 set statusline+=\ %5*
 	" cursor coordinates
-set statusline+=\ %v:%l
+set statusline+=\ %v:%l\ /
 	" num lines in buffer
 set statusline+=\ %L
 	" end it nicely
