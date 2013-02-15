@@ -6,6 +6,9 @@ au BufNewFile,BufRead *.xmlc set filetype=html
 " Ack shortcut
 cabbrev ack Ack
 
+" fix my constant need to type Wa instead of wa
+cabbrev Wa wa
+
 " add line numbers
 set number
 
@@ -20,6 +23,7 @@ set shiftround
 " various stuff
 set autowrite
 set cursorline
+set cursorcolumn
 set nowrap
 set showmatch
 set ignorecase
@@ -65,10 +69,13 @@ set directory=./.backup,.,/tmp
 highlight Pmenu ctermfg=black ctermbg=grey
 highlight PmenuSel ctermfg=grey ctermbg=black
 
+" cursor vertical and horizontal lines
+hi CursorLine cterm=NONE ctermbg=black
+hi CursorColumn cterm=NONE ctermbg=black
+
 " solarized color
 set background=dark
 colorscheme solarized
-hi CursorLine   cterm=NONE ctermbg=black
 
 " man pages
 let $PAGER=''
