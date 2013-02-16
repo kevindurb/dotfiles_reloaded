@@ -1,3 +1,4 @@
+" we are iMproved
 set nocompatible
 " SQL Format
 let g:sqlutil_keyword_case = '\U'
@@ -39,6 +40,7 @@ Bundle 'matchit.zip'
 Bundle 'uguu-org/vim-matrix-screensaver'
 Bundle 'FuzzyFinder'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'Lokaltog/vim-easymotion'
 
 " finish off vundle setup
 filetype plugin indent on
