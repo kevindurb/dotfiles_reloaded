@@ -50,8 +50,8 @@ set termencoding=utf-8
 set fileencodings=utf-8,iso-8859-15
 
 " change backup dir
-set backupdir=./.backup,.,/tmp
-set directory=./.backup,.,/tmp
+set backupdir=$VIMHOME/backup
+set directory=$VIMHOME/backup
 
 " change the term title
 set title

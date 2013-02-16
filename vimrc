@@ -1,5 +1,13 @@
 " we are iMproved
 set nocompatible
+
+" give me a home variable to work with
+if has('win32') || has ('win64')
+    let $VIMHOME = $VIM."/vimfiles"
+else
+    let $VIMHOME = $HOME."/.vim"
+endif
+
 " SQL Format
 let g:sqlutil_keyword_case = '\U'
 let g:sqlutil_align_comma = 1

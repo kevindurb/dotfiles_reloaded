@@ -6,13 +6,7 @@ source $HOME/dotfiles_reloaded/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 # plugins
 plugins=(git osx brew zsh-syntax-highlighting vi-mode)
 
-# fix vi backspace
-# if (($+terminfo[kbs])); then
-#   bindkey -M viins $terminfo[kbs] backward-delete-char
-# else
-#   bindkey -M viins '^?' backward-delete-char
-#   bindkey -M viins '^H' backward-delete-char
-# fi
+# fix backspace key
 zle -A .backward-kill-word vi-backward-kill-word
 zle -A .backward-delete-char vi-backward-delete-char
 
@@ -25,6 +19,12 @@ source $ZSH/oh-my-zsh.sh
 # my term path
 export PATH=/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
 NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+
+#make it easier to get to my rc files
+export MYVIMRC=$HOME/.vimrc
+export MYZSHRC=$HOME/.zshrc
+export MYVIMKEYMAPS=$HOME/.vim/plugin/keymaps.vim
+export MYVIMSETTINGS=$HOME/.vim/plugin/settings.vim
 
 # Change the Prompt
 function collapse_pwd {
