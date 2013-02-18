@@ -60,3 +60,6 @@ nnoremap <silent> <leader>e :python debugger_watch_input("eval")<cr>A
 
 " itunes shortcuts
 nnoremap <leader>i :StatusiTunes<CR>
+
+" jsbeautify
+nnoremap <C-f> :call JsBeautify()<cr>

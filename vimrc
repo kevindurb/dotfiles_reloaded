@@ -49,6 +49,8 @@ Bundle 'uguu-org/vim-matrix-screensaver'
 Bundle 'FuzzyFinder'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'TeTrIs.vim'
+Bundle 'maksimr/vim-jsbeautify'
 
 " finish off vundle setup
 filetype plugin indent on
