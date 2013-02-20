@@ -63,6 +63,12 @@ set noerrorbells
 " syntax highlighting
 syntax enable
 
+" folding
+set foldenable
+
+" better drawing
+set ttyfast
+
 " solarized color
 set background=dark
 colorscheme solarized

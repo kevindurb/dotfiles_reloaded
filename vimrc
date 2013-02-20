@@ -19,6 +19,11 @@ let g:debuggerMaxDepth = 100
 let g:debuggerDisableDefaultMappings = 1
 let g:debuggerDisableHelpPane = 1
 
+" dbext settings
+let g:dbext_default_profile_local_dev = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_dev'
+let g:dbext_default_profile_local_company = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_company'
+let g:dbext_default_profile_local_beta = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_beta'
+
 " vundle plugin!!!
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -42,15 +47,13 @@ Bundle 'SirVer/ultisnips'
 Bundle 'jaredcobb/DBGp-Remote-Debugger-Interface'
 Bundle 'Align'
 Bundle 'SQLUtilities'
-Bundle 'project.tar.gz'
 Bundle 'walm/jshint.vim'
 Bundle 'matchit.zip'
 Bundle 'uguu-org/vim-matrix-screensaver'
-Bundle 'FuzzyFinder'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'TeTrIs.vim'
-Bundle 'maksimr/vim-jsbeautify'
+Bundle 'dbext.vim'
 
 " finish off vundle setup
 filetype plugin indent on

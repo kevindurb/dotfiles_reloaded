@@ -15,7 +15,7 @@ nnoremap <C-h>				3zh
 
 " pane control
 nnoremap <leader>v			:vsp<CR>
-nnoremap <leader>s			:sp<CR>
+nnoremap <leader>b			:sp<CR>
 
 " tagbar controls
 nnoremap <silent> <leader>= :TagbarToggle<CR>
@@ -63,3 +63,9 @@ nnoremap <leader>i :StatusiTunes<CR>
 
 " jsbeautify
 nnoremap <C-f> :call JsBeautify()<cr>
+
+" folding fun
+	" shortcut to fold an HTML tag
+nnoremap <leader>ft Vatzf
+	" shortcut to fold braces (must be inside braces to fold)
+nnoremap <leader>fb zfa{
