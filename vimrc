@@ -24,6 +24,10 @@ let g:dbext_default_profile_local_dev = 'type=MYSQL:user=root:passwd=r00t:host=l
 let g:dbext_default_profile_local_company = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_company'
 let g:dbext_default_profile_local_beta = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_beta'
 
+" syntastic cool symbols
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+
 " vundle plugin!!!
 filetype off
 set rtp+=~/.vim/bundle/vundle/

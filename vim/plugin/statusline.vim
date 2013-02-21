@@ -17,23 +17,32 @@
 " cyan      #2aa198  6/6 cyan       37 #00afaf 60 -35 -05  42 161 152 175  74  63
 " green     #859900  2/2 green      64 #5f8700 60 -20  65 133 153   0  68 100  60
 
+" set syntastic status line format
+let g:syntastic_stl_format = '%F L : %e E : %w W'
+
 " set colors for the status line
 hi User1 ctermbg=234 ctermfg=254
 hi User2 ctermbg=64  ctermfg=254
 hi User3 ctermbg=166 ctermfg=254
 hi User4 ctermbg=37  ctermfg=254
 hi User5 ctermbg=33  ctermfg=254
+hi User6 ctermbg=124  ctermfg=254
 
 " start with the left side
 set statusline=
-	" change to green
-set statusline+=%2*
+"
 	" current git branch
+set statusline+=%2*
 set statusline+=\ %{fugitive#statusline()[5:-3]}
-	" change to orange
-set statusline+=\ %3*
+"
 	" file name and path
+set statusline+=\ %3*
 set statusline+=\ %t
+"
+	" syntax error
+set statusline+=\ %6*
+set statusline+=\ %{SyntasticStatuslineFlag()}
+"
 	" change to grey
 set statusline+=\ %1*
 	" readonly
@@ -47,13 +56,13 @@ set statusline+=%m
 
 " switch to right side of screen
 set statusline+=%=
-	" switch to magenta
-set statusline+=\ %4*
+
 	" percent through buffer
+set statusline+=\ %4*
 set statusline+=\ %p%%
-	" switch to blue
-set statusline+=\ %5*
+
 	" cursor coordinates
+set statusline+=\ %5*
 set statusline+=\ %v:%l\ /
 	" num lines in buffer
 set statusline+=\ %L
