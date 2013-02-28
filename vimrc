@@ -24,6 +24,7 @@ let g:dbext_default_profile_local_dev = 'type=MYSQL:user=root:passwd=r00t:host=l
 let g:dbext_default_profile_local_company = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_company'
 let g:dbext_default_profile_local_beta = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_beta'
 let g:dbext_default_profile_local_lyrix = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=lyrix'
+let g:dbext_default_profile_local_customer = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_customer'
 
 " syntastic cool symbols
 let g:syntastic_error_symbol='✗'
@@ -59,6 +60,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'TeTrIs.vim'
 Bundle 'dbext.vim'
+Bundle "pangloss/vim-javascript"
 
 " finish off vundle setup
 filetype plugin indent on
