@@ -1,49 +1,75 @@
-# A basic .muttrc for use with Gmail
-
-# Change the following six lines to match your Gmail account details
-set imap_user = "kevindurb@gmail.com"
-set smtp_url = "smtp://kevindurb@smtp.gmail.com:587/"
-set from = "kevindurb@gmail.com"
-set realname = "Kevin Durbin"
-
-# Change the following line to a different editor you prefer.
+# vim to edit emails
 set editor = "vim"
 
-# Basic config, you can leave this as is
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
+# Basic config
+set timeout         = 60
+set mail_check      = 120
+set imap_keepalive  = 300
+unset imap_passive
+set sort            = threads
+set sort_aux        = last-date-received
 set imap_check_subscribed
-set hostname = gmail.com
-set mail_check = 120
-set timeout = 300
-set imap_keepalive = 300
-set postponed = "+[GMail]/Drafts"
-set record = "+[GMail]/Sent Mail"
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
-set certificate_file=~/.mutt/certificates
 set move = no
 set include
-set sort = 'threads'
-set sort_aux = 'reverse-last-date-received'
 set auto_tag = yes
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
 hdr_order Date From To Cc
-alternative_order text/plain text/html *
-auto_view text/html
-bind editor <Tab> complete-query
-bind editor ^T complete
-bind editor <space> noop 
-
-# Gmail-style keyboard shortcuts
-macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
-macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
-macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
-macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
-macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+set header_cache =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
 
 # text html
 auto_view text/html
+
+# solarized theme
+source ~/dotfiles_reloaded/solarized/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+
+# set sidebar_width=12
+# set sidebar_visible=yes
+# set sidebar_delim='|'
+# set sidebar_sort=yes
+
+# Account Hooks
+account-hook . "unset imap_user; unset tunnel" # unset first!
+account-hook        "imaps://kevindurb@imap.gmail.com/" "\
+    set imap_user   = kevindurb@gmail.com"
+account-hook        "imaps://vbman11@imap.gmail.com/" "\
+    set imap_user   = vbman11@gmail.com"
+
+# Setup for Primary Account:
+set folder          = imaps://kevindurb@imap.gmail.com/
+mailboxes           = +INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam =[Gmail]/Trash
+set spoolfile       = +INBOX
+folder-hook         imaps://kevindurb@imap.gmail.com/ "\
+    set folder      = imaps://kevindurb@imap.gmail.com/ \
+        spoolfile   = +INBOX \
+        postponed   = +[Gmail]/Drafts \
+        record      = +[Gmail]/'Sent Mail' \
+        from        = 'Kevin Durbin <kevindurb@gmail.com> ' \
+        realname    = 'Kevin Durbin' \
+        smtp_url    = smtps://kevindurb@smtp.gmail.com"
+
+# Setup for Secondary Account:
+set folder          = imaps://vbman11@imap.gmail.com/
+mailboxes           = +INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam =[Gmail]/Trash
+set spoolfile       = +INBOX
+folder-hook         imaps://vbman11@imap.gmail.com/ "\
+    set folder      = imaps://vbman11@imap.gmail.com/ \
+        spoolfile   = +INBOX \
+        postponed   = +[Gmail]/Drafts \
+        record      = +[Gmail]/'Sent Mail' \
+        from        = 'Kevin Durbin <vbman11@gmail.com> ' \
+        realname    = 'Kevin Durbin' \
+        smtp_url    = smtps://vbman11@smtp.gmail.com"
+
+# key bindings
+macro index <F1> "y12<return><return>" "primary Account"
+macro index <F2> "y6<return><return>"  "secondary Account"
+macro index d ";s+[Gmail]/Trash<enter><enter>" "Move to Gmail's Trash"
+macro pager d "s+[Gmail]/Trash<enter><enter>"  "Move to Gmail's Trash"
+macro index u ";s+INBOX<enter><enter>"         "Move to Gmail's INBOX"
+macro pager u "s+INBOX<enter><enter>"          "Move to Gmail's INBOX"

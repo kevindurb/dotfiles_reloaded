@@ -1,0 +1,368 @@
+Delivered-To: kevindurb@gmail.com
+Received: by 10.194.10.99 with SMTP id h3csp47343wjb;
+        Sun, 24 Feb 2013 21:28:13 -0800 (PST)
+X-Received: by 10.60.170.44 with SMTP id aj12mr6270900oec.42.1361770092708;
+        Sun, 24 Feb 2013 21:28:12 -0800 (PST)
+Return-Path: <bounce-use=M=14673920552=echo3=e019dc303bb91e2b61b83f6a27c66833@returnpath.bluehornet.com>
+Received: from smtp.iquitos.bluehornet.com (smtp.iquitos.bluehornet.com. [67.216.224.5])
+        by mx.google.com with ESMTP id d5si10260573oed.47.2013.02.24.21.28.12;
+        Sun, 24 Feb 2013 21:28:12 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-use=M=14673920552=echo3=e019dc303bb91e2b61b83f6a27c66833@returnpath.bluehornet.com designates 67.216.224.5 as permitted sender) client-ip=67.216.224.5;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of bounce-use=M=14673920552=echo3=e019dc303bb91e2b61b83f6a27c66833@returnpath.bluehornet.com designates 67.216.224.5 as permitted sender) smtp.mail=bounce-use=M=14673920552=echo3=e019dc303bb91e2b61b83f6a27c66833@returnpath.bluehornet.com;
+       dkim=pass header.i=@bikebandit.com
+Return-Path: <bounce-use=M=14673920552=echo3=e019dc303bb91e2b61b83f6a27c66833@returnpath.bluehornet.com>
+X-MSFBL: a2V2aW5kdXJiQGdtYWlsLmNvbUBpcXVpdG9zQGRlZmF1bHRAYm91bmNlLXVzZT1N
+	PTE0NjczOTIwNTUyPWVjaG8zPWUwMTlkYzMwM2JiOTFlMmI2MWI4M2Y2YTI3YzY2
+	ODMz
+DomainKey-Signature: q=dns; a=rsa-sha1; c=nofws;
+	s=s1024-1.bh; d=bikebandit.com;
+	h=From:X-Outgoing;
+	b=ksXfy7JgZ64NKjyjj+YlHMFYpmCFlzmom9WWNfPfIsIyqDMlU1uMYg+LpxjtNWqy
+	81U9SBi1GndGpY0lI3nU8MULPXgmemrH267kM4qhFn5Mlit+AfLIxlcf54YzcSY/
+	dROJ/VTkg+mNnauEdedtdRXkoh21xuXh5Eqg2qgHrSE=
+DKIM-Signature: v=1; a=rsa-sha1; d=bikebandit.com; s=s1024-1.bh; c=simple/simple;
+	q=dns/txt; i=@bikebandit.com; t=1361769904;
+	h=From:Subject:Date:To:Mime-Version:Content-Type;
+	bh=sUYYxRHzO0M6dW9BDRrDnZWg0L4=;
+	b=zs4JtVbjrXCAbekH0r5VT1lDI1O8CZIdOZopIxZ7SFq12o/cFsRrw53q4YjB2Kwh
+	aNjVMa0YJql1Jg2sSnsHGqvTamHCLV8jCEU6eEm+emGtCNlDiSJQ2T5Jqkv/pHtt
+	WDcnpW/PrRXh65Y7I7c7AY3fqqY59KnQRUA2hyYEoMg=;
+DKIM-Signature: v=1; a=rsa-sha1; d=bluehornet.com; s=s1024-1.bh; c=simple/simple;
+	q=dns/txt; i=@bluehornet.com; t=1361769904;
+	h=From:Subject:Date:To:Mime-Version:Content-Type;
+	bh=sUYYxRHzO0M6dW9BDRrDnZWg0L4=;
+	b=ey1AJO7iDG1W7EVU8c3MbOEHzcW3NUiz/ViGeOXrFklzgOCfI7FRQUQE7OV6dlcU
+	CPuIum5Id0OUmNC0qibLAvgy0zoxc9lHYT7GqgKj787ylBqfIhmK9MOznTdgmchZ
+	oos+y6XZLArxtJ+V3NzY+ZuGrFQpFcr3be/H/8pgjjQ=;
+Received: from [10.64.22.20] ([10.64.22.20:54920] helo=localhost.localdomain)
+	by returnpath.bluehornet.com (envelope-from <bounce-use=M=14673920552=echo3=e019dc303bb91e2b61b83f6a27c66833@returnpath.bluehornet.com>)
+	(ecelerity 3.5.0.35861 r(Momo-dev:tip)) with ESMTP
+	id 64/2D-04172-0B5FA215; Sun, 24 Feb 2013 21:25:04 -0800
+Message-ID: <64.2D.04172.0B5FA215@dc1bhmta12>
+Date: Sun, 24 Feb 2013 21:28:06 -0800
+From: "BikeBandit.com" <service@bikebandit.com>
+Reply-To: service@bikebandit.com
+To: Kevin Durbin <kevindurb@gmail.com>
+X-Outgoing: iquitos
+Subject: =?UTF-8?B?QmlrZUJhbmRpdC5jb20gT3JkZXIgQ29uZmlybWF0aW9uIHwgT3JkZXIgREdCOU5VNA==?=
+List-Unsubscribe: <mailto:unsub-14673920552-echo3-e019dc303bb91e2b61b83f6a27c66833@listunsub.bluehornet.com>
+X-EMS-Sign: bikebandit.com;s1024-1.bh
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+    boundary="--512af66656452-MultiPart-Mime-Boundary"
+
+
+
+----512af66656452-MultiPart-Mime-Boundary
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+
+IMPORTANT INFORMATION ABOUT YOUR RECENT BIKEBANDIT.COM ORDER!
+
+Your Order: DGB9NU4
+Customer Service: 1-888-339-3888
+
+Order Update
+
+Greetings Kevin,
+
+Thank you for shopping with BikeBandit.com! We have received your order, and it is currently being processed.                           
+
+We will send brief emails to update you on your order's status as it is processed. Your order usually ships in the time frame that was quoted when you placed it. In the meantime, you can track the status of this order and all orders online by clicking here: "View My Order History" (https://www.bikebandit.com/my-orders).
+
+                      
+               
+Order # DGB9NU4:
+________________________________________________________________________________
+
+Item Name                                           |  Quantity  |  Total Price 
+________________________________________________________________________________
+
+CABLE A, THROTTLE  1  26.16
+CABLE B, THROTTLE  1  26.16
+CABLE, CLUTCH  1  19.22
+________________________________________________________________________________
+
+Subtotal:  71.54
+Shipping & Handling: 8.95
+Tax: 0.00
+
+Total: 80.49
+
+
+
+         
+Amount Charged to Your: Credit Card
+80.49
+
+
+***Important! Due to the speed of our ordering fulfillment, changes or cancellations to this order cannot be made. However, if you decide you do not need an item, BikeBandit.com offers customers a "No Hassle" Return Policy (http://www.bikebandit.com/partsbandit/faq/returnpolicy.asp).
+
+If you have any questions about your order, please contact our customer support team at 1-888-339-3888 or log into our LiveChat (http://www.bikebandit.com/help) to speak with one of our representatives.                         
+              
+            
+MY ORDER STATUS
+You can track the status of this order and all  other orders quickly and easily, online. 
+"View  My Order History" (https://www.bikebandit.com/my-orders)
+                        
+You can also: 
+- View   other item's status
+- Cancel items
+- Return items
+- Much, much more!
+                                  
+CUSTOMER SERVICE
+Contact BikeBandit.com's Customer Support Team!
+1-877-322-BIKE (2453)
+                          
+Mon-Fri 6 AM - 6 PM Pacific
+Sat 7:30 AM - 4 PM Pacific
+                    
+                
+                                   
+Please add service@bikebandit.com to your address book to ensure you receive our e-mails.
+WWW.BIKEBANDIT.COM | 7625 Panasonic Way, Suite B | San Diego,CA 92154
+
+
+
+----512af66656452-MultiPart-Mime-Boundary
+Content-Type: text/html; charset="iso-8859-1"
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+
+
+
+<html>
+<div align="center">
+	<table width="600" border="0">
+    	<tr>
+      	<td width="600" align="left"><h1 style="font-family:Verdana, Arial, sans-serif; font-size:12px; color:#666; font-weight:bold; margin:0px; padding:0px;">IMPORTANT INFORMATION ABOUT YOUR RECENT BIKEBANDIT.COM ORDER!</h1></td>
+	    </tr>
+  	</table>
+</div>
+
+<!--Begin main table-->
+
+
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0"  >
+  <tr align="left" valign="top" >
+    <td style="border:none" width="250" valign="bottom" ><a href="http://www.bikebandit.com/?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/logo.gif" width="250" height="105" border="0" /></a></td>
+    <td style="border:none" width="355" align="center" valign="top">
+      <table cellpadding="0" cellspacing="0" border="0" style="border:none">
+        <tr>
+          <td valign="middle" width="350" height="105" style="padding-top:2px;"><p style="font-size:14px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right;"><strong>Your Order: DGB9NU4</strong><br />
+            <span style="font-size:14px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right;">Customer Service: 1-888-339-3888</span></p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr> 
+
+  
+
+  <tr>
+    <td colspan="2">
+    <table width="600" cellpadding="0" cellspacing="0" align="center">
+      <tr>
+        <td><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/nav_01.gif" /></td>
+        <td><a href="http://www.bikebandit.com/oem-parts-select?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/nav_02.gif" alt="OEM Parts" border="0" /></a></td>
+        <td><a href="http://www.bikebandit.com/aftermarket-parts?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/nav_03.gif" alt="Aftermarket Parts" border="0" /></a></td>
+        <td><a href="http://www.bikebandit.com/apparel-accessories?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/nav_04.gif" alt="Apparel &amp; Accessories" border="0" /></a></td>
+        <td><a href="http://www.bikebandit.com/tires-tubes?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/nav_05.gif" alt="Tires &amp; Tubes" border="0" /></a></td>
+        <td><a href="http://www.bikebandit.com/manuals-tools?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/nav_06.gif" alt="Manuals &amp; Tools" border="0" /></a></td>
+        <td><a href="http://www.bikebandit.com/closeouts?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/nav_07.gif" alt="Closeouts !" border="0" /></a></td>
+        <td><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/nav_08.gif" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+
+  <tr>
+  <td colspan="2" >
+    <table width="595" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+        <table align="center" width="595" border="0" cellspacing="0" cellpadding="0" style="border-bottom-width:2px; border-bottom-color:#ff9933; border-bottom-style:solid;"  >
+          
+          <tr>
+            <td colspan="2" style="border-bottom-width:2px; border-bottom-color:#ff9933; border-bottom-style:solid;">
+              <table width="600" align="center">
+                <tr>
+                  <td width="270" valign="bottom" style="padding-top:2px;"><p style="font-size:16px; font-family:Verdana, Arial, sans-serif; line-height:20px; color:#666; text-align:left; margin-left:10px;">Order Update</p></td>
+                </tr>
+                <tr>
+                  <td colspan="2" >
+                    <p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666;  margin:10px; text-align:left;">Greetings Kevin,
+                    <p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666;  margin:10px; text-align:left;">Thank you for shopping with BikeBandit.com! We have received your order, and it is currently being processed.                           
+                    <p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666;  margin:10px; text-align:left;">We will send brief emails to update you on your order's status as it is processed. Your order usually ships in the time frame that was quoted when you placed it. In the meantime, you can track the status of this order and all orders online by clicking here: &quot;<a href="https://www.bikebandit.com/my-orders?WT.mc_id=2200302" style="color:#336699;">View My Order History</a>&quot;.
+	              </td>
+                </tr>
+	            
+                <tr>
+		          <td valign="top" width="444">
+		            <p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666;  margin:10px; text-align:left;"><strong>Order # DGB9NU4:</strong></p>
+		
+                      <table cellpadding="2px" cellspacing="3px" border="0" width="425" align="center" style="border-bottom-color:#F93; border-bottom-style:solid; border-bottom-width:1px; ">
+		                <tr>
+		                  <td width="221"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666; text-align:left; font-weight:bold;">Item Name</p></td>
+		                  <td width="73"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666; text-align:center; font-weight:bold;">Quantity</p></td>
+		                  <td width="107"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666; text-align:right; font-weight:bold;">Total Price</p></td>
+		                </tr>
+			               		                <tr>
+		                  <td width="221"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:left; ">CABLE A, THROTTLE</p></td>
+		                  <td width="73"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:center; ">1</p></td>
+		                  <td width="107" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">26.16</p></td>
+		                </tr>
+			               		                <tr>
+		                  <td width="221"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:left; ">CABLE B, THROTTLE</p></td>
+		                  <td width="73"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:center; ">1</p></td>
+		                  <td width="107" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">26.16</p></td>
+		                </tr>
+			               		                <tr>
+		                  <td width="221"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:left; ">CABLE, CLUTCH</p></td>
+		                  <td width="73"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:center; ">1</p></td>
+		                  <td width="107" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">19.22</p></td>
+		                </tr>
+			               		              </table>
+		              
+                      <table cellpadding="2" cellspacing="0" border="0" width="425" align="center" >
+        		        <tr>
+                		  <td width="422" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">Subtotal:</p></td>
+		                  <td width="111" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">71.54</p></td>
+        		        </tr>
+                		<tr>
+		                  <td width="422" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">Shipping &amp; Handling:</p></td>
+		                  <td width="111" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">8.95</p></td>
+		                </tr>
+		                <tr>
+        		          <td width="422" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">Tax:</p></td>
+                		  <td width="111" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">0.00</p></td>
+		                </tr>
+		                <tr>
+        		          <td width="422" align="right" style="border-bottom-color:#F93; border-bottom-style:solid; border-bottom-width:1px; "><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">Total:</p></td>
+                		  <td width="111" align="right" style="border-bottom-color:#F93; border-bottom-style:solid; border-bottom-width:1px; "><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; ">80.49</p></td>
+		                </tr>
+        			        
+                			                
+                        <tr>
+                          <td width="422" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; "><strong>Amount Charged to: Credit Card</strong></p></td>
+                          <td width="111" align="right"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:16px; color:#666; text-align:right; "><strong>80.49</strong></p></td>
+                        </tr>
+	                  </table>
+
+                    <br />
+                    <p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666;  margin:10px; text-align:left;"><strong style="color:#cc0000;">Important!</strong> Due to the speed of our ordering fulfillment, changes or cancellations to this order cannot be made. However, if you decide you do not need an item, BikeBandit.com offers customers a <a href="http://www.bikebandit.com/partsbandit/faq/returnpolicy.asp?WT.mc_id=2200302" style="color:#336699;">"No Hassle" Return Policy</a>.
+                    <p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666;  margin:10px; text-align:left;">If you have any questions about your order, please contact our customer support team at 1-888-339-3888 or log into our <a href="http://www.bikebandit.com/help?WT.mc_id=2200302" style="color:#369;">LiveChat</a> to speak with one of our representatives.                         
+
+                    <td valign="top" width="170" >
+                      <table width="170" cellpadding="0" cellspacing="0" >
+                        <tr>
+                          <td colspan="2" style="border:none; padding:0;" ><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/spacer.gif" width="1" height="3"></td>
+                        </tr>
+                        <tr>
+                          <td width="170">
+                            <table width="170" cellpadding="2" cellspacing="0" style="border-color:#CCC; border-style:solid; border-width:1px;">
+                              <tr>                   
+                                <td width="50" bgcolor="#CCCCCC" ><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/cart.gif" width="50" height="34" vspace="2" /></td>
+                                <td width="110" bgcolor="#CCCCCC"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666; text-align:left;"><strong>MY ORDER STATUS</strong></p></td>
+                              </tr>
+                              <tr>
+                                <td colspan="2"><p style="font-size:10px; font-family:Verdana, Arial, sans-serif; line-height:12px; color:#666; text-align:left; ">You can track the status of this order and all  other orders quickly and easily, online. <br />
+                                    <span style="font-size:11px; line-height:16px; margin-left:10px;">&quot;<a href="https://www.bikebandit.com/my-orders?WT.mc_id=2200302" style="color:#336699;">View  My Order History</a>&quot;</span> <span style="font-size:10px; font-family:Verdana, Arial, sans-serif; line-height:12px; color:#666; text-align:left; "><br />
+                                    <br />
+                                    You can also: </span><br />
+                                    <span style="font-size:10px; font-family:Verdana, Arial, sans-serif; line-height:12px; color:#666; text-align:left; margin-left:3px; ">- View   other item's status</span><br />
+                                    <span style="font-size:10px; font-family:Verdana, Arial, sans-serif; line-height:12px; color:#666; text-align:left; margin-left:3px; ">- Cancel items</span><br />
+                                    <span style="font-size:10px; font-family:Verdana, Arial, sans-serif; line-height:12px; color:#666; text-align:left; margin-left:3px; ">- Return items</span><br />
+                                    <span style="font-size:10px; font-family:Verdana, Arial, sans-serif; line-height:12px; color:#666; text-align:left; margin-left:3px; ">- Much, much more!</span></p>
+                                </td>
+                              </tr>
+                            </table>
+    					  </td>
+                        </tr>
+                        
+                        <tr>
+                          <td colspan="2" style="border:none; padding:0;" ><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/spacer.gif" width="1" height="3"></td>
+                        </tr>                  
+    
+                        <tr>
+                          <td width="170">
+                            <table width="170" cellpadding="2" cellspacing="0" style="border-color:#CCC; border-style:solid; border-width:1px;">
+                              <tr>                   
+                                <td width="50" bgcolor="#CCCCCC" ><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/phone.gif" width="50" height="34" /></td>
+                                <td width="110" bgcolor="#CCCCCC"><p style="font-size:12px; font-family:Verdana, Arial, sans-serif; line-height:14px; color:#666; text-align:left;"><strong>CUSTOMER SERVICE</strong><br /></p></td>
+                              </tr>
+                              <tr>
+                                <td colspan="2"><p style="font-size:10px; font-family:Verdana, Arial, sans-serif; line-height:12px; color:#666; text-align:left; ">Contact BikeBandit.com's Customer Support Team!<br />
+                                    <br />
+                                    <strong style="margin-left:10px;">1-877-322-BIKE (2453)<br />
+                                    <br />
+                                    </strong><span style="font-size:9px; text-align:center;">
+                                    Mon-Fri 6 AM - 6 PM Pacific<br />
+									Sat 7:30 AM - 4 PM Pacific</span></p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>  
+                        </tr>                   
+                      </table>
+                    </td>
+            	</tr>
+                
+          	</table>
+          	</td>
+          </tr>
+          
+    
+
+          <tr>
+          <td>
+            <table cellpadding="0" cellspacing="0">
+              <tr>
+                <td><a href="https://www.bikebandit.com/my-bandit-bucks?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/f__01.jpg" alt="Bandit Bucks" width="158" height="28" border="0" /></a></td>
+                <td><a href="http://www.bikebandit.com/help?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/f__02.jpg" alt="Live Chat" width="70" height="28" border="0" /></a></td>
+                <td><a href="http://www.bikebandit.com/help?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/f__03.jpg" alt="Contact Us" width="72" height="28" border="0" /></a></td>
+                <td><a href="https://www.bikebandit.com/my-orders?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/f__04.jpg" alt="Order History" width="86" height="28" border="0" /></a></td>
+                <td><a href="http://www.bikebandit.com?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/f__05.jpg" alt="Shop Parts &amp; Gear" width="115" height="28" border="0" /></a></td>
+                <td><a href="http://www.bikebandit.com/specials?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/f__06.jpg" alt="On Sale Now!" width="94" height="28" border="0" /></a></td>
+              </tr>
+              <tr>
+                <td colspan="6"><a href="http://www.bikebandit.com/bandit-bucks?WT.mc_id=2200302"><img src="http://cdn.bikebandit.com/assets/marketing/2010/other/transactionals/footer_bucks.jpg" alt="Every Purchase Earns You Big Rewards!" width="594" height="72" border="0" /></a></td>
+              </tr>
+            </table>
+          </td>
+          </tr>
+  	</table>
+  </td>
+  </tr>               
+
+      
+
+  <tr>
+    <td width="600" colspan="2" style="border-bottom-width:2px; border-bottom-color:#ff9933; border-bottom-style:solid;">
+       <table width="600">
+          <tr>
+              <td colspan="2" align="left">
+                <p style="font-family:Verdana, Arial, sans-serif; font-size:10px; color:#666; text-align:center; padding-top:0px;padding-bottom:0px;">
+                  Please add <a href="mailto:service@bikebandit.com" style="color:#336699;">service@bikebandit.com</a> to your address book to ensure you receive our e-mails.<br />
+                  <a href="http://www.bikebandit.com/?WT.mc_id=2200302" style="color:#336699;">WWW.BIKEBANDIT.COM</a> | 7625 Panasonic Way | San Diego,CA 92154</p>
+               </td>
+          </tr>
+        </table>
+    </td>
+  </tr>  
+
+      
+</table>
+</td>
+</tr>
+
+
+</table>
+
+<img src="http://echo3.bluehornet.com/imagelibrary/H-14673920552-af05b165b3efb67707be7bb3913c8372.jpg" border="0" width="1" height="1">
+
+
+----512af66656452-MultiPart-Mime-Boundary--
