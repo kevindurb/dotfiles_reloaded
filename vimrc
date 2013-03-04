@@ -60,7 +60,8 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'TeTrIs.vim'
 Bundle 'dbext.vim'
-Bundle "pangloss/vim-javascript"
+Bundle 'pangloss/vim-javascript'
+Bundle 'cakebaker/scss-syntax.vim'
 
 " finish off vundle setup
 filetype plugin indent on

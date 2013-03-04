@@ -1,5 +1,6 @@
-" add xmlc to have html colors
+" special file types
 au BufNewFile,BufRead *.xmlc set filetype=html
+au BufRead,BufNewFile *.scss set filetype=scss
 
 " Ack shortcut
 cabbrev ack Ack
