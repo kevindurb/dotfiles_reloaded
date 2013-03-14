@@ -64,6 +64,7 @@ Bundle 'dbext.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'nono/vim-handlebars'
 
 " finish off vundle setup
 filetype plugin indent on
