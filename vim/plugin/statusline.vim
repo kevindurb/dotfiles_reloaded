@@ -37,7 +37,7 @@ set statusline+=\ %{fugitive#statusline()[5:-3]}
 "
 	" file name and path
 set statusline+=\ %3*
-set statusline+=\ %t
+set statusline+=\ %f
 "
 	" syntax error
 set statusline+=\ %6*

@@ -7,6 +7,9 @@ cabbrev ack Ack
 
 " fix my constant need to type Wa instead of wa
 cabbrev Wa wa
+cabbrev Wq wq
+cabbrev W w
+cabbrev Q q
 
 " add line numbers
 set number
@@ -81,3 +84,6 @@ highlight PmenuSel ctermfg=grey ctermbg=black
 " cursor vertical and horizontal lines
 hi CursorLine cterm=NONE ctermbg=black
 hi CursorColumn cterm=NONE ctermbg=black
+
+" gutter color
+" highlight SignColumn ctermbg=DarkGreen

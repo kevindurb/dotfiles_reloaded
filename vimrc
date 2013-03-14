@@ -37,6 +37,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " my bundles
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'L9'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-commentary'
@@ -62,6 +63,7 @@ Bundle 'TeTrIs.vim'
 Bundle 'dbext.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'airblade/vim-gitgutter'
 
 " finish off vundle setup
 filetype plugin indent on
