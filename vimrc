@@ -66,6 +66,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'nono/vim-handlebars'
 Bundle 'freitass/todo.txt-vim'
+Bundle 'klokane/vim-phpunit'
 
 " finish off vundle setup
 filetype plugin indent on
