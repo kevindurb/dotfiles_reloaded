@@ -20,6 +20,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
 NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 
+#set my editor
+export EDITOR=/usr/local/bin/vim
+
 #make it easier to get to my rc files
 export MYVIMRC=$HOME/.vimrc
 export MYZSHRC=$HOME/.zshrc
@@ -67,5 +70,8 @@ alias gitp="git push origin"
 alias gitd="git diff"
 alias gitpu="git smart-pull"
 alias gitl="git smart-log"
-alias td="~/dotfiles_reloaded/todo/todo.sh"
+alias t="~/dotfiles_reloaded/todo/todo.sh"
 alias localsql="mysql --auto-rehash -h localhost -u root -p"
+
+# todo settings
+export TODOTXT_DEFAULT_ACTION=ls
