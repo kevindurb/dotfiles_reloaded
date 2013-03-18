@@ -67,6 +67,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'nono/vim-handlebars'
 Bundle 'freitass/todo.txt-vim'
 Bundle 'klokane/vim-phpunit'
+Bundle 'nono/vim-handlebars'
 
 " finish off vundle setup
 filetype plugin indent on
