@@ -50,7 +50,7 @@ todo = todo.split($/)
 
 unless yesterdays_completed.empty?
 	puts "\n========================================"
-	puts "| Yesterday: #{yesterday}              |"
+	puts "| Yesterday: #{yesterday}                |"
 	puts "========================================"
 end
 
@@ -64,7 +64,7 @@ yesterdays_completed.each { |task|
 # ==============================
 
 puts "\n========================================"
-puts " Today: #{Date.today}"
+puts "| Today: #{Date.today}                    |"
 puts "========================================"
 
 #dump TODAY's COMPELTED
@@ -83,7 +83,7 @@ todo.each { |task|
 #generate IMPEDIMENT's List
 if impediments.length > 0
 	puts "\n========================================"
-	puts " Impediments: #{Date.today}"
+	puts "| Impediments: #{Date.today}             |"
 	puts "========================================"
 
 	impediments.each { |task|
