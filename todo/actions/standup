@@ -50,7 +50,7 @@ todo = todo.split($/)
 
 unless yesterdays_completed.empty?
 	puts "\n========================================"
-	puts " Yesterday: #{yesterday}"
+	puts "| Yesterday: #{yesterday}              |"
 	puts "========================================"
 end
 
