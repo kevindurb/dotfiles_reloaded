@@ -2,6 +2,7 @@
 ZSH=$HOME/dotfiles_reloaded/oh-my-zsh
 
 source $HOME/dotfiles_reloaded/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/dotfiles_reloaded/todo/todo_completion
 
 # plugins
 plugins=(git osx brew zsh-syntax-highlighting vi-mode)
