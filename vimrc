@@ -68,6 +68,8 @@ Bundle 'nono/vim-handlebars'
 Bundle 'freitass/todo.txt-vim'
 Bundle 'klokane/vim-phpunit'
 Bundle 'nono/vim-handlebars'
+Bundle 'rosenfeld/conque-term'
+Bundle 'vim-scripts/ZoomWin'
 
 " finish off vundle setup
 filetype plugin indent on
