@@ -18,7 +18,7 @@ ZSH_HIGHLIGHT_STYLES[path]='bold'
 source $ZSH/oh-my-zsh.sh
 
 # my term path
-export PATH=/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
+export PATH=/Users/kevin/pear/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
 NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 
 #set my editor

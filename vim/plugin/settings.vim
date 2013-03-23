@@ -1,6 +1,7 @@
 " special file types
 au BufNewFile,BufRead *.xmlc set filetype=html
 au BufRead,BufNewFile *.scss set filetype=scss
+au BufRead,BufNewFile *.html set syntax=underscore_template
 
 " Ack shortcut
 cabbrev ack Ack
