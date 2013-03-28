@@ -6,6 +6,9 @@ au BufRead,BufNewFile *.html set syntax=underscore_template
 " Ack shortcut
 cabbrev ack Ack
 
+" Silver Searcher shortcut
+cabbrev ag Ag
+
 " fix my constant need to type Wa instead of wa
 cabbrev Wa wa
 cabbrev Wq wq

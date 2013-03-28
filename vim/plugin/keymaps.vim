@@ -15,8 +15,8 @@ nnoremap <C-h>				3zh
 
 " pane control
 nnoremap <leader>v			:vsp<CR>
-nnoremap <leader><S-v>			:sp<CR>
-nnoremap <leader>z <c-w>o
+nnoremap <leader><S-v>		:sp<CR>
+nnoremap <leader>z			<c-w>o
 
 " tagbar controls
 nnoremap <silent> <leader>= :TagbarToggle<CR>
@@ -36,14 +36,14 @@ vnoremap <silent> <F2>		<Esc>:tabnext<CR>v
 vnoremap <silent> <C-t>		<Esc>:tabnew<CR>
 
 " disable arrow keys
-nnoremap <up>				<nop>
-nnoremap <down>				<nop>
-nnoremap <left>				<nop>
-nnoremap <right>			<nop>
-inoremap <up>				<nop>
-inoremap <down>				<nop>
-inoremap <left>				<nop>
-inoremap <right>			<nop>
+map <up>				<nop>
+map <down>				<nop>
+map <left>				<nop>
+map <right>			<nop>
+map <up>				<nop>
+map <down>				<nop>
+map <left>				<nop>
+map <right>			<nop>
 
 " debugger controls
 nnoremap <silent> <leader>b :Bp<CR>
@@ -70,3 +70,6 @@ nnoremap <C-f> :call JsBeautify()<cr>
 nnoremap <leader>ft Vatzf
 	" shortcut to fold braces (must be inside braces to fold)
 nnoremap <leader>fb zfa{
+
+" shortcut for Silver Searcher
+nnoremap <leader>a :Ag<space>
