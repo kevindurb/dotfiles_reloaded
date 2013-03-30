@@ -1,7 +1,13 @@
 # where my zsh dir is
 ZSH=$HOME/dotfiles_reloaded/oh-my-zsh
 
+# zsh themes
+source $ZSH/oh-my-zsh.sh
+
+# syntax highlighting
 source $HOME/dotfiles_reloaded/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# todo completion
 source $HOME/dotfiles_reloaded/todo/todo_completion
 
 # plugins
@@ -14,12 +20,9 @@ zle -A .backward-delete-char vi-backward-delete-char
 # highlighting settings
 ZSH_HIGHLIGHT_STYLES[path]='bold'
 
-# zsh themes
-source $ZSH/oh-my-zsh.sh
-
-# my term path
+# my term paths
 export PATH=/Users/kevin/pear/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
-NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 
 #set my editor
 export EDITOR=/usr/local/bin/vim
