@@ -1,17 +1,26 @@
+" map leader to comma for speed!!!
+let mapleader=","
+
 " ctags nav
 nnoremap <silent> <leader>] <C-]>
 nnoremap <silent> <leader>[ <C-t>
 
 " pane navigation
-nnoremap <leader>w			<C-w>w
-nnoremap <leader>h			<C-w>h
-nnoremap <leader>j			<C-w>j
-nnoremap <leader>k			<C-w>k
-nnoremap <leader>l			<C-w>l
-nnoremap <C-j>				3<C-e>
-nnoremap <C-k>				3<C-y>
-nnoremap <C-l>				3zl
-nnoremap <C-h>				3zh
+" nnoremap <leader>w			<C-w>w
+" nnoremap <leader>h			<C-w>h
+" nnoremap <leader>j			<C-w>j
+" nnoremap <leader>k			<C-w>k
+" nnoremap <leader>l			<C-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" scrolling
+" nnoremap <C-j>				3<C-e>
+" nnoremap <C-k>				3<C-y>
+" nnoremap <C-l>				3zl
+" nnoremap <C-h>				3zh
 
 " pane control
 nnoremap <leader>v			:vsp<CR>
@@ -20,9 +29,6 @@ nnoremap <leader>z			<c-w>o
 
 " tagbar controls
 nnoremap <silent> <leader>= :TagbarToggle<CR>
-
-" NERDTree controls
-nnoremap <silent> <leader>- :NERDTreeToggle<CR>
 
 " tab navigation with F1 F2 and ctrl-t
 nnoremap <silent> <F1>		:tabprevious<CR>
@@ -72,4 +78,4 @@ nnoremap <leader>ft Vatzf
 nnoremap <leader>fb zfa{
 
 " shortcut for Silver Searcher
-nnoremap <leader>a :Ag<space>
+nnoremap <leader>g :Ag<space>
