@@ -36,6 +36,8 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+set scrolloff=3
+set sidescrolloff=3
 set backspace=indent,eol,start
 set list listchars=tab:▸\ ,eol:¬,trail:•
 set list
