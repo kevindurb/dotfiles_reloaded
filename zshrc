@@ -79,3 +79,6 @@ alias localsql="mysql --auto-rehash -h localhost -u root -p"
 
 # todo settings
 export TODOTXT_DEFAULT_ACTION=ls
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
