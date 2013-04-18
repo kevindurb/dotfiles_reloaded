@@ -65,6 +65,7 @@ Bundle 'rosenfeld/conque-term'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'rking/ag.vim'
 Bundle 'tetsuo13/Vim-PHP-Doc'
+Bundle 'nono/vim-handlebars'
 
 " finish off vundle setup
 filetype plugin indent on
