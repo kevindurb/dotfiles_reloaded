@@ -37,7 +37,7 @@ set statusline+=\ %{fugitive#statusline()[5:-3]}
 "
 	" file name and path
 set statusline+=\ %3*
-set statusline+=\ %f
+set statusline+=\ %<%f
 "
 	" syntax error
 set statusline+=\ %6*
@@ -71,3 +71,6 @@ set statusline+=\
 
 " enable statusline
 set laststatus=2
+
+" time in ruler?
+set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
