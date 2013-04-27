@@ -21,7 +21,7 @@ zle -A .backward-delete-char vi-backward-delete-char
 ZSH_HIGHLIGHT_STYLES[path]='bold'
 
 # my term paths
-export PATH=/Users/kevin/pear/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
+export PATH=/usr/local/share/npm/bin:/Users/kevin/pear/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 
 #set my editor
