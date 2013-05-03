@@ -49,7 +49,7 @@ function virtualenv_info {
 
 
 PROMPT='
-%n%{$reset_color%} @ %m%{$reset_color%} : %{$fg[blue]%}$(collapse_pwd)%{$reset_color%}$(git_prompt_info)
+%{$fg[cyan]%}%n @ %m%{$reset_color%} : %{$fg[blue]%}$(collapse_pwd)%{$reset_color%}$(git_prompt_info)
 %{$fg[blue]%}$(virtualenv_info)$(prompt_char) '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[green]%}"
