@@ -32,6 +32,8 @@ export MYZSHRC=$HOME/.zshrc
 export MYVIMKEYMAPS=$HOME/.vim/plugin/keymaps.vim
 export MYVIMSETTINGS=$HOME/.vim/plugin/settings.vim
 
+export PRO_BASE=$HOME/projects
+
 function prompt_char {
     git branch >/dev/null 2>/dev/null && echo '±' && return
     echo '○'
@@ -68,5 +70,8 @@ alias localsql="mysql --auto-rehash -h localhost -u root -p"
 # todo settings
 export TODOTXT_DEFAULT_ACTION=ls
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# pro cd function
+pd() {
+  local projDir=$(pro search $1)
+  cd ${projDir}
+}
