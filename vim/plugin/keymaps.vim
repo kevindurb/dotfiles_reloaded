@@ -82,3 +82,6 @@ nnoremap <leader>g :Ag<space>
 
 " stop doing ex mode
 nnoremap Q gq
+
+" php commenter
+nnoremap <buffer> <C-c> :call pdv#DocumentCurrentLine()<CR>

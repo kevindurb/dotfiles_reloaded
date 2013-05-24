@@ -29,6 +29,10 @@ let g:dbext_default_profile_local_customer = 'type=MYSQL:user=root:passwd=r00t:h
 " syntastic cool symbols
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['css'] }
+
+" php commenter templates
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 
 " vundle plugin!!!
 filetype off
@@ -63,7 +67,10 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'rking/ag.vim'
 Bundle 'tetsuo13/Vim-PHP-Doc'
 Bundle 'nono/vim-handlebars'
+Bundle 'klokane/vim-phpunit'
 Bundle 'FredKSchott/CoVim'
+Bundle 'tobyS/pdv'
+Bundle 'tobyS/vmustache'
 
 " finish off vundle setup
 filetype plugin indent on
