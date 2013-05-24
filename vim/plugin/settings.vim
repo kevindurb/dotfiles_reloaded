@@ -39,6 +39,7 @@ set incsearch
 set scrolloff=3
 set sidescrolloff=3
 set backspace=indent,eol,start
+set wildmode=longest,list
 
 " spellcheck
 set spell spelllang=en_us

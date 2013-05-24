@@ -79,3 +79,6 @@ nnoremap <leader>fb zfa{
 
 " shortcut for Silver Searcher
 nnoremap <leader>g :Ag<space>
+
+" stop doing ex mode
+nnoremap Q gq
