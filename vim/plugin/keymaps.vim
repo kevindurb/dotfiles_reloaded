@@ -6,21 +6,10 @@ nnoremap <silent> <leader>] <C-]>
 nnoremap <silent> <leader>[ <C-t>
 
 " pane navigation
-" nnoremap <leader>w			<C-w>w
-" nnoremap <leader>h			<C-w>h
-" nnoremap <leader>j			<C-w>j
-" nnoremap <leader>k			<C-w>k
-" nnoremap <leader>l			<C-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-
-" scrolling
-" nnoremap <C-j>				3<C-e>
-" nnoremap <C-k>				3<C-y>
-" nnoremap <C-l>				3zl
-" nnoremap <C-h>				3zh
 
 " pane control
 nnoremap <leader>v			:vsp<CR>
@@ -42,14 +31,14 @@ vnoremap <silent> <F2>		<Esc>:tabnext<CR>v
 vnoremap <silent> <C-t>		<Esc>:tabnew<CR>
 
 " disable arrow keys
-map <up>				<nop>
-map <down>				<nop>
-map <left>				<nop>
-map <right>			<nop>
-map <up>				<nop>
-map <down>				<nop>
-map <left>				<nop>
-map <right>			<nop>
+map <up>	<nop>
+map <down>	<nop>
+map <left>	<nop>
+map <right>	<nop>
+map <up>	<nop>
+map <down>	<nop>
+map <left>	<nop>
+map <right>	<nop>
 
 " debugger controls
 nnoremap <silent> <leader>b :Bp<CR>
@@ -84,4 +73,7 @@ nnoremap <leader>g :Ag<space>
 nnoremap Q gq
 
 " php commenter
-nnoremap <buffer> <C-c> :call pdv#DocumentCurrentLine()<CR>
+" nnoremap <buffer> <C-c> :call pdv#DocumentCurrentLine()<CR>
+
+" doc comments
+nnoremap <C-c> :call GenerateDOCComment()<CR>

@@ -43,7 +43,6 @@ Bundle 'gmarik/vundle'
 " my bundles
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'L9'
-Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
@@ -62,15 +61,9 @@ Bundle 'dbext.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'rosenfeld/conque-term'
-Bundle 'vim-scripts/ZoomWin'
 Bundle 'rking/ag.vim'
-Bundle 'tetsuo13/Vim-PHP-Doc'
 Bundle 'nono/vim-handlebars'
-Bundle 'klokane/vim-phpunit'
 Bundle 'FredKSchott/CoVim'
-Bundle 'tobyS/pdv'
-Bundle 'tobyS/vmustache'
 
 " finish off vundle setup
 filetype plugin indent on
