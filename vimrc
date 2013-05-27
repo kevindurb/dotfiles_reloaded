@@ -20,11 +20,7 @@ let g:debuggerDisableDefaultMappings = 1
 let g:debuggerDisableHelpPane = 1
 
 " dbext settings
-let g:dbext_default_profile_local_dev = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_dev'
-let g:dbext_default_profile_local_company = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_company'
-let g:dbext_default_profile_local_beta = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_beta'
-let g:dbext_default_profile_local_lyrix = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=lyrix'
-let g:dbext_default_profile_local_customer = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_customer'
+let g:dbext_default_profile_dev = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_dev'
 
 " syntastic cool symbols
 let g:syntastic_error_symbol='✗'
