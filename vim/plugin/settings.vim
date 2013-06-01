@@ -3,6 +3,9 @@ au BufNewFile,BufRead *.xmlc set filetype=html
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.html set syntax=underscore_template
 
+" auto make on save
+autocmd BufWritePost <buffer> Make!
+
 " Ack shortcut
 cabbrev ack Ack
 

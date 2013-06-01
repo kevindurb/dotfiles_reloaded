@@ -25,7 +25,7 @@ let g:dbext_default_profile_dev = 'type=MYSQL:user=root:passwd=r00t:host=localho
 " syntastic cool symbols
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['css'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['js', 'php', 'html', 'mysql'], 'passive_filetypes': ['css', 'scss'] }
 
 " php commenter templates
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
@@ -43,6 +43,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-dispatch'
 Bundle 'Townk/vim-autoclose'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'

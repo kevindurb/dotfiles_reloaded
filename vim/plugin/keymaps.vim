@@ -77,3 +77,9 @@ nnoremap Q gq
 
 " doc comments
 nnoremap <C-c> :call GenerateDOCComment()<CR>
+
+" run syntax
+nnoremap <silent> <leader>s :SyntasticCheck<CR>
+
+" run background make
+nnoremap <silent> <leader>m :Make!<CR>
