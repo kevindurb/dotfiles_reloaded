@@ -61,6 +61,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'rking/ag.vim'
 Bundle 'nono/vim-handlebars'
 Bundle 'FredKSchott/CoVim'
+Bundle 'uguu-org/vim-matrix-screensaver'
 
 " finish off vundle setup
 filetype plugin indent on

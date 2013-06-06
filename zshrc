@@ -56,14 +56,17 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[orange]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-# aliases to make stuff faster
-alias lss="ls -lAF"
-alias gits="git status"
+# git aliases to make stuff faster
+alias gits="tig status"
 alias gitc="git commit -a"
 alias gitp="git push origin"
 alias gitd="git diff"
 alias gitpu="git smart-pull"
-alias gitl="git smart-log"
+alias gitl="tig"
+alias gitch="git checkout"
+
+# other aliases to make stuff faster
+alias lss="ls -lAF"
 alias t="~/dotfiles_reloaded/todo/todo.sh"
 alias localsql="mysql --auto-rehash -h localhost -u root -p"
 
