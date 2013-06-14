@@ -11,7 +11,7 @@ source $HOME/dotfiles_reloaded/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 source $HOME/dotfiles_reloaded/todo/todo_completion
 
 # plugins
-plugins=(gitfast osx brew zsh-syntax-highlighting)
+plugins=(git osx brew zsh-syntax-highlighting)
 
 # highlighting settings
 ZSH_HIGHLIGHT_STYLES[path]='bold'

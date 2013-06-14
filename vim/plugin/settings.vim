@@ -3,18 +3,13 @@ au BufNewFile,BufRead *.xmlc set filetype=html
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.html set syntax=underscore_template
 
-" auto make on save
-autocmd BufWritePost <buffer> Make!
-
-" Ack shortcut
-cabbrev ack Ack
-
 " Silver Searcher shortcut
 cabbrev ag Ag
 
 " fix my constant need to type Wa instead of wa
 cabbrev Wa wa
 cabbrev Wq wq
+cabbrev Wqa wqa
 cabbrev W w
 cabbrev Q q
 

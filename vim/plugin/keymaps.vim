@@ -72,9 +72,6 @@ nnoremap <leader>g :Ag<space>
 " stop doing ex mode
 nnoremap Q gq
 
-" php commenter
-" nnoremap <buffer> <C-c> :call pdv#DocumentCurrentLine()<CR>
-
 " doc comments
 nnoremap <C-c> :call GenerateDOCComment()<CR>
 
