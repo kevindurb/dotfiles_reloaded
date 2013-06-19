@@ -25,10 +25,7 @@ let g:dbext_default_profile_dev = 'type=MYSQL:user=root:passwd=r00t:host=localho
 " syntastic cool symbols
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['js', 'php', 'html', 'mysql'], 'passive_filetypes': ['css', 'scss'] }
-
-" php commenter templates
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['js', 'php', 'html', 'mysql'], 'passive_filetypes': ['css', 'scss'] }
 
 " vundle plugin!!!
 filetype off
@@ -51,7 +48,6 @@ Bundle 'ervandew/supertab'
 Bundle 'jaredcobb/DBGp-Remote-Debugger-Interface'
 Bundle 'Align'
 Bundle 'SQLUtilities'
-Bundle 'walm/jshint.vim'
 Bundle 'matchit.zip'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'dbext.vim'
@@ -60,8 +56,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'rking/ag.vim'
 Bundle 'nono/vim-handlebars'
-Bundle 'FredKSchott/CoVim'
-Bundle 'uguu-org/vim-matrix-screensaver'
+Bundle 'renamer.vim'
 
 " finish off vundle setup
 filetype plugin indent on

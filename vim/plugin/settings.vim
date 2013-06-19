@@ -76,6 +76,10 @@ set foldenable
 " better drawing
 set ttyfast
 
+" session saving
+set ssop-=options
+set ssop-=folds
+
 " solarized color
 set background=dark
 colorscheme solarized

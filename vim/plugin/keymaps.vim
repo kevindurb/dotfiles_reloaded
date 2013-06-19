@@ -80,3 +80,9 @@ nnoremap <silent> <leader>s :SyntasticCheck<CR>
 
 " run background make
 nnoremap <silent> <leader>m :Make!<CR>
+
+" insert filename
+inoremap <silent> <leader>fn <C-R>=expand("%:t")<CR>
+
+" save session
+nnoremap <C-s> :MkSession! session.vim<CR>
