@@ -25,7 +25,7 @@ let g:dbext_default_profile_dev = 'type=MYSQL:user=root:passwd=r00t:host=localho
 " syntastic cool symbols
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['js', 'php', 'html', 'mysql'], 'passive_filetypes': ['css', 'scss'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['css', 'scss'] }
 
 " vundle plugin!!!
 filetype off

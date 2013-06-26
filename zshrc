@@ -39,16 +39,16 @@ function prompt_char {
     echo '○'
 }
 
-TMOUT=30
-TRAPALRM () {
-	zle reset-prompt
-}
+# TMOUT=30
+# TRAPALRM () {
+# 	zle reset-prompt
+# }
 
 PROMPT='
 %{$fg[cyan]%}%n %{$reset_color%}@ %{$fg[cyan]%}%m %{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
 %{$fg[blue]%}$(prompt_char) '
 
-RPROMPT='%{$fg[white]%}%t %W'
+# RPROMPT='%{$fg[white]%}%t %W'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="on %{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"

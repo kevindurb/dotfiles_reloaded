@@ -1,0 +1,51 @@
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[user]
+	name = Kevin Durbin
+	email = kdurbin@churchcommunitybuilder.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[color "branch"]
+	current = yellow reverse
+	local = yellow 
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = green
+	changed = red
+	untracked = cyan
+[alias]
+	s = status
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	switch = checkout
+	sw = checkout
+	df = diff
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	m = merge --no-commit
+	info = config --list
+	amend = commit --amend
+	up = fetch
+	d = difftool
+[diff]
+	tool = vimdiff
+[push]
+	default = tracking
+[rerere]
+	enabled = 1
+[mergetool]
+	keepBackup = true
+[difftool]
+	prompt = false
+[pull]
+	rebase = true
