@@ -2,8 +2,8 @@
 let mapleader=","
 
 " ctags nav
-nnoremap <silent> <leader>] <C-]>
-nnoremap <silent> <leader>[ <C-t>
+nnoremap <leader>] <C-]>
+nnoremap <leader>[ <C-t>
 
 " pane navigation
 nnoremap <c-j> <c-w>j
@@ -17,18 +17,18 @@ nnoremap <leader><S-v>		:sp<CR>
 nnoremap <leader>z			<c-w>o
 
 " tagbar controls
-nnoremap <silent> <leader>= :TagbarToggle<CR>
+nnoremap <leader>= :TagbarToggle<CR>
 
 " tab navigation with F1 F2 and ctrl-t
-nnoremap <silent> <F1>		:tabprevious<CR>
-nnoremap <silent> <F2>		:tabnext<CR>
-nnoremap <silent> <C-t>		:tabnew<CR>
-inoremap <silent> <F1>		<Esc>:tabprevious<CR>i
-inoremap <silent> <F2>		<Esc>:tabnext<CR>i
-inoremap <silent> <C-t>		<Esc>:tabnew<CR>
-vnoremap <silent> <F1>		<Esc>:tabprevious<CR>v
-vnoremap <silent> <F2>		<Esc>:tabnext<CR>v
-vnoremap <silent> <C-t>		<Esc>:tabnew<CR>
+nnoremap <F1>		:tabprevious<CR>
+nnoremap <F2>		:tabnext<CR>
+nnoremap <C-t>		:tabnew<CR>
+inoremap <F1>		<Esc>:tabprevious<CR>i
+inoremap <F2>		<Esc>:tabnext<CR>i
+inoremap <C-t>		<Esc>:tabnew<CR>
+vnoremap <F1>		<Esc>:tabprevious<CR>v
+vnoremap <F2>		<Esc>:tabnext<CR>v
+vnoremap <C-t>		<Esc>:tabnew<CR>
 
 " disable arrow keys
 map <up>	<nop>
@@ -41,18 +41,18 @@ map <left>	<nop>
 map <right>	<nop>
 
 " debugger controls
-nnoremap <silent> <leader>b :Bp<CR>
-nnoremap <silent> <leader>1 :python debugger_resize()<cr>
-nnoremap <silent> <leader>2 :python debugger_command('step_into')<cr>
-nnoremap <silent> <leader>3 :python debugger_command('step_over')<cr>
-nnoremap <silent> <leader>4 :python debugger_command('step_out')<cr>
-nnoremap <silent> <leader>5 :python debugger_run()<cr>
-nnoremap <silent> <leader>6 :python debugger_quit()<cr>
-nnoremap <silent> <leader>9 :python debugger_context()<cr>
-nnoremap <silent> <leader>0 :python debugger_property()<cr>
-nnoremap <silent> <leader>9 :python debugger_watch_input("context_get")<cr>A<cr>
-nnoremap <silent> <leader>0 :python debugger_watch_input("property_get", '<cword>')<cr>A<cr>
-nnoremap <silent> <leader>e :python debugger_watch_input("eval")<cr>A
+nnoremap <leader>b :Bp<CR>
+nnoremap <leader>1 :python debugger_resize()<cr>
+nnoremap <leader>2 :python debugger_command('step_into')<cr>
+nnoremap <leader>3 :python debugger_command('step_over')<cr>
+nnoremap <leader>4 :python debugger_command('step_out')<cr>
+nnoremap <leader>5 :python debugger_run()<cr>
+nnoremap <leader>6 :python debugger_quit()<cr>
+nnoremap <leader>9 :python debugger_context()<cr>
+nnoremap <leader>0 :python debugger_property()<cr>
+nnoremap <leader>9 :python debugger_watch_input("context_get")<cr>A<cr>
+nnoremap <leader>0 :python debugger_watch_input("property_get", '<cword>')<cr>A<cr>
+nnoremap <leader>e :python debugger_watch_input("eval")<cr>A
 
 " itunes shortcuts
 nnoremap <leader>i :StatusiTunes<CR>
@@ -76,13 +76,20 @@ nnoremap Q gq
 nnoremap <C-c> :call GenerateDOCComment()<CR>
 
 " run syntax
-nnoremap <silent> <leader>s :SyntasticCheck<CR>
+nnoremap <leader>s :SyntasticCheck<CR>
 
 " run background make
-nnoremap <silent> <leader>m :Make!<CR>
+nnoremap <leader>m :Make!<CR>
 
 " insert filename
-inoremap <silent> <leader>fn <C-R>=expand("%:t")<CR>
+inoremap <leader>fn <C-R>=expand("%:t")<CR>
 
 " save session
 nnoremap <C-s> :MkSession! session.vim<CR>
+
+" remove highlight
+nnoremap <leader>n :noh<CR>
+
+" new line without insert mode
+nnoremap <S-Enter> O<Esc>j
+nnoremap <CR> o<Esc>k
