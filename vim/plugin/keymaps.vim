@@ -92,4 +92,4 @@ nnoremap <leader>n :noh<CR>
 
 " new line without insert mode
 nnoremap <S-Enter> O<Esc>j
-nnoremap <CR> o<Esc>k
+nnoremap <Enter> o<Esc>k
