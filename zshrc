@@ -58,6 +58,7 @@ alias gitd="git diff"
 alias gitpu="git smart-pull"
 alias gitl="tig"
 alias gitch="git checkout"
+alias gitdep="git push deploy master"
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"
