@@ -8,7 +8,7 @@
 	diff = auto
 	status = auto
 	branch = auto
-	ui = always
+	ui = auto
 [color "branch"]
 	current = yellow reverse
 	local = yellow 
@@ -49,3 +49,8 @@
 	prompt = false
 [pull]
 	rebase = true
+[mergetool "sublime"]
+	cmd = subl -w $MERGED
+	trustExitCode = false
+[merge]
+	tool = sublime

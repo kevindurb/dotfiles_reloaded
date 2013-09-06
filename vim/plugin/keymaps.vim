@@ -89,7 +89,3 @@ nnoremap <C-s> :MkSession! session.vim<CR>
 
 " remove highlight
 nnoremap <leader>n :noh<CR>
-
-" new line without insert mode
-nnoremap <S-Enter> O<Esc>j
-nnoremap <Enter> o<Esc>k
