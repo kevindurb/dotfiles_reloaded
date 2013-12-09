@@ -10,9 +10,6 @@ source $HOME/dotfiles_reloaded/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 # todo completion
 source $HOME/dotfiles_reloaded/todo/todo_completion
 
-# super git status
-source $HOME/dotfiles_reloaded/zsh-git-prompt/zshrc.sh
-
 # plugins
 plugins=(git osx brew zsh-syntax-highlighting)
 
@@ -23,7 +20,15 @@ ZSH_HIGHLIGHT_STYLES[path]='bold'
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # my term paths
-export PATH=$HOME/bin:/usr/local/share/npm/bin:$HOME/pear/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
+DROPBOX_BIN=$HOME/Dropbox/bin
+HOME_BIN=$HOME/bin
+NPM_BIN=/usr/local/share/npm/bin
+PEAR_BIN=$HOME/pear/bin
+RUBY_BIN=/usr/local/opt/ruby/bin
+USR_LOCAL_BIN=/usr/local/bin
+USR_BIN=/usr/bin
+ROOT_BIN=/bin
+export PATH=$DROPBOX_BIN:$HOME_BIN:$NPM_BIN:$PEAR_BIN:$RUBY_BIN:$USR_LOCAL_BIN:$USR_BIN:$ROOT_BIN:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
 export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
 
 #set my editor
@@ -53,6 +58,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 # git aliases to make stuff faster
 alias gits="tig status"
 alias gitc="git commit -a"
+alias gita="git amend"
+alias gitcp="git cherry-pick"
 alias gitp="git push origin"
 alias gitd="git diff"
 alias gitpu="git smart-pull"
@@ -62,6 +69,7 @@ alias gitdep="git push deploy master"
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"
+alias c="clear"
 alias t="~/dotfiles_reloaded/todo/todo.sh"
 alias localsql="mysql --auto-rehash -h localhost -u root -p"
 
