@@ -37,6 +37,7 @@
 	amend = commit --amend
 	up = fetch
 	d = difftool
+	diff = diff -w
 [diff]
 	tool = vimdiff
 [push]

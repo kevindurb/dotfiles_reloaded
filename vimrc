@@ -34,7 +34,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " my bundles
-Bundle 'altercation/vim-colors-solarized'
+"Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/wombat256.vim'
 Bundle 'L9'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'

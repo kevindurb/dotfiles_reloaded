@@ -83,7 +83,8 @@ set ssop-=folds
 
 " solarized color
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme wombat256mod
 
 " auto complete colors
 highlight Pmenu ctermfg=black ctermbg=grey

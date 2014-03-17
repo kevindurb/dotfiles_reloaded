@@ -19,18 +19,6 @@ ZSH_HIGHLIGHT_STYLES[path]='bold'
 # colorized ls
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-# my term paths
-DROPBOX_BIN=$HOME/Dropbox/bin
-HOME_BIN=$HOME/bin
-NPM_BIN=/usr/local/share/npm/bin
-PEAR_BIN=$HOME/pear/bin
-RUBY_BIN=/usr/local/opt/ruby/bin
-USR_LOCAL_BIN=/usr/local/bin
-USR_BIN=/usr/bin
-ROOT_BIN=/bin
-export PATH=$DROPBOX_BIN:$HOME_BIN:$NPM_BIN:$PEAR_BIN:$RUBY_BIN:$USR_LOCAL_BIN:$USR_BIN:$ROOT_BIN:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
-export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
-
 #set my editor
 export EDITOR='subl -w'
 
@@ -61,7 +49,7 @@ alias gitc="git commit -a"
 alias gita="git amend"
 alias gitcp="git cherry-pick"
 alias gitp="git push origin"
-alias gitd="git diff"
+alias gitd="git diff -w"
 alias gitpu="git smart-pull"
 alias gitl="tig"
 alias gitch="git checkout"
