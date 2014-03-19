@@ -10,5 +10,7 @@ session.php
 .jshintrc
 .sass-cache
 .jscs.json
+.jscsrc
 .tern-port
 node_modules
+katon.log

@@ -1,5 +1,5 @@
 # where my zsh dir is
-ZSH=$HOME/dotfiles/oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
 # zsh themes
 source $ZSH/oh-my-zsh.sh

@@ -46,12 +46,11 @@
 	enabled = 1
 [mergetool]
 	keepBackup = true
+	prompt = false
 [difftool]
 	prompt = false
 [pull]
 	rebase = true
-[mergetool "sublime"]
-	cmd = subl -w $MERGED
-	trustExitCode = false
 [merge]
-	tool = sublime
+	tool = vimdiff
+	conflictstyle = diff3
