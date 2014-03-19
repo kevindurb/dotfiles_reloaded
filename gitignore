@@ -1,0 +1,14 @@
+.*.sw[o-z]
+.DS_Store
+*tags*
+*~
+.vimprojects
+.VimballRecord
+.netrwhist
+*env.rb*
+session.php
+.jshintrc
+.sass-cache
+.jscs.json
+.tern-port
+node_modules
