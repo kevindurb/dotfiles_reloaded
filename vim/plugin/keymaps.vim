@@ -89,3 +89,6 @@ nnoremap <C-s> :MkSession! session.vim<CR>
 
 " remove highlight
 nnoremap <leader>n :noh<CR>
+
+" dash keyword
+nmap <silent> <leader>d <Plug>DashSearch

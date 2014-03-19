@@ -27,6 +27,9 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['css', 'scss'] }
 
+" autoclose disable expand spaces
+let g:AutoCloseExpandSpace = 0
+
 " vundle plugin!!!
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -34,14 +37,14 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " my bundles
-"Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-scripts/wombat256.vim'
+Bundle 'dsolstad/vim-wombat256i'
 Bundle 'L9'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-markdown'
 Bundle 'Townk/vim-autoclose'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
@@ -58,6 +61,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'rking/ag.vim'
 Bundle 'nono/vim-handlebars'
 Bundle 'renamer.vim'
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+Bundle 'terryma/vim-multiple-cursors'
 
 " finish off vundle setup
 filetype plugin indent on

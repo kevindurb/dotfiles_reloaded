@@ -21,7 +21,7 @@
 let g:syntastic_stl_format = '%F L : %e E : %w W'
 
 " set colors for the status line
-hi User1 ctermbg=234 ctermfg=254
+hi User1 ctermbg=235 ctermfg=254
 hi User2 ctermbg=64  ctermfg=254
 hi User3 ctermbg=166 ctermfg=254
 hi User4 ctermbg=37  ctermfg=254
