@@ -1,14 +1,11 @@
 # where my zsh dir is
-ZSH=$HOME/dotfiles_reloaded/oh-my-zsh
+ZSH=$HOME/dotfiles/oh-my-zsh
 
 # zsh themes
 source $ZSH/oh-my-zsh.sh
 
 # syntax highlighting
-source $HOME/dotfiles_reloaded/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# todo completion
-source $HOME/dotfiles_reloaded/todo/todo_completion
+source $HOME/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # plugins
 plugins=(git osx brew zsh-syntax-highlighting)
@@ -58,7 +55,6 @@ alias gitdep="git push deploy master"
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias c="clear"
-alias t="~/dotfiles_reloaded/todo/todo.sh"
 alias localsql="mysql --auto-rehash -h localhost -u root -p"
 
 # fix tmux colors
