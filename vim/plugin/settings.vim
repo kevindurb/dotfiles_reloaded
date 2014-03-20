@@ -20,6 +20,9 @@ cabbrev Q q
 " add line numbers
 set number
 
+" show the status line
+set laststatus=2
+
 " tab stuff
 set tabstop=2
 set shiftwidth=2

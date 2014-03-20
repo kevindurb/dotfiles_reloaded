@@ -16,29 +16,35 @@ ZSH_HIGHLIGHT_STYLES[path]='bold'
 # colorized ls
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-#set my editor
-export EDITOR='subl -w'
+# set my editor
+export EDITOR='vim'
 
-#make it easier to get to my rc files
+# make it easier to get to my rc files
 export MYVIMRC=$HOME/.vimrc
 export MYZSHRC=$HOME/.zshrc
 export MYVIMKEYMAPS=$HOME/.vim/plugin/keymaps.vim
 export MYVIMSETTINGS=$HOME/.vim/plugin/settings.vim
+
+# powerline!
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 function prompt_char {
     git branch >/dev/null 2>/dev/null && echo '±' && return
     echo '○'
 }
 
-PROMPT='
-%{$fg[cyan]%}%n %{$reset_color%}@ %{$fg[cyan]%}%m %{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
-%{$fg[blue]%}$(prompt_char) '
+#PROMPT='
+#%{$fg[cyan]%}%n %{$reset_color%}@ %{$fg[cyan]%}%m %{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
+#%{$fg[blue]%}$(prompt_char) '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="on %{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[orange]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+#zsh vi mode
+bindkey -v
 
 # git aliases to make stuff faster
 alias gits="tig status"

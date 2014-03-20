@@ -30,6 +30,12 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_
 " autoclose disable expand spaces
 let g:AutoCloseExpandSpace = 0
 
+" powerline!
+python import sys; sys.path.append("/usr/local/lib/python2.7/site-packages/")
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 " vundle plugin!!!
 filetype off
 set rtp+=~/.vim/bundle/vundle/
