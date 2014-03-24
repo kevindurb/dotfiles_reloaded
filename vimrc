@@ -37,9 +37,12 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['css', 'scss'] }
 
+" syntastic jshint location
+
+
 " autoclose
 let g:AutoCloseExpandSpace = 0
-let g:AutoClosePairs = "() {} \" '"
+let g:AutoClosePairs = "() {} [] ` \" ' <>"
 
 " powerline!
 python import sys; sys.path.append("/usr/local/lib/python2.7/site-packages/")
@@ -70,7 +73,6 @@ Bundle 'Align'
 Bundle 'SQLUtilities'
 Bundle 'matchit.zip'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'rking/ag.vim'
