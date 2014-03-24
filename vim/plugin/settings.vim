@@ -22,6 +22,7 @@ set number
 
 " show the status line
 set laststatus=2
+set noshowmode
 
 " tab stuff
 set tabstop=2
@@ -91,7 +92,7 @@ syntax enable
 set foldenable
 
 " better drawing
-set ttyfast
+"set ttyfast
 
 " session saving
 set ssop-=options

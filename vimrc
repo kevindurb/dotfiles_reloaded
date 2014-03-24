@@ -8,6 +8,16 @@ else
     let $VIMHOME = $HOME."/.vim"
 endif
 
+" remove delay when leaving insert mode
+if ! has('gui_running')
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
+
 " SQL Format
 let g:sqlutil_keyword_case = '\U'
 let g:sqlutil_align_comma = 1
@@ -27,8 +37,9 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['css', 'scss'] }
 
-" autoclose disable expand spaces
+" autoclose
 let g:AutoCloseExpandSpace = 0
+let g:AutoClosePairs = "() {} \" '"
 
 " powerline!
 python import sys; sys.path.append("/usr/local/lib/python2.7/site-packages/")
@@ -55,12 +66,10 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
-Bundle 'jaredcobb/DBGp-Remote-Debugger-Interface'
 Bundle 'Align'
 Bundle 'SQLUtilities'
 Bundle 'matchit.zip'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'dbext.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'airblade/vim-gitgutter'
