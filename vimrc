@@ -22,13 +22,6 @@ endif
 let g:sqlutil_keyword_case = '\U'
 let g:sqlutil_align_comma = 1
 
-" debugging
-let g:debuggerMaxChildren = 128
-let g:debuggerMaxData = 9999
-let g:debuggerMaxDepth = 100
-let g:debuggerDisableDefaultMappings = 1
-let g:debuggerDisableHelpPane = 1
-
 " dbext settings
 let g:dbext_default_profile_dev = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_dev'
 
@@ -81,6 +74,7 @@ Bundle 'renamer.vim'
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'joonty/vdebug'
 
 " finish off vundle setup
 filetype plugin indent on
