@@ -57,9 +57,6 @@ set backspace=indent,eol,start
 set wildmode=longest:list,full
 set wildmenu
 
-" spellcheck
-set spell spelllang=en_us
-
 " copy and paste in system clipboard
 set clipboard=unnamed
 
@@ -91,22 +88,16 @@ syntax enable
 " folding
 set foldenable
 
-" better drawing
-"set ttyfast
-
 " session saving
 set ssop-=options
 set ssop-=folds
 
 " colorscheme stuff
-colorscheme wombat256i
+colorscheme Tomorrow-Night-Bright
 
 " auto complete colors
-highlight Pmenu ctermfg=black ctermbg=grey
-highlight PmenuSel ctermfg=grey ctermbg=black
-
-" cursor vertical and horizontal lines
-hi CursorLine cterm=NONE ctermbg=black
+"highlight Pmenu ctermfg=black ctermbg=grey
+"highlight PmenuSel ctermfg=grey ctermbg=black
 
 " generate doc comments
 function! GenerateDOCComment()

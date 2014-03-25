@@ -50,7 +50,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " my bundles
-Bundle 'dsolstad/vim-wombat256i'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'L9'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
@@ -76,6 +76,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'joonty/vdebug'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'fholgado/minibufexpl.vim'
 
 " finish off vundle setup
 filetype plugin indent on

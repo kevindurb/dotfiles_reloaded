@@ -4,6 +4,9 @@ let mapleader=","
 " ctags nav
 "nnoremap <C-[> <C-t>
 
+" MBE
+map <Leader>= :MBEToggle<cr>
+
 " easy motion
 map <Leader> <Plug>(easymotion-prefix)
 
