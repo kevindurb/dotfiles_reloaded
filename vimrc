@@ -75,7 +75,7 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'joonty/vdebug'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'vim-scripts/icalendar.vim'
+Bundle 'Lokaltog/vim-easymotion'
 
 " finish off vundle setup
 filetype plugin indent on

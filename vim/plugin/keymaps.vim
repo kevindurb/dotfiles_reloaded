@@ -4,6 +4,9 @@ let mapleader=","
 " ctags nav
 "nnoremap <C-[> <C-t>
 
+" easy motion
+map <Leader> <Plug>(easymotion-prefix)
+
 " pane navigation
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
