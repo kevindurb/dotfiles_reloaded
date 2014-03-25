@@ -56,7 +56,6 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-markdown'
 Bundle 'Townk/vim-autoclose'
 Bundle 'scrooloose/syntastic'
@@ -75,6 +74,8 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'joonty/vdebug'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-scripts/icalendar.vim'
 
 " finish off vundle setup
 filetype plugin indent on

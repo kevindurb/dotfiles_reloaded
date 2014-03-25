@@ -2,7 +2,7 @@
 let mapleader=","
 
 " ctags nav
-nnoremap <C-]> <C-t>
+"nnoremap <C-[> <C-t>
 
 " pane navigation
 nnoremap <c-j> <c-w>j
@@ -11,22 +11,23 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " pane control
-nnoremap <leader>v			:vsp<CR>
-nnoremap <leader><S-v>		:sp<CR>
-nnoremap <leader>z			<c-w>o
-
-" tagbar controls
-nnoremap <leader>= :TagbarToggle<CR>
+nnoremap <leader>v		 :vsp<CR>
+nnoremap <leader><S-v> :sp<CR>
+nnoremap <leader>z		 <c-w>o
 
 " disable arrow keys
-map <up>	<nop>
-map <down>	<nop>
-map <left>	<nop>
-map <right>	<nop>
-map <up>	<nop>
-map <down>	<nop>
-map <left>	<nop>
-map <right>	<nop>
+inoremap <up>	    <nop>
+inoremap <down>	  <nop>
+inoremap <left>	  <nop>
+inoremap <right>	<nop>
+nnoremap <up>	    <nop>
+nnoremap <down>	  <nop>
+nnoremap <left>	  <nop>
+nnoremap <right>	<nop>
+map      <up>	    <nop>
+map      <down>	  <nop>
+map      <left>	  <nop>
+map      <right>	<nop>
 
 " folding fun
 	" shortcut to fold an HTML tag
@@ -45,9 +46,6 @@ nnoremap <C-c> :call GenerateDOCComment()<CR>
 
 " run syntax
 nnoremap <leader>s :SyntasticCheck<CR>
-
-" run background make
-nnoremap <leader>m :Make!<CR>
 
 " insert filename
 inoremap <leader>fn <C-R>=expand("%:t")<CR>

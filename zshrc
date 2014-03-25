@@ -57,6 +57,7 @@ alias gitpu="git smart-pull"
 alias gitl="tig"
 alias gitch="git checkout"
 alias gitdep="git push deploy master"
+alias ungit="git undo -h"
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"
