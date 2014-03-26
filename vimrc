@@ -77,6 +77,7 @@ Bundle 'joonty/vdebug'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'vim-scripts/Gundo'
 
 " finish off vundle setup
 filetype plugin indent on
