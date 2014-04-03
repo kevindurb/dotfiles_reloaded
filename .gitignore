@@ -6,3 +6,4 @@ vim/backup
 
 # dont ignore these
 !vim/bundle/vundle
+!vim/backup/.gitkeep

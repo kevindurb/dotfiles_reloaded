@@ -8,4 +8,4 @@ USR_LOCAL_BIN=/usr/local/bin
 USR_BIN=/usr/bin
 ROOT_BIN=/bin
 export PATH=$DROPBOX_BIN:$HOME_BIN:$NPM_BIN:$PEAR_BIN:$RUBY_BIN:$USR_LOCAL_BIN:$USR_BIN:$ROOT_BIN:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
-export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'

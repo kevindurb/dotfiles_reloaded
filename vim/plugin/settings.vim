@@ -6,6 +6,9 @@ au BufRead,BufNewFile *.html set syntax=underscore_template
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
+" close vim when only nerdtree is left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 " Silver Searcher shortcut
 cabbrev ag Ag
 
@@ -95,9 +98,9 @@ set ssop-=folds
 " colorscheme stuff
 colorscheme Tomorrow-Night-Bright
 
-" auto complete colors
-"highlight Pmenu ctermfg=black ctermbg=grey
-"highlight PmenuSel ctermfg=grey ctermbg=black
+" make vim draw faster
+set lazyredraw
+set ttyfast
 
 " generate doc comments
 function! GenerateDOCComment()

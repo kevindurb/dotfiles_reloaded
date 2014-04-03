@@ -43,9 +43,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[orange]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-#zsh vi mode
-bindkey -v
-
 # git aliases to make stuff faster
 alias gits="tig status"
 alias gitc="git commit -a"
@@ -58,14 +55,13 @@ alias gitl="tig"
 alias gitch="git checkout"
 alias gitdep="git push deploy master"
 alias ungit="git undo -h"
+alias ccb="cd ~/projects/ccb"
+alias resources="cd ~/projects/resources"
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias c="clear"
 alias localsql="mysql --auto-rehash -h localhost -u root -p"
-
-# fix tmux colors
-alias tmux="TERM=screen-256color-bce tmux"
 
 # todo settings
 export TODOTXT_DEFAULT_ACTION=ls

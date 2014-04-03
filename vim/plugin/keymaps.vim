@@ -1,14 +1,25 @@
 " map leader to comma for speed!!!
-let mapleader=","
+let mapleader="\<space>"
 
-" ctags nav
-"nnoremap <C-[> <C-t>
+" mouse for scroll
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
 
-" MBE
-map <Leader>= :MBEToggle<cr>
+" faster goto line
+nnoremap <CR> G
 
-" easy motion
-map <Leader> <Plug>(easymotion-prefix)
+" nerd tree
+map <leader>= :NERDTreeToggle<CR>
+
+" tagbar
+map <leader>t :TagbarToggle<CR>
+
+" faster write file
+nnoremap <leader>w :w<CR>
+
+" faster open file
+nnoremap <leader>o :CtrlP<CR>
 
 " pane navigation
 nnoremap <c-j> <c-w>j
@@ -50,14 +61,11 @@ nnoremap Q gq
 " doc comments
 nnoremap <C-c> :call GenerateDOCComment()<CR>
 
-" run syntax
-nnoremap <leader>s :SyntasticCheck<CR>
-
 " insert filename
 inoremap <leader>fn <C-R>=expand("%:t")<CR>
 
 " save session
-nnoremap <C-s> :MkSession! session.vim<CR>
+nnoremap <leader>s :mksession! session.vim<CR>
 
 " remove highlight
 nnoremap <leader>n :noh<CR>
