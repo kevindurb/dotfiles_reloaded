@@ -22,10 +22,10 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>o :CtrlP<CR>
 
 " pane navigation
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+"nnoremap <c-j> <c-w>j
+"nnoremap <c-k> <c-w>k
+"nnoremap <c-h> <c-w>h
+"nnoremap <c-l> <c-w>l
 
 " pane control
 nnoremap <leader>v		 :vsp<CR>
@@ -41,10 +41,10 @@ nnoremap <up>	    <nop>
 nnoremap <down>	  <nop>
 nnoremap <left>	  <nop>
 nnoremap <right>	<nop>
-map      <up>	    <nop>
-map      <down>	  <nop>
-map      <left>	  <nop>
-map      <right>	<nop>
+vnoremap <up>	    <nop>
+vnoremap <down>	  <nop>
+vnoremap <left>	  <nop>
+vnoremap <right>	<nop>
 
 " folding fun
 	" shortcut to fold an HTML tag

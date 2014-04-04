@@ -83,6 +83,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'itchyny/calendar.vim'
 Plugin 'vim-scripts/gitignore'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " finish off vundle setup
 filetype plugin indent on
