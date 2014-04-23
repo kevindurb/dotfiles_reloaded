@@ -1,13 +1,10 @@
 " map leader to comma for speed!!!
-let mapleader="\<space>"
+let mapleader=","
 
 " mouse for scroll
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
-
-" faster goto line
-nnoremap <CR> G
 
 " nerd tree
 map <leader>= :NERDTreeToggle<CR>
@@ -16,16 +13,16 @@ map <leader>= :NERDTreeToggle<CR>
 map <leader>t :TagbarToggle<CR>
 
 " faster write file
-nnoremap <leader>w :w<CR>
+nnoremap <leader>w :wa<CR>
 
 " faster open file
 nnoremap <leader>o :CtrlP<CR>
 
 " pane navigation
-"nnoremap <c-j> <c-w>j
-"nnoremap <c-k> <c-w>k
-"nnoremap <c-h> <c-w>h
-"nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 " pane control
 nnoremap <leader>v		 :vsp<CR>
@@ -59,7 +56,7 @@ nnoremap <C-g> :Ag<space>
 nnoremap Q gq
 
 " doc comments
-nnoremap <C-c> :call GenerateDOCComment()<CR>
+"nnoremap <C-c> :call GenerateDOCComment()<CR>
 
 " insert filename
 inoremap <leader>fn <C-R>=expand("%:t")<CR>
@@ -71,4 +68,5 @@ nnoremap <leader>s :mksession! session.vim<CR>
 nnoremap <leader>n :noh<CR>
 
 " dash keyword
-nmap <silent> <leader>d <Plug>DashSearch
+"nmap <silent> <leader>d <Plug>DashSearch
+map <leader>d :Dash<cr>

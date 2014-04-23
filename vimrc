@@ -36,13 +36,14 @@ let g:calendar_google_task = 1
 
 " autoclose
 let g:AutoCloseExpandSpace = 0
-let g:AutoClosePairs = "() {} [] ` \" ' <>"
 
-" powerline!
-python import sys; sys.path.append("/usr/local/lib/python2.7/site-packages/")
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" airline look pretty
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_detect_whitespace=0
+
+" dont echo the bufferline
+let g:bufferline_echo = 0
 
 " vundle plugin!!!
 filetype off
@@ -63,7 +64,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Align'
-Plugin 'SQLUtilities'
 Plugin 'matchit.zip'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'cakebaker/scss-syntax.vim'
@@ -71,19 +71,17 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'rking/ag.vim'
 Plugin 'nono/vim-handlebars'
 Plugin 'renamer.vim'
-Plugin 'rizzatti/funcoo.vim'
-Plugin 'rizzatti/dash.vim'
+"Plugin 'rizzatti/funcoo.vim'
+"Plugin 'rizzatti/dash.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'joonty/vdebug'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-scripts/Gundo'
-Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'StanAngeloff/php.vim'
-Plugin 'itchyny/calendar.vim'
 Plugin 'vim-scripts/gitignore'
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'pangloss/vim-javascript'
+Plugin 'bling/vim-airline'
 
 " finish off vundle setup
 filetype plugin indent on

@@ -26,6 +26,10 @@ set number
 set laststatus=2
 set noshowmode
 
+" more natural split directions
+set splitbelow
+set splitright
+
 " tab stuff
 set tabstop=2
 set shiftwidth=2
@@ -102,24 +106,38 @@ colorscheme Tomorrow-Night-Bright
 set lazyredraw
 set ttyfast
 
+" search dash
+"au FileType javascript command Dash call SearchDash('js:')
+"au FileType css command Dash call SearchDash('css:')
+"au FileType sass command Dash call SearchDash('sass:')
+"au FileType vim command Dash call SearchDash('vim:')
+"au FileType perl command Dash call SearchDash('perl:')
+"au FileType php command Dash call SearchDash('php:')
+"au FileType ruby command Dash call SearchDash('ruby:')
+"function SearchDash(lib)
+"  let s:url = \"dash://".a:lib.expand("<cword>")
+"  execute \"silent ! /usr/bin/open ". s:url
+"  redraw!
+"endfunction
+
 " generate doc comments
-function! GenerateDOCComment()
-	let l    = line('.')
-	let i    = indent(l)
-	let pre  = repeat(' ',i)
-	let text = getline(l)
-	let params   = matchstr(text,'([^)]*)')
-	let paramPat = '\([$a-zA-Z_0-9]\+\)[, ]*\(.*\)'
-	echomsg params
-	let vars = []
-	let m    = ' '
-	let ml = matchlist(params,paramPat)
-	while ml!=[]
-		let [_,var;rest]= ml
-		let vars += [pre.' * @param '.var]
-		let ml = matchlist(rest,paramPat,0)
-	endwhile
-	let comment = [pre.'/**',pre.' * '] + vars + [pre.' */']
-	call append(l-1,comment)
-	call cursor(l+1,i+3)
-endfunction
+"function! GenerateDOCComment()
+"	let l    = line('.')
+"	let i    = indent(l)
+"	let pre  = repeat(' ',i)
+"	let text = getline(l)
+"	let params   = matchstr(text,'([^)]*)')
+"	let paramPat = '\([$a-zA-Z_0-9]\+\)[, ]*\(.*\)'
+"	echomsg params
+"	let vars = []
+"	let m    = ' '
+"	let ml = matchlist(params,paramPat)
+"	while ml!=[]
+"		let [_,var;rest]= ml
+"		let vars += [pre.' * @param '.var]
+"		let ml = matchlist(rest,paramPat,0)
+"	endwhile
+"	let comment = [pre.'/**',pre.' * '] + vars + [pre.' */']
+"	call append(l-1,comment)
+"	call cursor(l+1,i+3)
+"endfunction
