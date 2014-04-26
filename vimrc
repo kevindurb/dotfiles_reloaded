@@ -82,6 +82,7 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'vim-scripts/gitignore'
 Plugin 'pangloss/vim-javascript'
 Plugin 'bling/vim-airline'
+Plugin 'digitaltoad/vim-jade'
 
 " finish off vundle setup
 filetype plugin indent on
