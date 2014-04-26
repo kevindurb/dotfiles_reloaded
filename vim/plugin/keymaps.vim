@@ -12,6 +12,12 @@ map <leader>= :NERDTreeToggle<CR>
 " tagbar
 map <leader>t :TagbarToggle<CR>
 
+" choose buffer faster
+map <leader>b :b
+map <leader>bn :bnext<CR>
+map <leader>bp :bprev<CR>
+map <leader>bd :bdel<CR>
+
 " faster write file
 nnoremap <leader>w :wa<CR>
 
