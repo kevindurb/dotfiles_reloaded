@@ -51,14 +51,26 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Plugin 'gmarik/vundle'
 
-" my bundles
+" look and feel
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Plugin 'L9'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'majutsushi/tagbar'
+Plugin 'bling/vim-airline'
+Plugin 'plasticboy/vim-markdown'
+
+" syntax
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'nono/vim-handlebars'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'StanAngeloff/php.vim'
+
+" other
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-markdown'
 Plugin 'Townk/vim-autoclose'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
@@ -66,23 +78,11 @@ Plugin 'ervandew/supertab'
 Plugin 'Align'
 Plugin 'matchit.zip'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'rking/ag.vim'
-Plugin 'nono/vim-handlebars'
-Plugin 'renamer.vim'
-"Plugin 'rizzatti/funcoo.vim'
-"Plugin 'rizzatti/dash.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'joonty/vdebug'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'vim-scripts/Gundo'
-Plugin 'majutsushi/tagbar'
-Plugin 'StanAngeloff/php.vim'
 Plugin 'vim-scripts/gitignore'
-Plugin 'pangloss/vim-javascript'
-Plugin 'bling/vim-airline'
-Plugin 'digitaltoad/vim-jade'
 
 " finish off vundle setup
 filetype plugin indent on
