@@ -1,11 +1,6 @@
 " map leader to comma for speed!!!
 let mapleader=","
 
-" mouse for scroll
-set mouse=a
-map <ScrollWheelUp> <C-Y>
-map <ScrollWheelDown> <C-E>
-
 " nerd tree
 map <leader>= :NERDTreeToggle<CR>
 
@@ -17,12 +12,6 @@ map <leader>b :b
 map <leader>bn :bnext<CR>
 map <leader>bp :bprev<CR>
 map <leader>bd :bdel<CR>
-
-" faster write file
-nnoremap <leader>w :wa<CR>
-
-" faster open file
-nnoremap <leader>o :CtrlP<CR>
 
 " pane navigation
 nnoremap <c-j> <c-w>j

@@ -54,9 +54,9 @@ Plugin 'gmarik/vundle'
 " look and feel
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'airblade/vim-gitgutter'
+Plugin 'ap/vim-css-color'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
-Plugin 'plasticboy/vim-markdown'
 
 " syntax
 Plugin 'cakebaker/scss-syntax.vim'
@@ -65,13 +65,13 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'plasticboy/vim-markdown'
 
 " other
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'Townk/vim-autoclose'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
@@ -83,6 +83,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'joonty/vdebug'
 Plugin 'vim-scripts/Gundo'
 Plugin 'vim-scripts/gitignore'
+Plugin 'Raimondi/delimitMate'
 
 " finish off vundle setup
 filetype plugin indent on
