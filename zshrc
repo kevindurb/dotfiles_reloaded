@@ -33,8 +33,11 @@ function prompt_char {
     echo '○'
 }
 
+#PROMPT='
+#%{$fg[cyan]%}%n %{$reset_color%}@ %{$fg[cyan]%}%m %{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
+#%{$fg[blue]%}$(prompt_char) '
 PROMPT='
-%{$fg[cyan]%}%n %{$reset_color%}@ %{$fg[cyan]%}%m %{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
+%{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
 %{$fg[blue]%}$(prompt_char) '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="on %{$fg[green]%}"
