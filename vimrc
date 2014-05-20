@@ -72,6 +72,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-dispatch'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
@@ -80,10 +81,11 @@ Plugin 'matchit.zip'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'rking/ag.vim'
 Plugin 'terryma/vim-multiple-cursors'
-"Plugin 'joonty/vdebug'
+Plugin 'joonty/vdebug'
 Plugin 'vim-scripts/Gundo'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Raimondi/delimitMate'
+"Plugin 'marijnh/tern_for_vim'
 
 " finish off vundle setup
 filetype plugin indent on

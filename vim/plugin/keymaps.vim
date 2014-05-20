@@ -1,6 +1,9 @@
 " map leader to comma for speed!!!
 let mapleader=","
 
+" map jj to escape for mor speed!!
+inoremap jj <Esc>
+
 " nerd tree
 map <leader>= :NERDTreeToggle<CR>
 
