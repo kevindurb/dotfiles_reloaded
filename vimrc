@@ -85,7 +85,7 @@ Plugin 'joonty/vdebug'
 Plugin 'vim-scripts/Gundo'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Raimondi/delimitMate'
-"Plugin 'marijnh/tern_for_vim'
+Plugin 'digitaltoad/vim-jade'
 
 " finish off vundle setup
 filetype plugin indent on
