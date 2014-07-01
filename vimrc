@@ -86,6 +86,7 @@ Plugin 'vim-scripts/Gundo'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Raimondi/delimitMate'
 Plugin 'moll/vim-node'
+Plugin 'marijnh/tern_for_vim'
 
 " finish off vundle setup
 filetype plugin indent on

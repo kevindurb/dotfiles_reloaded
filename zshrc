@@ -68,3 +68,5 @@ alias localsql="mysql --auto-rehash -h localhost -u root -p"
 
 # todo settings
 export TODOTXT_DEFAULT_ACTION=ls
+
+[ -s "/Users/kdurbin/.nvm/nvm.sh" ] && . "/Users/kdurbin/.nvm/nvm.sh" # This loads nvm
