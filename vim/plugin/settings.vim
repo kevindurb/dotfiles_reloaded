@@ -101,6 +101,7 @@ set ssop-=folds
 
 " colorscheme stuff
 colorscheme Tomorrow-Night-Bright
+hi Normal ctermbg=none
 
 " make vim draw faster
 set lazyredraw

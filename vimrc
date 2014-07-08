@@ -45,6 +45,9 @@ let g:airline_detect_whitespace=0
 " dont echo the bufferline
 let g:bufferline_echo = 0
 
+" dont match carrots
+let delimitMate_matchpairs = "(:),[:],{:}"
+
 " vundle plugin!!!
 filetype off
 set rtp+=~/.vim/bundle/vundle/
@@ -66,6 +69,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'chutzpah/icalendar.vim'
 
 " other
 Plugin 'tpope/vim-commentary'
