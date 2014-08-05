@@ -101,7 +101,8 @@ set ssop-=folds
 
 " colorscheme stuff
 colorscheme Tomorrow-Night-Bright
-hi Normal ctermbg=none
+set guifont=Source\ Code\ Pro\ for\ Powerline:h16
+set guioptions-=r
 
 " make vim draw faster
 set lazyredraw

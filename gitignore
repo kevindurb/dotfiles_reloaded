@@ -14,3 +14,4 @@ session.php
 .tern-port
 node_modules
 katon.log
+vdebug_log

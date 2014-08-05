@@ -18,6 +18,24 @@ if ! has('gui_running')
   augroup END
 endif
 
+" vdebug
+let g:vdebug_options = {
+\'debug_file_level': 2,
+\'watch_window_style': 'expanded',
+\'marker_default': '*',
+\'continuous_mode': 0,
+\'ide_key': 'vagrant',
+\'break_on_open': 1,
+\'on_close': 'detach',
+\'path_maps': {'/var/www/app': '/Users/kdurbin/dev/ccb'},
+\'marker_closed_tree': '+',
+\'timeout': 20,
+\'port': 9000,
+\'marker_open_tree': '-',
+\'debug_window_level': 1,
+\'server': '0.0.0.0'
+\}
+
 " SQL Format
 let g:sqlutil_keyword_case = '\U'
 let g:sqlutil_align_comma = 1
@@ -29,6 +47,9 @@ let g:dbext_default_profile_dev = 'type=MYSQL:user=root:passwd=r00t:host=localho
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['css', 'scss'] }
+
+" syntastic html settings
+let g:syntastic_html_validator_parser = 'html'
 
 " calendar settings
 let g:calendar_google_calendar = 1
@@ -63,13 +84,15 @@ Plugin 'bling/vim-airline'
 
 " syntax
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'nono/vim-handlebars'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'chutzpah/icalendar.vim'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'othree/html5.vim'
 
 " other
 Plugin 'tpope/vim-commentary'
@@ -78,6 +101,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-speeddating'
+Plugin 'tpope/vim-obsession'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
@@ -91,7 +115,7 @@ Plugin 'vim-scripts/Gundo'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Raimondi/delimitMate'
 Plugin 'moll/vim-node'
-Plugin 'marijnh/tern_for_vim'
+Plugin 'scrooloose/nerdtree'
 
 " finish off vundle setup
 filetype plugin indent on

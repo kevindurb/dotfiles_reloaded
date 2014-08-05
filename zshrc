@@ -25,6 +25,9 @@ export MYZSHRC=$HOME/.zshrc
 export MYVIMKEYMAPS=$HOME/.vim/plugin/keymaps.vim
 export MYVIMSETTINGS=$HOME/.vim/plugin/settings.vim
 
+# vi mode
+bindkey -v
+
 # powerline!
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
