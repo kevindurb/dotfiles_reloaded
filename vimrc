@@ -87,6 +87,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'plasticboy/vim-markdown'
@@ -116,6 +117,8 @@ Plugin 'vim-scripts/gitignore'
 Plugin 'Raimondi/delimitMate'
 Plugin 'moll/vim-node'
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/renamer.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " finish off vundle setup
 filetype plugin indent on

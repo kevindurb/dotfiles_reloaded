@@ -1,13 +1,17 @@
 " special file types
-au BufRead,BufNewFile *.scss set filetype=scss
-au BufRead,BufNewFile *.html set syntax=underscore_template
+au BufRead,BufNewFile *.scss set ft=scss
+au BufRead,BufNewFile *.ejs set ft=html
 
 " change the cursor in different modes
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
+" tabs and eols
+set list
+set listchars=tab:▸\ ,eol:¬
+
 " close vim when only nerdtree is left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Silver Searcher shortcut
 cabbrev ag Ag
@@ -41,13 +45,13 @@ set smarttab
 set shiftround
 
 " per language stuff
-autocmd Filetype php        setlocal ts=4 sts=4 sw=4 expandtab
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype scss       setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype ruby       setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype coffee     setlocal foldmethod=indent nofoldenable
+au Filetype php        setlocal ts=4 sts=4 sw=4
+au Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+au Filetype scss       setlocal ts=2 sts=2 sw=2 expandtab
+au Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
+au Filetype ruby       setlocal ts=2 sts=2 sw=2 expandtab
+au Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
+au Filetype coffee     setlocal foldmethod=indent nofoldenable
 
 " various stuff
 set autowrite
@@ -101,6 +105,7 @@ set ssop-=folds
 
 " colorscheme stuff
 colorscheme Tomorrow-Night-Bright
+set background=dark
 set guifont=Source\ Code\ Pro\ for\ Powerline:h16
 set guioptions-=r
 

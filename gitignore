@@ -12,6 +12,6 @@ session.php
 .jscs.json
 .jscsrc
 .tern-port
-node_modules
 katon.log
 vdebug_log
+*.log

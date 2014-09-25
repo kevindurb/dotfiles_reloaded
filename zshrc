@@ -26,7 +26,7 @@ export MYVIMKEYMAPS=$HOME/.vim/plugin/keymaps.vim
 export MYVIMSETTINGS=$HOME/.vim/plugin/settings.vim
 
 # vi mode
-bindkey -v
+#bindkey -v
 
 # powerline!
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
@@ -71,5 +71,8 @@ alias localsql="mysql --auto-rehash -h localhost -u root -p"
 
 # todo settings
 export TODOTXT_DEFAULT_ACTION=ls
+
+# docker link
+export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 
 [ -s "/Users/kdurbin/.nvm/nvm.sh" ] && . "/Users/kdurbin/.nvm/nvm.sh" # This loads nvm
