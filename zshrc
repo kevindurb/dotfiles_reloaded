@@ -25,25 +25,11 @@ export MYZSHRC=$HOME/.zshrc
 export MYVIMKEYMAPS=$HOME/.vim/plugin/keymaps.vim
 export MYVIMSETTINGS=$HOME/.vim/plugin/settings.vim
 
-# vi mode
-#bindkey -v
-
-# powerline!
-#. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-
-function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo '±' && return
-    echo '○'
-}
-
-#PROMPT='
-#%{$fg[cyan]%}%n %{$reset_color%}@ %{$fg[cyan]%}%m %{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
-#%{$fg[blue]%}$(prompt_char) '
 PROMPT='
 %{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
-%{$fg[blue]%}$(prompt_char) '
+%{$fg[blue]%}> '
 
-ZSH_THEME_GIT_PROMPT_PREFIX="on %{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[orange]%}?"
@@ -61,8 +47,6 @@ alias gitl="tig"
 alias gitch="git checkout"
 alias gitdep="git push deploy master"
 alias ungit="git undo -h"
-alias ccb="cd ~/projects/ccb"
-alias resources="cd ~/projects/resources"
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"
