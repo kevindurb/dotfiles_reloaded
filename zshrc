@@ -61,6 +61,11 @@ go () { cd ~/projects/$1; }
 _go () { _files -W ~/projects -/; }
 compdef _go go
 
+# jump to a project from anywhere
+ccb () { cd ~/dev/ccb/$1; }
+_ccb () { _files -W ~/dev/ccb -/; }
+compdef _ccb ccb
+
 # todo settings
 export TODOTXT_DEFAULT_ACTION=ls
 
