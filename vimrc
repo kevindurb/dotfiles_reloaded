@@ -50,6 +50,7 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_
 
 " syntastic html settings
 let g:syntastic_html_validator_parser = 'html'
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 " calendar settings
 let g:calendar_google_calendar = 1
@@ -59,9 +60,11 @@ let g:calendar_google_task = 1
 let g:AutoCloseExpandSpace = 0
 
 " airline look pretty
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_detect_whitespace=0
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 
 " dont echo the bufferline
 let g:bufferline_echo = 0

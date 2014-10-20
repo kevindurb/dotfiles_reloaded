@@ -53,6 +53,14 @@ alias lss="ls -lAF"
 alias c="clear"
 alias localsql="mysql --auto-rehash -h localhost -u root -p"
 
+#macvim
+alias vim="mvim"
+
+# jump to a project from anywhere
+go () { cd ~/projects/$1; }
+_go () { _files -W ~/projects -/; }
+compdef _go go
+
 # todo settings
 export TODOTXT_DEFAULT_ACTION=ls
 
