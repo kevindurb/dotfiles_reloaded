@@ -54,7 +54,7 @@ alias c="clear"
 alias localsql="mysql --auto-rehash -h localhost -u root -p"
 
 #macvim
-alias vim="mvim"
+#alias vim="mvim"
 
 # jump to a project from anywhere
 go () { cd ~/projects/$1; }
@@ -62,8 +62,8 @@ _go () { _files -W ~/projects -/; }
 compdef _go go
 
 # jump to a project from anywhere
-ccb () { cd ~/dev/ccb/$1; }
-_ccb () { _files -W ~/dev/ccb -/; }
+ccb () { cd ~/dev/$1; }
+_ccb () { _files -W ~/dev -/; }
 compdef _ccb ccb
 
 # todo settings

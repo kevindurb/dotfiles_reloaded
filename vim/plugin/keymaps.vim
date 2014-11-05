@@ -2,7 +2,7 @@
 let mapleader=","
 
 " map jj to escape for mor speed!!
-inoremap jj <Esc>
+inoremap jj <ESC>
 
 " nerd tree
 map <leader>= :NERDTreeToggle<CR>
