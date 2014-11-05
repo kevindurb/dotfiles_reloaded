@@ -38,6 +38,10 @@
 	up = fetch
 	d = difftool
 	diff = diff -w
+  pu = smart-pull
+  puts = push origin
+  cp = cherry-pick
+  a = amend
 [diff]
 	tool = vimdiff
 [push]

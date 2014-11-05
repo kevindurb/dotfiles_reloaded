@@ -35,26 +35,9 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[orange]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-# git aliases to make stuff faster
-alias gits="tig status"
-alias gitc="git commit -a"
-alias gita="git amend"
-alias gitcp="git cherry-pick"
-alias gitp="git push origin"
-alias gitd="git diff -w"
-alias gitpu="git smart-pull"
-alias gitl="tig"
-alias gitch="git checkout"
-alias gitdep="git push deploy master"
-alias ungit="git undo -h"
-
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias c="clear"
-alias localsql="mysql --auto-rehash -h localhost -u root -p"
-
-#macvim
-#alias vim="mvim"
 
 # jump to a project from anywhere
 go () { cd ~/projects/$1; }
@@ -65,9 +48,6 @@ compdef _go go
 ccb () { cd ~/dev/$1; }
 _ccb () { _files -W ~/dev -/; }
 compdef _ccb ccb
-
-# todo settings
-export TODOTXT_DEFAULT_ACTION=ls
 
 # docker link
 export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
