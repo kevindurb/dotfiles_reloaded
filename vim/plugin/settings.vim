@@ -43,7 +43,7 @@ set smarttab
 set shiftround
 
 " per language stuff
-au Filetype php        setlocal ts=4 sts=4 sw=4
+au Filetype php        setlocal ts=4 sts=4 sw=4 noexpandtab
 au Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 au Filetype scss       setlocal ts=2 sts=2 sw=2 expandtab
 au Filetype css        setlocal ts=2 sts=2 sw=2 expandtab

@@ -40,7 +40,7 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_
 
 " syntastic html settings
 let g:syntastic_html_validator_parser = 'html'
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute "]
 
 " calendar settings
 let g:calendar_google_calendar = 1
@@ -112,6 +112,7 @@ Plugin 'moll/vim-node'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/renamer.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'esneider/YUNOcommit.vim'
 
 " finish off vundle setup
 filetype plugin indent on

@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # plugins
-plugins=(git osx brew zsh-syntax-highlighting)
+plugins=(git osx brew zsh-syntax-highlighting node npm git-extras vagrant)
 
 # highlighting settings
 ZSH_HIGHLIGHT_STYLES[path]='bold'
@@ -45,8 +45,8 @@ _go () { _files -W ~/projects -/; }
 compdef _go go
 
 # jump to a project from anywhere
-ccb () { cd ~/dev/$1; }
-_ccb () { _files -W ~/dev -/; }
+ccb () { cd ~/dev/ccb/$1; }
+_ccb () { _files -W ~/dev/ccb -/; }
 compdef _ccb ccb
 
 # docker link
