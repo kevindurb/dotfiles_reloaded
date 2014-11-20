@@ -1,0 +1,9 @@
+install git
+install git-extras
+install node
+install ruby
+install the_silver_searcher
+install tig
+install vim
+install wget
+install zsh
