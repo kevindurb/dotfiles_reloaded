@@ -17,7 +17,7 @@ let g:vdebug_options = {
 \'ide_key': 'vagrant',
 \'break_on_open': 1,
 \'on_close': 'detach',
-\'path_maps': {'/var/www/app': '/Users/kdurbin/dev/ccb'},
+\'path_maps': {'/var/www/app': '/Users/kdurbin/Development/churchcommunitybuilder/app'},
 \'marker_closed_tree': '+',
 \'timeout': 20,
 \'port': 9000,
@@ -80,7 +80,6 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'jelera/vim-javascript-syntax'
-" Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'plasticboy/vim-markdown'
@@ -97,6 +96,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-eunuch'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
@@ -112,8 +113,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'moll/vim-node'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/renamer.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'esneider/YUNOcommit.vim'
+Bundle 'ntpeters/vim-better-whitespace'
 
 " finish off vundle setup
 filetype plugin indent on

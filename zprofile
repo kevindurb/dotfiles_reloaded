@@ -10,3 +10,9 @@ USR_BIN=/usr/bin
 ROOT_BIN=/bin
 export PATH=$DROPBOX_BIN:$HOME_BIN:$NPM_BIN:$PEAR_BIN:$RUBY_BIN:$USR_LOCAL_BIN:$USR_LOCAL_SBIN:$USR_BIN:$ROOT_BIN:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
 NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+
+# Added by VagrantFile Thu Jan 22 07:31:43 MST 2015
+source ~/Dropbox\ \(CCBHQ\)/Vagrant/.vagrant_helpers
+

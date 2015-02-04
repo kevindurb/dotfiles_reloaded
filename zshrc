@@ -38,6 +38,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias c="clear"
+alias reqtime="curl -o /dev/null -s -w %{time_total}\\\n"
 
 # jump to a project from anywhere
 go () { cd ~/projects/$1; }
@@ -45,8 +46,8 @@ _go () { _files -W ~/projects -/; }
 compdef _go go
 
 # jump to a project from anywhere
-ccb () { cd ~/dev/ccb/$1; }
-_ccb () { _files -W ~/dev/ccb -/; }
+ccb () { cd ~/Development/churchcommunitybuilder/app/$1; }
+_ccb () { _files -W ~/Development/churchcommunitybuilder/app -/; }
 compdef _ccb ccb
 
 # docker link

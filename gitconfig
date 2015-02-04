@@ -53,7 +53,7 @@
 	keepBackup = true
 	prompt = false
 [difftool]
-	prompt = false
+	prompt = true
 [pull]
 	rebase = true
 [merge]
