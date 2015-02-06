@@ -39,6 +39,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 alias lss="ls -lAF"
 alias c="clear"
 alias reqtime="curl -o /dev/null -s -w %{time_total}\\\n"
+alias vim="mvim"
 
 # jump to a project from anywhere
 go () { cd ~/projects/$1; }
