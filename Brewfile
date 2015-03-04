@@ -7,3 +7,4 @@ install tig
 install vim
 install wget
 install zsh
+install autojump

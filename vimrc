@@ -36,7 +36,7 @@ let g:dbext_default_profile_dev = 'type=MYSQL:user=root:passwd=r00t:host=localho
 " syntastic cool symbols
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['css', 'scss'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['css', 'scss'] }
 
 " syntastic html settings
 let g:syntastic_html_validator_parser = 'html'
@@ -61,6 +61,9 @@ let g:bufferline_echo = 0
 
 " dont match carrots
 let delimitMate_matchpairs = "(:),[:],{:}"
+
+" minibufexplorer
+let g:miniBufExplAutoStart = 0
 
 " vundle plugin!!!
 filetype off
@@ -87,6 +90,8 @@ Plugin 'chutzpah/icalendar.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'othree/html5.vim'
 Plugin 'mxw/vim-jsx'
+Bundle 'suan/vim-instant-markdown'
+Plugin 'moll/vim-node'
 
 " other
 Plugin 'tpope/vim-commentary'
@@ -110,11 +115,13 @@ Plugin 'joonty/vdebug'
 Plugin 'vim-scripts/Gundo'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Raimondi/delimitMate'
-Plugin 'moll/vim-node'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/renamer.vim'
-Plugin 'esneider/YUNOcommit.vim'
 Bundle 'ntpeters/vim-better-whitespace'
+Bundle 'fholgado/minibufexpl.vim'
+
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-leiningen'
 
 " finish off vundle setup
 filetype plugin indent on
