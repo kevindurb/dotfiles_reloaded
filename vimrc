@@ -123,5 +123,8 @@ Bundle 'fholgado/minibufexpl.vim'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-leiningen'
 
+Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-misc'
+
 " finish off vundle setup
 filetype plugin indent on

@@ -25,8 +25,15 @@ export MYZSHRC=$HOME/.zshrc
 export MYVIMKEYMAPS=$HOME/.vim/plugin/keymaps.vim
 export MYVIMSETTINGS=$HOME/.vim/plugin/settings.vim
 
+function mood {
+  if [ $? = 0 ];
+  then echo $fg[green]'^_^';
+  else echo $fg[red]'O_O';
+  fi;
+}
+
 PROMPT='
-%{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
+$(mood) %{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
 %{$fg[blue]%}> '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"

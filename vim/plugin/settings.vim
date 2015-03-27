@@ -6,8 +6,6 @@ au BufRead,BufNewFile *.ejs set ft=html
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-" tabs and eols
-
 " close vim when only nerdtree is left
 au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -55,16 +53,23 @@ au Filetype coffee     setlocal foldmethod=indent nofoldenable
 set autowrite
 set cursorline
 set nowrap
+set backspace=indent,eol,start
+set wildmode=longest:list,full
+set wildmenu
+
+" dont get too close to the edge
+set scrolloff=3
+set sidescrolloff=3
+
+" make search awesome
 set showmatch
 set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-set scrolloff=3
-set sidescrolloff=3
-set backspace=indent,eol,start
-set wildmode=longest:list,full
-set wildmenu
+
+" enable mouse
+set mouse=a
 
 " copy and paste in system clipboard
 set clipboard=unnamed
@@ -108,39 +113,3 @@ set background=dark
 " make vim draw faster
 set lazyredraw
 set ttyfast
-
-" search dash
-"au FileType javascript command Dash call SearchDash('js:')
-"au FileType css command Dash call SearchDash('css:')
-"au FileType sass command Dash call SearchDash('sass:')
-"au FileType vim command Dash call SearchDash('vim:')
-"au FileType perl command Dash call SearchDash('perl:')
-"au FileType php command Dash call SearchDash('php:')
-"au FileType ruby command Dash call SearchDash('ruby:')
-"function SearchDash(lib)
-"  let s:url = \"dash://".a:lib.expand("<cword>")
-"  execute \"silent ! /usr/bin/open ". s:url
-"  redraw!
-"endfunction
-
-" generate doc comments
-"function! GenerateDOCComment()
-"	let l    = line('.')
-"	let i    = indent(l)
-"	let pre  = repeat(' ',i)
-"	let text = getline(l)
-"	let params   = matchstr(text,'([^)]*)')
-"	let paramPat = '\([$a-zA-Z_0-9]\+\)[, ]*\(.*\)'
-"	echomsg params
-"	let vars = []
-"	let m    = ' '
-"	let ml = matchlist(params,paramPat)
-"	while ml!=[]
-"		let [_,var;rest]= ml
-"		let vars += [pre.' * @param '.var]
-"		let ml = matchlist(rest,paramPat,0)
-"	endwhile
-"	let comment = [pre.'/**',pre.' * '] + vars + [pre.' */']
-"	call append(l-1,comment)
-"	call cursor(l+1,i+3)
-"endfunction
