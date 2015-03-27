@@ -1,6 +1,34 @@
 " we are iMproved
 set nocompatible
 
+let g:startify_custom_header = [
+            \'',
+\'           |~',
+\'           |.---.',
+\'          .`_____`. /\`',
+\'          |~xxxxx~| ||',
+\'          |_  #  _| ||',
+\'     .------`-#-`-----.',
+\'    (___|\_________/|_.`.',
+\'     /  | _________ | | |',
+\'    /   |/   _|_   \| | |',
+\'   /   /X|  __|__  |/ `.|',
+\'  (  --< \\/    _\//|_ |`.',
+\'  `.    ~----.-~=====,:=======',
+\'    ~-._____/___:__(``/| |',
+\'      |    |      XX|~ | |',
+\'       \__/======| /|  `.|',
+\'       |_\|\    /|/_|    )',
+\'       |_   \__/   _| .-`',
+\'       | \ .`||`. / |(_|',
+\'       |  ||.``.||  |   )',
+\'       |  ``|  |``  |  /',
+\'       |    |  |    |\/',
+\'',
+\'    IT''S ABOUT THE BOUNTY',
+\'',
+\]
+
 " give me a home variable to work with
 if has('win32') || has ('win64')
     let $VIMHOME = $VIM."/vimfiles"
@@ -125,6 +153,7 @@ Bundle 'tpope/vim-leiningen'
 
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
+Bundle 'mhinz/vim-startify'
 
 " finish off vundle setup
 filetype plugin indent on
