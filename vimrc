@@ -105,6 +105,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ap/vim-css-color'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'mhinz/vim-startify'
 
 " syntax
 Plugin 'cakebaker/scss-syntax.vim'
@@ -120,6 +122,8 @@ Plugin 'othree/html5.vim'
 Plugin 'mxw/vim-jsx'
 Bundle 'suan/vim-instant-markdown'
 Plugin 'moll/vim-node'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-leiningen'
 
 " other
 Plugin 'tpope/vim-commentary'
@@ -128,11 +132,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-speeddating'
-Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-eunuch'
 Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Align'
 Plugin 'matchit.zip'
@@ -140,20 +141,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'rking/ag.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'joonty/vdebug'
-Plugin 'vim-scripts/Gundo'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/renamer.vim'
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'fholgado/minibufexpl.vim'
-
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-leiningen'
-
-Bundle 'xolox/vim-easytags'
-Bundle 'xolox/vim-misc'
-Bundle 'mhinz/vim-startify'
+Plugin 'marijnh/tern_for_vim'
 
 " finish off vundle setup
 filetype plugin indent on
