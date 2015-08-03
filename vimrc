@@ -147,6 +147,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/renamer.vim'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'kien/ctrlp.vim'
 
 " finish off vundle setup
 filetype plugin indent on

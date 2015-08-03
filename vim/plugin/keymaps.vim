@@ -68,3 +68,6 @@ nnoremap <leader>n :noh<CR>
 " dash keyword
 "nmap <silent> <leader>d <Plug>DashSearch
 map <leader>d :Dash<cr>
+
+" insert php arrow
+inoremap <C-l>  => 

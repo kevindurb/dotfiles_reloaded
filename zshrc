@@ -42,10 +42,34 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[orange]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+# bindkey -v
+
+# bindkey '^P' up-history
+# bindkey '^N' down-history
+# bindkey '^?' backward-delete-char
+# bindkey '^h' backward-delete-char
+# bindkey '^w' backward-kill-word
+# bindkey '^r' history-incremental-search-backward
+# bindkey 'jj' vi-cmd-mode
+
+# function zle-line-init zle-keymap-select {
+#     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+#     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+#     zle reset-prompt
+# }
+
+# zle -N zle-line-init
+# zle -N zle-keymap-select
+# export KEYTIMEOUT=1
+
 # other aliases to make stuff faster
 alias lss="ls -lAF"
+alias lsd="ls -lAFd */"
+alias rmvimswp="rm -rf ~/.vim/backup/*"
 alias c="clear"
 alias reqtime="curl -o /dev/null -s -w %{time_total}\\\n"
+alias zzz="osascript -e 'tell application \"Finder\" to sleep'"
+alias ql="qlmanage -p"
 
 # jump to a project from anywhere
 go () { cd ~/projects/$1; }
@@ -62,3 +86,6 @@ export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
