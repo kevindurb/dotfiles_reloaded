@@ -124,6 +124,7 @@ Bundle 'suan/vim-instant-markdown'
 Plugin 'moll/vim-node'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
+" Plugin 'facebook/vim-flow'
 
 " other
 Plugin 'tpope/vim-commentary'

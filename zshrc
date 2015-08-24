@@ -60,4 +60,5 @@ compdef _ccb ccb
 # docker link
 export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 
-[ -s "/Users/kdurbin/.nvm/nvm.sh" ] && . "/Users/kdurbin/.nvm/nvm.sh" # This loads nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
