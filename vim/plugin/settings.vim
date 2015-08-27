@@ -69,7 +69,7 @@ set hlsearch
 set incsearch
 
 " enable mouse
-set mouse=a
+" set mouse=a
 
 " copy and paste in system clipboard
 set clipboard=unnamed

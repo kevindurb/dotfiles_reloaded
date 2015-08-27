@@ -1,8 +1,8 @@
 # ignore these
-vim/bundle
+vim/bundle/*
 .DS_Store
 mutt/cache
-vim/backup
+vim/backup/*
 
 # dont ignore these
 !vim/bundle/vundle

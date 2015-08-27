@@ -19,7 +19,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
 
 # vagrant helpers
-if  [[ -e VAGRANT_HELPERS ]]
+if  [[ -f $VAGRANT_HELPERS ]]
 then
-  source VAGRANT_HELPERS
+  source $VAGRANT_HELPERS
 fi
