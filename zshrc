@@ -69,7 +69,12 @@ alias rmvimswp="rm -rf ~/.vim/backup/*"
 alias c="clear"
 alias reqtime="curl -o /dev/null -s -w %{time_total}\\\n"
 alias zzz="osascript -e 'tell application \"Finder\" to sleep'"
+alias lockme="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias ql="qlmanage -p"
+alias ccbtags="ctags -R --exclude=node_modules --exclude=resources --exclude=vendor --exclude=feature --exclude=sql --exclude=upgrades"
+alias wiredaddress="ipconfig getifaddr en0"
+alias wifiaddress="ipconfig getifaddr en1"
+alias externaladdress="curl ipecho.net/plain; echo"
 
 # jump to a project from anywhere
 go () { cd ~/projects/$1; }

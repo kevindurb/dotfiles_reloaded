@@ -151,3 +151,5 @@ Plugin 'kien/ctrlp.vim'
 
 " finish off vundle setup
 filetype plugin indent on
+imap <Esc> <Esc>:x<CR>
+imap jj <Esc>:x<CR>
