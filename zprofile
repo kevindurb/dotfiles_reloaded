@@ -1,5 +1,8 @@
+# vi: ft=zsh
+
 # my term paths
 DROPBOX_BIN=$HOME/Dropbox/bin
+HEROKU_BIN=/usr/local/heroku/bin
 PEBBLE_BIN=$HOME/pebble-dev/PebbleSDK-3.0-dp7/bin
 HOME_BIN=$HOME/bin
 NPM_BIN=/usr/local/share/npm/bin
@@ -12,7 +15,7 @@ ROOT_BIN=/bin
 VAGRANT_HELPERS=$HOME/Dropbox\ \(CCBHQ\)/Vagrant/.vagrant_helpers
 
 # path
-export PATH=$DROPBOX_BIN:$HOME_BIN:$PEBBLE_BIN:$NPM_BIN:$PEAR_BIN:$RUBY_BIN:$USR_LOCAL_BIN:$USR_LOCAL_SBIN:$USR_BIN:$ROOT_BIN:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
+export PATH=$DROPBOX_BIN:$HEROKU_BIN:$HOME_BIN:$PEBBLE_BIN:$NPM_BIN:$PEAR_BIN:$RUBY_BIN:$USR_LOCAL_BIN:$USR_LOCAL_SBIN:$USR_BIN:$ROOT_BIN:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
 
 # autojump
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
