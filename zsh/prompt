@@ -1,5 +1,6 @@
 #vi: ft=zsh
 
+AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=13'
 zle-line-init() {
   zle autosuggest-start
 }
