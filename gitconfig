@@ -24,6 +24,7 @@
 	untracked = cyan
 [alias]
 	s = status
+  aa = add --all
 	st = status
 	ci = commit
 	br = branch
@@ -43,6 +44,7 @@
   puts = push origin
   cp = cherry-pick
   a = amend
+	out = fire
 [diff]
 	tool = vimdiff
 [push]

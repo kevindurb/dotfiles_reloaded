@@ -148,8 +148,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/renamer.vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'wikitopian/hardmode'
 
 " finish off vundle setup
 filetype plugin indent on
-imap <Esc> <Esc>:x<CR>
-imap jj <Esc>:x<CR>

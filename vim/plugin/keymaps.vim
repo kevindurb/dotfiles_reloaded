@@ -4,6 +4,9 @@ let mapleader=","
 " map jj to escape for mor speed!!
 inoremap jj <ESC>
 
+" hard mode!!
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
 " nerd tree
 map <leader>= :NERDTreeToggle<CR>
 
@@ -71,3 +74,14 @@ map <leader>d :Dash<cr>
 
 " insert php arrow
 inoremap <C-l>  => 
+
+" switch between relative and absolute line numbers
+function! NumberToggle()
+  if(&relativenumber ==1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<CR>

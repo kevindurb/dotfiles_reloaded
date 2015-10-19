@@ -2,6 +2,9 @@
 au BufRead,BufNewFile *.scss set ft=scss
 au BufRead,BufNewFile *.ejs set ft=html
 
+" always start with hard mode on
+" au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
 " change the cursor in different modes
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"

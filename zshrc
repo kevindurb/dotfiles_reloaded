@@ -1,29 +1,29 @@
 # vi: ft=zsh
 
-DOTFILES=$HOME/dotfiles
-SOURCES=$DOTFILES/sources
-ZSH=$DOTFILES/oh-my-zsh
+ZSH_PATH=$HOME/.zsh
+ZSH=$ZSH_PATH/oh-my-zsh
 
-# zsh themes
 source $ZSH/oh-my-zsh.sh
-
-# syntax highlighting
-source $DOTFILES/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_PATH/zsh-autosuggestions/autosuggestions.zsh
 
 # plugins
-plugins=(git osx brew zsh-syntax-highlighting node npm git-extras vagrant)
+plugins=(git osx brew zsh-syntax-highlighting node npm git-extras vagrant thefuck)
 
 # exports
-source $SOURCES/exports
+source $ZSH_PATH/exports
 
 # prompt
-source $SOURCES/prompt
+source $ZSH_PATH/prompt
 
 # aliases
-source $SOURCES/aliases
+source $ZSH_PATH/aliases
 
 # functions
-source $SOURCES/functions
+source $ZSH_PATH/functions
 
 # nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
