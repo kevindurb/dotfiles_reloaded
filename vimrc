@@ -149,6 +149,7 @@ Plugin 'vim-scripts/renamer.vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'wikitopian/hardmode'
+" Plugin 'vim-scripts/php_localvarcheck.vim'
 
 " finish off vundle setup
 filetype plugin indent on

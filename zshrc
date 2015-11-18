@@ -5,10 +5,10 @@ ZSH=$ZSH_PATH/oh-my-zsh
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH_PATH/zsh-autosuggestions/autosuggestions.zsh
+# source $ZSH_PATH/zsh-autosuggestions/autosuggestions.zsh
 
 # plugins
-plugins=(git osx brew zsh-syntax-highlighting node npm git-extras vagrant thefuck)
+plugins=(git osx brew zsh-syntax-highlighting node npm git-extras vagrant)
 
 # exports
 source $ZSH_PATH/exports
