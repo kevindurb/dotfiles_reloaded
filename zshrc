@@ -8,7 +8,7 @@ source $ZSH_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source $ZSH_PATH/zsh-autosuggestions/autosuggestions.zsh
 
 # plugins
-plugins=(git osx brew zsh-syntax-highlighting node npm git-extras vagrant)
+plugins=(git osx brew zsh-syntax-highlighting node npm git-extras vagrant nvm)
 
 # exports
 source $ZSH_PATH/exports
@@ -27,3 +27,8 @@ source $(brew --prefix nvm)/nvm.sh
 
 # autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# autocomplete ssh
+zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
+
+eval $(thefuck --alias)

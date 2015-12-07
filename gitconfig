@@ -42,6 +42,7 @@
 	diff = diff -w
   pu = smart-pull
   puts = push origin
+  putsup = push --set-upstream origin
   cp = cherry-pick
   a = amend
 	out = fire
