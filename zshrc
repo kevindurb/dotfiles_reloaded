@@ -22,13 +22,19 @@ source $ZSH_PATH/aliases
 # functions
 source $ZSH_PATH/functions
 
-# nvm
-source $(brew --prefix nvm)/nvm.sh
+if which brew > /dev/null
+then
+  # nvm
+  source $(brew --prefix nvm)/nvm.sh
 
-# autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+  # autojump
+  [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+fi
 
 # autocomplete ssh
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
-eval $(thefuck --alias)
+if which thefuck > /dev/null
+then
+  eval $(thefuck --alias)
+fi

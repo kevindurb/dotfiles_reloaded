@@ -17,9 +17,14 @@ VAGRANT_HELPERS=$HOME/Dropbox\ \(CCBHQ\)/Vagrant/.vagrant_helpers
 # path
 export PATH=$DROPBOX_BIN:$HEROKU_BIN:$HOME_BIN:$PEBBLE_BIN:$NPM_BIN:$PEAR_BIN:$RUBY_BIN:$USR_LOCAL_BIN:$USR_LOCAL_SBIN:$USR_BIN:$ROOT_BIN:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin
 
-# autojump
+# rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-[[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
+
+# autojump
+if which brew > /dev/null
+then
+  [[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
+fi
 
 # vagrant helpers
 if  [[ -f $VAGRANT_HELPERS ]]
