@@ -29,6 +29,9 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # airdrop over wired connection
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
+# disable app nap
+defaults write NSGlobalDomain NSAppSleepDisabled -bool YES
+
 # restart to apply settings
 killall Finder
 killall Dock

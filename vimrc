@@ -1,34 +1,6 @@
 " we are iMproved
 set nocompatible
 
-let g:startify_custom_header = [
-            \'',
-\'           |~',
-\'           |.---.',
-\'          .`_____`. /\`',
-\'          |~xxxxx~| ||',
-\'          |_  #  _| ||',
-\'     .------`-#-`-----.',
-\'    (___|\_________/|_.`.',
-\'     /  | _________ | | |',
-\'    /   |/   _|_   \| | |',
-\'   /   /X|  __|__  |/ `.|',
-\'  (  --< \\/    _\//|_ |`.',
-\'  `.    ~----.-~=====,:=======',
-\'    ~-._____/___:__(``/| |',
-\'      |    |      XX|~ | |',
-\'       \__/======| /|  `.|',
-\'       |_\|\    /|/_|    )',
-\'       |_   \__/   _| .-`',
-\'       | \ .`||`. / |(_|',
-\'       |  ||.``.||  |   )',
-\'       |  ``|  |``  |  /',
-\'       |    |  |    |\/',
-\'',
-\'    IT''S ABOUT THE BOUNTY',
-\'',
-\]
-
 " give me a home variable to work with
 if has('win32') || has ('win64')
     let $VIMHOME = $VIM."/vimfiles"
@@ -58,9 +30,6 @@ let g:vdebug_options = {
 let g:sqlutil_keyword_case = '\U'
 let g:sqlutil_align_comma = 1
 
-" dbext settings
-let g:dbext_default_profile_dev = 'type=MYSQL:user=root:passwd=r00t:host=localhost:dbname=ccb_app_dev'
-
 " syntastic cool symbols
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
@@ -70,15 +39,10 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['css', 'scs
 let g:syntastic_html_validator_parser = 'html'
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute "]
 
-" calendar settings
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
-
 " autoclose
 let g:AutoCloseExpandSpace = 0
 
 " airline look pretty
-"let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_detect_whitespace=0
 let g:airline_left_sep=''
@@ -90,8 +54,8 @@ let g:bufferline_echo = 0
 " dont match carrots
 let delimitMate_matchpairs = "(:),[:],{:}"
 
-" minibufexplorer
-let g:miniBufExplAutoStart = 0
+" ctrl p exclude
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard', 'node_modules/']
 
 " vundle plugin!!!
 filetype off
@@ -103,37 +67,26 @@ Plugin 'gmarik/vundle'
 Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ap/vim-css-color'
-Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'mhinz/vim-startify'
 
 " syntax
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'chutzpah/icalendar.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'othree/html5.vim'
 Plugin 'mxw/vim-jsx'
 Bundle 'suan/vim-instant-markdown'
 Plugin 'moll/vim-node'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-leiningen'
-" Plugin 'facebook/vim-flow'
+Plugin 'helino/vim-json'
 
 " other
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-speeddating'
-Plugin 'tpope/vim-git'
 Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'Align'
@@ -144,12 +97,11 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'joonty/vdebug'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/renamer.vim'
 Plugin 'marijnh/tern_for_vim'
-Plugin 'kien/ctrlp.vim'
 Plugin 'wikitopian/hardmode'
-" Plugin 'vim-scripts/php_localvarcheck.vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " finish off vundle setup
 filetype plugin indent on

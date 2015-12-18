@@ -14,3 +14,29 @@ compdef _ccb ccb
 notify () {
   osascript -e "display notification \"$1\" with title \"$2\""
 }
+
+vagrant_mysql() {
+  vagrant ssh -c "mysql --user=ccb_app --password=iloveccb"
+}
+
+set_ma () {
+  ma_id=1
+
+  if [ ! -z "$1" ]
+  then
+    ma_id="$1"
+  fi
+
+  cat ~/Development/sql_scripts/update_ma.sql | sed s/MA_ID/${ma_id}/ | vagrant_mysql
+}
+
+set_package () {
+  package="deluxe"
+
+  if [ ! -z "$1" ]
+  then
+    package="$1"
+  fi
+
+  cat ~/Development/sql_scripts/update_package.sql | sed s/PACKAGE/${package}/ | vagrant_mysql
+}

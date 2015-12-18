@@ -46,6 +46,7 @@
   cp = cherry-pick
   a = amend
 	out = fire
+	appraise = !/Users/kdurbin/go/bin/git-appraise
 [diff]
 	tool = vimdiff
 [push]
