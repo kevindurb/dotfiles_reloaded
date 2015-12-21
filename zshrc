@@ -38,3 +38,6 @@ if which thefuck > /dev/null
 then
   eval $(thefuck --alias)
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

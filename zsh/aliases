@@ -16,3 +16,15 @@ alias externaladdress="curl ipecho.net/plain; echo"
 alias phpsyntax="vagrant ssh -c \"find /var/www/app -path /var/www/app/vendor -prune -o \( -name \"*.php\" -or -name \"*.phtml\" \) -print0 | xargs -0 -n 1 php -l\""
 alias sqldumpdev="vagrant ssh -c \"mysqldump ccb_dev --user=ccb_app --password=iloveccb --lock-tables=false\""
 alias t="todo.sh"
+alias tmux="TERM=xterm-256color tmux"
+alias tnew="tmux new -s"
+alias tattach="tmux attach -t"
+alias tls="tmux ls"
+alias tkill="tmux kill-session -t"
+
+if which pbpaste > /dev/null; then
+  # dont need to do anything
+else
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
