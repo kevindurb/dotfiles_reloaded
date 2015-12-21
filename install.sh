@@ -53,6 +53,7 @@ ln -s ~/dotfiles/zprofile  .zprofile
 ln -s ~/dotfiles/vimrc     .vimrc
 ln -s ~/dotfiles/vim       .vim
 ln -s ~/dotfiles/zsh       .zsh
+ln -s ~/dotfiles/tmux.conf .tmux.conf
 
 cd $PREVIOUS_DIR
 echo "Dotfiles installed!"
