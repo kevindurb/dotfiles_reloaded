@@ -8,7 +8,7 @@ inoremap jj <ESC>
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " nerd tree
-map <leader>= :NERDTreeToggle<CR>
+map <leader>[ :NERDTreeToggle<CR>
 
 " tagbar
 map <leader>t :TagbarToggle<CR>

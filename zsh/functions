@@ -16,7 +16,12 @@ notify () {
 }
 
 vagrant_mysql() {
-  vagrant ssh -c "mysql --user=ccb_app --password=iloveccb"
+  if ! vagrant ssh -c "mysql --user=ccb_app --password=iloveccb"
+  then
+    echo "Is vagrant up?"
+  else
+    echo "Success!"
+  fi
 }
 
 set_ma () {
