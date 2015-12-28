@@ -8,23 +8,27 @@ fi
 echo "Please enter SUDO password"
 sudo echo "Installing..."
 
-PLATFORM=`uname`;
+PLATFORM=`uname`
+CURRENT_USER=`whoami`
 
 if [[ $PLATFORM == 'Darwin' ]]; then
   echo "Determined OSX... Installing brew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   echo "Installing Deps..."
-  brew install vim git tig ruby
+  brew install vim git tig ruby zsh
   sudo gem install git-smart
 elif which apt-get > /dev/null; then
   echo "Determined linux with apt..."
   echo "Installing Deps..."
-  sudo apt-get install vim git tig ruby xclip
+  sudo apt-get install vim git tig ruby xclip zsh
 else
   echo "Couldnt determine OS... Exiting..."
   exit 1
 fi
+
+echo "setting zsh to default..."
+sudo chsh -s $(which zsh) $CURRENT_USER
 
 echo "Installing nvm..."
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
