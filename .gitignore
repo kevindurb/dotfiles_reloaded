@@ -1,5 +1,6 @@
 # ignore these
 vim/bundle/*
+tmux/plugins/*
 .DS_Store
 mutt/cache
 vim/backup/*
@@ -7,3 +8,4 @@ vim/backup/*
 # dont ignore these
 !vim/bundle/vundle
 !vim/backup/.gitkeep
+!tmux/plugins/tpm
