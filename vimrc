@@ -40,6 +40,7 @@ Plugin 'helino/vim-json'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-obsession'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Align'
@@ -55,6 +56,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " finish off vundle setup
 filetype plugin indent on

@@ -1,6 +1,7 @@
 # ignore these
 vim/bundle/*
 tmux/plugins/*
+tmux/resurrect/*
 .DS_Store
 mutt/cache
 vim/backup/*

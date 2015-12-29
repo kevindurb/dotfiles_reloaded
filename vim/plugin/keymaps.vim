@@ -20,10 +20,10 @@ map <leader>bp :bprev<CR>
 map <leader>bd :bdel<CR>
 
 " pane navigation
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-l> <c-w>l
 
 " pane control
 nnoremap <leader>v		 :vsp<CR>
