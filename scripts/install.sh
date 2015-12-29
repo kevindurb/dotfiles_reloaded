@@ -16,12 +16,12 @@ if [[ $PLATFORM == 'Darwin' ]]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   echo "Installing Deps..."
-  brew install vim git tig ruby zsh
+  brew install vim git tig ruby zsh cmake
   sudo gem install git-smart
 elif which apt-get > /dev/null; then
   echo "Determined linux with apt..."
   echo "Installing Deps..."
-  sudo apt-get install vim git tig ruby xclip zsh
+  sudo apt-get install vim git tig ruby xclip zsh cmake build-essential python-dev
 else
   echo "Couldnt determine OS... Exiting..."
   exit 1
