@@ -57,6 +57,7 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tmux-plugins/vim-tmux'
 
 " finish off vundle setup
 filetype plugin indent on

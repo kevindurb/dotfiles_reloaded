@@ -15,3 +15,4 @@ session.php
 katon.log
 vdebug_log
 *.log
+.tern-project

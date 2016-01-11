@@ -6,16 +6,38 @@
 # }
 # zle -N zle-line-init
 
-function mood {
+function prompt_mood {
   if [ $? = 0 ];
   then echo $fg[green]'^_^';
   else echo $fg[red]'O_O';
   fi;
 }
 
+function prompt_notifications {
+  echo "%{$reset_color%}${$(cat ~/.notifications | wc -l)##*( )}"
+}
+
+function prompt_me {
+  echo "%{$fg[magenta]%}$(whoami)%{$fg[white]%}@%{$fg[yellow]%}$(hostname)"
+}
+
+function prompt_path {
+  echo "%{$fg[blue]%}${PWD/#$HOME/~}"
+}
+
+function prompt_git {
+  echo "%{$reset_color%}$(git_prompt_info)"
+}
+
+function prompt_carrot {
+  echo "%{$fg[blue]%}> "
+}
+
 PROMPT='
-$(mood) %{$fg[magenta]%}$(whoami)%{$fg[white]%}@%{$fg[yellow]%}$(hostname) %{$fg[blue]%}${PWD/#$HOME/~} %{$reset_color%}$(git_prompt_info)
-%{$fg[blue]%}> '
+$(prompt_mood) $(prompt_notifications) $(prompt_me) $(prompt_path) $(prompt_git)
+$(prompt_carrot)'
+
+RPROMPT=''
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"

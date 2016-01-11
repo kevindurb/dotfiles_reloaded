@@ -45,3 +45,13 @@ set_package () {
 
   cat ~/Development/sql_scripts/update_package.sql | sed s/PACKAGE/${package}/ | vagrant_mysql
 }
+
+automation() {
+  cat ~/Development/sql_scripts/automation_man_cleanup.sql | vagrant_mysql
+  vagrant ssh -c "restart_gearman; restart_am;"
+
+}
+
+reset_grunt() {
+  vagrant ssh -c "rm -rf /var/www/app/resources/assets;sudo service gruntwatch stop;sudo service gruntwatch start;"
+}
