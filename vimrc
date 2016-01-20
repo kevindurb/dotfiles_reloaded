@@ -55,7 +55,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tmux-plugins/vim-tmux'
 

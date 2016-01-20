@@ -22,6 +22,9 @@ alias phpsyntax="vagrant ssh -c \"find /var/www/app -path /var/www/app/vendor -p
 alias sqldumpdev="vagrant ssh -c \"mysqldump ccb_dev --user=ccb_app --password=iloveccb --lock-tables=false\""
 alias ccbtags="ctags -R --exclude=node_modules --exclude=resources --exclude=vendor --exclude=feature --exclude=sql --exclude=upgrades"
 alias resetassets="vagrant ssh -c \"rm -rf /var/www/app/resources/assets && sudo service gruntwatch stop && sudo service gruntwatch start\""
+alias tailresources="clear;vagrant ssh -c \"tail -f /var/log/resources/gruntwatch.log\""
+alias tailrsync="clear;tail -f ~/Development/rsync.log | grep completed"
+alias vagrantsync="vagrant gatling-rsync-auto"
 
 # tmux
 alias tmux="TERM=xterm-256color tmux"

@@ -55,3 +55,9 @@ automation() {
 reset_grunt() {
   vagrant ssh -c "rm -rf /var/www/app/resources/assets;sudo service gruntwatch stop;sudo service gruntwatch start;"
 }
+
+eq() {
+    calc="${@//p/+}"
+    calc="${calc//x/*}"
+    bc -l <<<"scale=10;$calc"
+}
