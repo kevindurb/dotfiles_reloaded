@@ -13,10 +13,6 @@ function prompt_mood {
   fi;
 }
 
-function prompt_todo {
-  echo "%{$reset_color%}${$(cat ~/.todo/todo.txt | wc -l)##*( )}"
-}
-
 function prompt_me {
   echo "%{$fg[magenta]%}$(whoami)%{$fg[white]%}@%{$fg[yellow]%}$(hostname)"
 }
@@ -34,7 +30,7 @@ function prompt_carrot {
 }
 
 PROMPT='
-$(prompt_mood) $(prompt_todo) $(prompt_me) $(prompt_path) $(prompt_git)
+$(prompt_mood) $(prompt_me) $(prompt_path) $(prompt_git)
 $(prompt_carrot)'
 
 RPROMPT=''
