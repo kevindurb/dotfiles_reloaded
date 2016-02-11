@@ -47,9 +47,6 @@ set_package () {
 }
 
 automation() {
-  cat ~/Development/sql_scripts/automation_man_cleanup.sql | vagrant_mysql
-  vagrant ssh -c "restart_gearman; restart_am;"
-
 }
 
 reset_grunt() {
@@ -60,4 +57,12 @@ eq() {
     calc="${@//p/+}"
     calc="${calc//x/*}"
     bc -l <<<"scale=10;$calc"
+}
+
+reset_origin() {
+  git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
+}
+
+tiny() {
+  curl http://tinyurl.com/api-create.php?url="$1"
 }
