@@ -20,3 +20,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "hosts"]
+	path = hosts
+	url = https://github.com/StevenBlack/hosts.git
