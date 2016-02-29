@@ -66,3 +66,7 @@ reset_origin() {
 tiny() {
   curl http://tinyurl.com/api-create.php?url="$1"
 }
+
+battery() {
+  pmset -g batt | grep Internal | awk '{print $2;}'
+}

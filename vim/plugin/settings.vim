@@ -1,6 +1,9 @@
 " special file types
-au BufRead,BufNewFile *.scss set ft=scss
-au BufRead,BufNewFile *.ejs set ft=html
+augroup special_file_types
+  autocmd!
+  autocmd BufRead,BufNewFile *.scss set ft=scss
+  autocmd BufRead,BufNewFile *.ejs set ft=html
+augroup END
 
 " always start with hard mode on
 " au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
@@ -48,14 +51,23 @@ set smartindent
 set smarttab
 set shiftround
 
-" per language stuff
-au Filetype php        setlocal ts=4 sts=4 sw=4 noexpandtab
-au Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
-au Filetype scss       setlocal ts=2 sts=2 sw=2 expandtab
-au Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
-au Filetype ruby       setlocal ts=2 sts=2 sw=2 expandtab
-au Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
-au Filetype coffee     setlocal foldmethod=indent nofoldenable
+" per language tabbing
+augroup language_tabbing
+  autocmd!
+  autocmd Filetype php        setlocal ts=4 sts=4 sw=4 noexpandtab
+  autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd Filetype scss       setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd Filetype ruby       setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd Filetype coffee     setlocal foldmethod=indent nofoldenable
+augroup END
+
+" run sparkup for jsx
+augroup sparkup_types
+  autocmd!
+  autocmd Filetype javascript runtime! ftplugin/html/sparkup.vim
+augroup END
 
 " various stuff
 set autowrite
@@ -75,9 +87,6 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-
-" enable mouse
-" set mouse=a
 
 " copy and paste in system clipboard
 set clipboard=unnamed
@@ -116,7 +125,6 @@ set ssop-=folds
 
 " colorscheme stuff
 set background=dark
-" colorscheme Tomorrow-Night-Bright
 colorscheme solarized
 
 " make vim draw faster

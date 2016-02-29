@@ -61,4 +61,8 @@ ln -s ~/dotfiles/tmux.conf .tmux.conf
 ln -s ~/dotfiles/tmux      .tmux
 
 cd $PREVIOUS_DIR
+
+echo "Installing vim plugins..."
+vim +PluginInstall +qa
+
 echo "Dotfiles installed!"

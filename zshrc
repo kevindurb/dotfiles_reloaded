@@ -22,6 +22,9 @@ source $ZSH_PATH/aliases
 # functions
 source $ZSH_PATH/functions
 
+# tmuxinator
+source $HOME/dotfiles/tmux/tmuxinator.zsh
+
 if which brew > /dev/null
 then
   # nvm
