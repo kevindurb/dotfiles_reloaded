@@ -1,5 +1,6 @@
 " we are iMproved
 set nocompatible
+filetype off
 
 " give me a home variable to work with
 let $VIMHOME = $HOME."/.vim"
@@ -15,7 +16,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ap/vim-css-color'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ntpeters/vim-better-whitespace'
 
 " syntax
@@ -37,8 +39,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sensible'
 Plugin 'scrooloose/syntastic'
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'joonty/vdebug'
 Plugin 'ervandew/supertab'
 Plugin 'flowtype/vim-flow'
