@@ -2,19 +2,14 @@
 set nocompatible
 
 " give me a home variable to work with
-if has('win32') || has ('win64')
-    let $VIMHOME = $VIM."/vimfiles"
-else
-    let $VIMHOME = $HOME."/.vim"
-endif
+let $VIMHOME = $HOME."/.vim"
 
 source $VIMHOME/plugin_settings.vim
 
 " vundle plugin!!!
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Plugin 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
 " look and feel
 Plugin 'altercation/vim-colors-solarized'
@@ -63,4 +58,5 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tmux-plugins/vim-tmux'
 
 " finish off vundle setup
+call vundle#end()
 filetype plugin indent on

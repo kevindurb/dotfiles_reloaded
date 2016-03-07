@@ -7,6 +7,6 @@ mutt/cache
 vim/backup/*
 
 # dont ignore these
-!vim/bundle/vundle
+!vim/bundle/Vundle.vim
 !vim/backup/.gitkeep
 !tmux/plugins/tpm
