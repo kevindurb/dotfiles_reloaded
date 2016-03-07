@@ -1,10 +1,6 @@
 [submodule "solarized"]
 	path = solarized
 	url = https://github.com/altercation/solarized.git
-[submodule "vim/bundle/vundle"]
-	path = vim/bundle/vundle
-	url = https://github.com/gmarik/vundle.git
-	ignore = dirty
 [submodule "tomorrow-theme"]
 	path = tomorrow-theme
 	url = https://github.com/chriskempson/tomorrow-theme.git
