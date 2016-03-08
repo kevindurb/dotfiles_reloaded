@@ -5,17 +5,9 @@ augroup special_file_types
   autocmd BufRead,BufNewFile *.ejs set ft=html
 augroup END
 
-" always start with hard mode on
-" au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-
 " change the cursor in different modes
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
-else
-    let &t_SI = "\e[5 q"
-    let &t_EI = "\e[2 q"
-endif
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[2 q"
 
 " close vim when only nerdtree is left
 au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -76,17 +68,17 @@ set nowrap
 set backspace=indent,eol,start
 set wildmode=longest:list,full
 set wildmenu
+set showmatch  " highlight matching brace
 
 " dont get too close to the edge
 set scrolloff=3
 set sidescrolloff=3
 
 " make search awesome
-set showmatch
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
+set ignorecase " ignore search case
+set smartcase  " dont ignore case once you use a capital letter
+set hlsearch   " highlight all search matches
+set incsearch  " jump to search
 
 " copy and paste in system clipboard
 set clipboard=unnamed
@@ -118,6 +110,9 @@ syntax enable
 
 " folding
 set foldenable
+set foldmethod=indent
+set foldnestmax=10
+set foldlevel=1
 
 " session saving
 set ssop-=options
@@ -126,7 +121,7 @@ set ssop-=folds
 " colorscheme stuff
 " let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+colorscheme brogrammer
 
 " make vim draw faster
 set lazyredraw

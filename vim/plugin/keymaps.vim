@@ -24,6 +24,12 @@ nnoremap <leader>v		 :vsp<CR>
 nnoremap <leader><S-v> :sp<CR>
 nnoremap <leader>z		 <c-w>o
 
+" pane navigation
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+
 " disable arrow keys
 inoremap <up>	    <nop>
 inoremap <down>	  <nop>
