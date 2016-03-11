@@ -1,12 +1,7 @@
 # ignore these
-vim/bundle/*
-tmux/plugins/*
-tmux/resurrect/*
+vim/plugged/*
 .DS_Store
-mutt/cache
 vim/backup/*
 
 # dont ignore these
-!vim/bundle/Vundle.vim
 !vim/backup/.gitkeep
-!tmux/plugins/tpm
