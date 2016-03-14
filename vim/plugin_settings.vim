@@ -23,10 +23,10 @@ let g:sqlutil_align_comma = 1
 " syntastic cool symbols
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['css', 'scss'] }
+let g:syntastic_mode_map={ 'mode': 'active', 'passive_filetypes': ['css', 'scss'] }
 
 " syntastic html settings
-let g:syntastic_html_validator_parser = 'html'
+let g:syntastic_html_validator_parser='html'
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute "]
 
 " syntastic check files on open
@@ -36,7 +36,7 @@ let g:syntastic_check_on_open=1
 let g:AutoCloseExpandSpace = 0
 
 " airline look pretty
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#enabled=0
 let g:airline_left_sep=''
 let g:airline_right_sep=''

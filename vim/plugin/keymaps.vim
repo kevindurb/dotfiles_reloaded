@@ -11,7 +11,7 @@ nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 map <leader>[ :NERDTreeToggle<CR>
 
 " tagbar
-map <leader>t :TagbarToggle<CR>
+map <leader>] :TagbarToggle<CR>
 
 " choose buffer faster
 map <leader>b :b

@@ -31,12 +31,13 @@ Plug 'StanAngeloff/php.vim',         { 'for' : 'php' }
 
 " syntax checking and completion
 Plug 'scrooloose/syntastic'
-Plug 'flowtype/vim-flow'
+" Plug 'flowtype/vim-flow'
 Plug 'ternjs/tern_for_vim'
 Plug 'ervandew/supertab'
 
 " project navigation
 Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-scripts/gitignore'
 Plug 'rking/ag.vim'
@@ -55,5 +56,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'matchit.zip'
 Plug 'xolox/vim-misc'
+Plug 'junegunn/vim-emoji'
 
 call plug#end()
