@@ -1,7 +1,7 @@
 # ignore these
-vim/plugged/*
+nvim/plugged/*
 .DS_Store
-vim/backup/*
+nvim/backup/*
 
 # dont ignore these
-!vim/backup/.gitkeep
+!nvim/backup/.gitkeep

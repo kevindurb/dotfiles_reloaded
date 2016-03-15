@@ -5,6 +5,9 @@ augroup special_file_types
   autocmd BufRead,BufNewFile *.ejs set ft=html
 augroup END
 
+" run neomake on write
+autocmd! BufWritePost * Neomake
+
 " change the cursor in different modes
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
@@ -86,13 +89,6 @@ set clipboard=unnamed
 " go back forever!
 set history=1000
 set undolevels=1000
-
-" UTF-8 encoding
-set encoding=utf-8
-setglobal fileencoding=utf-8
-set nobomb
-set termencoding=utf-8
-set fileencodings=utf-8,iso-8859-15
 
 " change backup dir
 set backupdir=$VIMHOME/backup

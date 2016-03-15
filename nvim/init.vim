@@ -2,7 +2,7 @@
 set nocompatible
 
 " give me a home variable to work with
-let $VIMHOME = $HOME."/.vim"
+let $VIMHOME = $HOME."/.config/nvim"
 
 source $VIMHOME/plugin_settings.vim
 
@@ -30,9 +30,10 @@ Plug 'othree/html5.vim',             { 'for' : 'html' }
 Plug 'StanAngeloff/php.vim',         { 'for' : 'php' }
 
 " syntax checking and completion
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
 " Plug 'flowtype/vim-flow'
-Plug 'ternjs/tern_for_vim'
+" Plug 'ternjs/tern_for_vim'
 Plug 'ervandew/supertab'
 
 " project navigation

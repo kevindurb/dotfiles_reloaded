@@ -16,7 +16,7 @@ if [[ $PLATFORM == 'Darwin' ]]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   echo "Installing Deps..."
-  brew install vim git tig ruby zsh cmake cmatrix
+  brew install neovim/neovim/neovim git tig ruby zsh cmake cmatrix
   sudo gem install git-smart
 elif which apt-get > /dev/null; then
   echo "Determined linux with apt..."
@@ -54,15 +54,12 @@ ln -s ~/dotfiles/gitconfig .gitconfig
 ln -s ~/dotfiles/gitignore .gitignore
 ln -s ~/dotfiles/zshrc     .zshrc
 ln -s ~/dotfiles/zprofile  .zprofile
-ln -s ~/dotfiles/vimrc     .vimrc
-ln -s ~/dotfiles/vim       .vim
+ln -s ~/dotfiles/nvim      ~/.config/nvim
 ln -s ~/dotfiles/zsh       .zsh
-ln -s ~/dotfiles/tmux.conf .tmux.conf
-ln -s ~/dotfiles/tmux      .tmux
 
 cd $PREVIOUS_DIR
 
 echo "Installing vim plugins..."
-vim +PluginInstall +qa
+nvim +PlugInstall +qa
 
 echo "Dotfiles installed!"

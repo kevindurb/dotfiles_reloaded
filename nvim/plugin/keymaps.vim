@@ -3,6 +3,9 @@ let mapleader=","
 
 " map jj to escape for mor speed!!
 inoremap jj <ESC>
+if has("nvim")
+  tnoremap <ESC> <c-\><c-n>
+endif
 
 " hard mode!!
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
@@ -23,12 +26,25 @@ map <leader>bd :bdel<CR>
 nnoremap <leader>v		 :vsp<CR>
 nnoremap <leader><S-v> :sp<CR>
 nnoremap <leader>z		 <c-w>o
+if has("nvim")
+  tnoremap <leader>v		 :vsp<CR>
+  tnoremap <leader><S-v> :sp<CR>
+  tnoremap <leader>z		 <c-w>o
+endif
 
 " pane navigation
-nnoremap <C-j> <C-w><C-j>
-nnoremap <C-k> <C-w><C-k>
-nnoremap <C-l> <C-w><C-l>
-nnoremap <C-h> <C-w><C-h>
+if has("nvim")
+  tnoremap <C-h> <C-\><C-n><C-w>h
+  tnoremap <C-j> <C-\><C-n><C-w>j
+  tnoremap <C-k> <C-\><C-n><C-w>k
+  tnoremap <C-l> <C-\><C-n><C-w>l
+  nnoremap <BS> <C-w>h
+  nnoremap <BS> <C-\><C-n><C-w>h
+endif
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " disable arrow keys
 inoremap <up>	    <nop>

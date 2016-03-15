@@ -37,6 +37,9 @@ alias tkill="tmux kill-session -t"
 alias spp="spotify play/pause"
 alias sinfo="spotify info"
 
+# use nvim
+alias vim="nvim"
+
 # useful copy paste
 if ! which pbpaste > /dev/null; then
   alias pbcopy='xclip -selection clipboard'
