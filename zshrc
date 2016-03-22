@@ -1,47 +1,32 @@
-# vi: ft=zsh
+ZSH=$HOME/dotfiles/zsh
 
-ZSH_PATH=$HOME/.zsh
-ZSH=$ZSH_PATH/oh-my-zsh
+#antigen
+source $ZSH/antigen/antigen.zsh
 
-source $ZSH/oh-my-zsh.sh
-source $ZSH_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH_PATH/zsh-git-prompt/zshrc.sh
-# source $ZSH_PATH/zsh-autosuggestions/autosuggestions.zsh
+antigen use oh-my-zsh
 
-# plugins
-plugins=(git osx brew zsh-syntax-highlighting node npm git-extras vagrant nvm)
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle olivierverdier/zsh-git-prompt
+antigen bundle git
+antigen bundle heroku
+antigen bundle npm
+antigen bundle brew
+antigen bundle command-not-found
 
 # exports
-source $ZSH_PATH/exports
+source $ZSH/exports.zsh
 
 # prompt
-source $ZSH_PATH/prompt
+source $ZSH/prompt.zsh
 
 # aliases
-source $ZSH_PATH/aliases
+source $ZSH/aliases.zsh
 
 # functions
-source $ZSH_PATH/functions
-
-if which brew > /dev/null
-then
-  # nvm
-  source $(brew --prefix nvm)/nvm.sh
-
-  # autojump
-  [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-fi
+source $ZSH/functions.zsh
 
 # autocomplete ssh
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
-
-if which thefuck > /dev/null
-then
-  eval $(thefuck --alias)
-fi
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 # added by travis gem
 [ -f /Users/kdurbin/.travis/travis.sh ] && source /Users/kdurbin/.travis/travis.sh

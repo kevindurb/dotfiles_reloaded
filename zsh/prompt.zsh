@@ -1,11 +1,3 @@
-#vi: ft=zsh
-
-# AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=13'
-# zle-line-init() {
-#   zle autosuggest-start
-# }
-# zle -N zle-line-init
-
 function prompt_mood {
   if [ $? = 0 ];
   then echo $fg[green]'^_^';
