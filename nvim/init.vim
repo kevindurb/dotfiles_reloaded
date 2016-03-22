@@ -30,10 +30,8 @@ Plug 'othree/html5.vim',             { 'for' : 'html' }
 Plug 'StanAngeloff/php.vim',         { 'for' : 'php' }
 
 " syntax checking and completion
-" Plug 'scrooloose/syntastic'
 Plug 'benekastah/neomake'
-" Plug 'flowtype/vim-flow'
-" Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim'
 Plug 'ervandew/supertab'
 
 " project navigation
@@ -58,5 +56,6 @@ Plug 'tpope/vim-sensible'
 Plug 'matchit.zip'
 Plug 'xolox/vim-misc'
 Plug 'junegunn/vim-emoji'
+Plug 'joonty/vdebug'
 
 call plug#end()

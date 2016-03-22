@@ -14,29 +14,35 @@ function prompt_mood {
 }
 
 function prompt_me {
-  echo "%{$fg[magenta]%}$(whoami)%{$fg[white]%}@%{$fg[yellow]%}$(hostname)"
+  echo "%{$fg[magenta]%}$(whoami)%{$fg[white]%}@%{$fg[blue]%}$(hostname)"
 }
 
 function prompt_path {
-  echo "%{$fg[blue]%}${PWD/#$HOME/~}"
+  echo "%{$fg[white]%}${PWD/#$HOME/~}"
 }
 
 function prompt_git {
-  echo "%{$reset_color%}$(git_prompt_info)"
+  echo "%{$reset_color%}$(git_super_status)"
 }
 
 function prompt_carrot {
-  echo "%{$fg[blue]%}> "
+  echo "%{$fg[magenta]%}>%{$fg[blue]%}>%{$fg[white]%}> "
 }
 
 PROMPT='
-$(prompt_mood) $(prompt_me) $(prompt_path) $(prompt_git)
+$(prompt_mood) $(prompt_me) $(prompt_path)
 $(prompt_carrot)'
 
-RPROMPT=''
+RPROMPT='$(prompt_git)'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[orange]%}?"
-ZSH_THEME_GIT_PROMPT_CLEAN=""
+ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_SEPARATOR=""
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
+ZSH_THEME_GIT_PROMPT_STAGED=" %{$fg[red]%}%{●%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS=" %{$fg[red]%}%{✖%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED=" %{$fg[blue]%}%{✚%G%}"
+ZSH_THEME_GIT_PROMPT_BEHIND=" %{↓%G%}"
+ZSH_THEME_GIT_PROMPT_AHEAD=" %{↑%G%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{…%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg_bold[green]%}%{✔%G%}"

@@ -3,12 +3,8 @@ let mapleader=","
 
 " map jj to escape for mor speed!!
 inoremap jj <ESC>
-if has("nvim")
-  tnoremap <ESC> <c-\><c-n>
-endif
-
-" hard mode!!
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+tnoremap jj <ESC>
+tnoremap <ESC> <c-\><c-n>
 
 " nerd tree
 map <leader>[ :NERDTreeToggle<CR>
@@ -26,25 +22,29 @@ map <leader>bd :bdel<CR>
 nnoremap <leader>v		 :vsp<CR>
 nnoremap <leader><S-v> :sp<CR>
 nnoremap <leader>z		 <c-w>o
-if has("nvim")
-  tnoremap <leader>v		 :vsp<CR>
-  tnoremap <leader><S-v> :sp<CR>
-  tnoremap <leader>z		 <c-w>o
-endif
+tnoremap <leader>v		 :vsp<CR>
+tnoremap <leader><S-v> :sp<CR>
+tnoremap <leader>z		 <c-w>o
 
 " pane navigation
-if has("nvim")
-  tnoremap <C-h> <C-\><C-n><C-w>h
-  tnoremap <C-j> <C-\><C-n><C-w>j
-  tnoremap <C-k> <C-\><C-n><C-w>k
-  tnoremap <C-l> <C-\><C-n><C-w>l
-  nnoremap <BS> <C-w>h
-  nnoremap <BS> <C-\><C-n><C-w>h
-endif
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" fix nvim bug
+nnoremap <BS> <C-w>h
+nnoremap <BS> <C-\><C-n><C-w>h
+
+" pane resizing
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+tnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+tnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " disable arrow keys
 inoremap <up>	    <nop>

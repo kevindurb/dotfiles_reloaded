@@ -5,6 +5,7 @@ ZSH=$ZSH_PATH/oh-my-zsh
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_PATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_PATH/zsh-git-prompt/zshrc.sh
 # source $ZSH_PATH/zsh-autosuggestions/autosuggestions.zsh
 
 # plugins
@@ -41,3 +42,6 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# added by travis gem
+[ -f /Users/kdurbin/.travis/travis.sh ] && source /Users/kdurbin/.travis/travis.sh
