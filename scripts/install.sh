@@ -50,12 +50,12 @@ git submodule update
 
 echo "Creating symlinks..."
 cd ~
-ln -s ~/dotfiles/gitconfig .gitconfig
-ln -s ~/dotfiles/gitignore .gitignore
-ln -s ~/dotfiles/zshrc     .zshrc
-ln -s ~/dotfiles/zprofile  .zprofile
-ln -s ~/dotfiles/nvim      ~/.config/nvim
-ln -s ~/dotfiles/zsh       .zsh
+ln -s ~/dotfiles/gitconfig    ~/.gitconfig
+ln -s ~/dotfiles/gitignore    ~/.gitignore
+ln -s ~/dotfiles/zsh          ~/.config/zsh
+ln -s ~/dotfiles/nvim         ~/.config/nvim
+ln -s ~/.config/zsh/init.zsh  ~/.zshrc
+ln -s ~/dotfiles/zprofile     ~/.zprofile
 
 cd $PREVIOUS_DIR
 

@@ -1,5 +1,3 @@
-# vi: ft=zsh
-
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias lsd="ls -lAFd */"

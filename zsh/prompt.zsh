@@ -21,6 +21,8 @@ function prompt_carrot {
   echo "%{$fg_bold[magenta]%}>%{$fg_bold[blue]%}>%{$fg_bold[white]%}> "
 }
 
+autoload -U colors && colors
+
 PROMPT='
 $(prompt_git) $(prompt_carrot)'
 

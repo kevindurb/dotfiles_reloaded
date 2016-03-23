@@ -1,11 +1,12 @@
 ZSH=$HOME/dotfiles/zsh
 
-#antigen
+# antigen
 source $ZSH/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions src
 antigen bundle olivierverdier/zsh-git-prompt
 antigen bundle git
 antigen bundle heroku
@@ -30,3 +31,8 @@ zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f
 
 # added by travis gem
 [ -f /Users/kdurbin/.travis/travis.sh ] && source /Users/kdurbin/.travis/travis.sh
+
+# autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+autoload -U compinit && compinit

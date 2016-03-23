@@ -1,5 +1,3 @@
-# vi: ft=zsh
-
 # jump to a project from anywhere
 go () { cd ~/projects/$1; }
 _go () { _files -W ~/projects -/; }
