@@ -31,7 +31,6 @@ Plug 'StanAngeloff/php.vim',         { 'for' : 'php' }
 
 " syntax checking and completion
 Plug 'benekastah/neomake'
-Plug 'ternjs/tern_for_vim'
 Plug 'ervandew/supertab'
 
 " project navigation
@@ -57,5 +56,6 @@ Plug 'matchit.zip'
 Plug 'xolox/vim-misc'
 Plug 'junegunn/vim-emoji'
 Plug 'joonty/vdebug'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()

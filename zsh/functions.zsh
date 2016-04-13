@@ -68,3 +68,14 @@ tiny() {
 battery() {
   pmset -g batt | grep Internal | awk '{print $2;}'
 }
+
+review() {
+  hash=$(git rev-parse HEAD)
+
+  if [ ! -z "$1" ]
+  then
+    hash="$1"
+  fi
+
+  echo "https://testdrivesite.beanstalkapp.com/churchcommunitybuilder/changesets/${hash}" | pbcopy
+}

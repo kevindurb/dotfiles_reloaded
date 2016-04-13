@@ -26,7 +26,7 @@ autoload -U colors && colors
 PROMPT='
 $(prompt_git) $(prompt_carrot)'
 
-RPROMPT='$(prompt_path)'
+RPROMPT=''
 
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""

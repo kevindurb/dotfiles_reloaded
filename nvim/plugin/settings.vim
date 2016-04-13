@@ -108,7 +108,7 @@ syntax enable
 set foldenable
 set foldmethod=indent
 set foldnestmax=10
-set foldlevel=1
+set foldlevel=0
 
 " session saving
 set ssop-=options
