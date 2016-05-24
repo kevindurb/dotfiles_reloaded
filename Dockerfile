@@ -56,4 +56,18 @@ USER dev
 WORKDIR /home/dev
 ENV HOME /home/dev
 
+# setup antigen
+RUN /bin/zsh -c "\
+  source /home/dev/dotfiles/zsh/antigen/antigen.zsh; \
+  antigen use oh-my-zsh; \
+  antigen bundle zsh-users/zsh-syntax-highlighting; \
+  antigen bundle zsh-users/zsh-completions src; \
+  antigen bundle olivierverdier/zsh-git-prompt; \
+  antigen bundle git; \
+  antigen bundle heroku; \
+  antigen bundle npm; \
+  antigen bundle brew; \
+  antigen bundle command-not-found; \
+"
+
 ENTRYPOINT ["/bin/zsh"]
