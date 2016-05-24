@@ -31,3 +31,7 @@ if  [[ -f $VAGRANT_HELPERS ]]
 then
   source $VAGRANT_HELPERS
 fi
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"

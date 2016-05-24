@@ -35,6 +35,7 @@ Plug 'ervandew/supertab'
 
 " project navigation
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-scripts/gitignore'

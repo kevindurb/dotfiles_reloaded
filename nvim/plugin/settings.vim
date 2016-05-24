@@ -12,8 +12,12 @@ autocmd! BufWritePost * Neomake
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
 
+" open nerd tree when no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 " close vim when only nerdtree is left
-au bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Silver Searcher shortcut
 cabbrev ag Ag

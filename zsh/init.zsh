@@ -30,12 +30,9 @@ source $ZSH/functions.zsh
 zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
 # added by travis gem
-[ -f /Users/kdurbin/.travis/travis.sh ] && source /Users/kdurbin/.travis/travis.sh
-
-# autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 autoload -U compinit && compinit
 
-export NVM_DIR="/Users/kdurbin/.nvm"
+export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
