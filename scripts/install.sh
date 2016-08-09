@@ -32,6 +32,8 @@ sudo chsh -s $(which zsh) $CURRENT_USER
 
 echo "Installing nvm..."
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 echo "Installing node..."
 nvm install stable
@@ -50,19 +52,19 @@ git submodule update
 
 echo "Creating symlinks..."
 cd ~
-ln -s ~/dotfiles/gitconfig     ~/.gitconfig
-ln -s ~/dotfiles/gitignore     ~/.gitignore
-ln -s ~/dotfiles/zsh           ~/.zsh
-ln -s ~/dotfiles/vim           ~/.vim
-ln -s ~/dotfiles/tmux          ~/.tmux
-ln -s ~/dotfiles/zsh/init.zsh  ~/.zshrc
-ln -s ~/dotfiles/vim/init.zsh  ~/.vimrc
-ln -s ~/dotfiles/tmux/init.zsh ~/.tmux.conf
-ln -s ~/dotfiles/zprofile      ~/.zprofile
+ln -s ~/dotfiles/gitconfig      ~/.gitconfig
+ln -s ~/dotfiles/gitignore      ~/.gitignore
+ln -s ~/dotfiles/zsh            ~/.zsh
+ln -s ~/dotfiles/vim            ~/.vim
+ln -s ~/dotfiles/tmux           ~/.tmux
+ln -s ~/dotfiles/zsh/init.zsh   ~/.zshrc
+ln -s ~/dotfiles/vim/init.vim   ~/.vimrc
+ln -s ~/dotfiles/tmux/init.conf ~/.tmux.conf
+ln -s ~/dotfiles/zprofile       ~/.zprofile
 
 cd $PREVIOUS_DIR
 
 echo "Installing vim plugins..."
-nvim +PlugInstall +qa
+vim +PlugInstall +qa
 
 echo "Dotfiles installed!"
