@@ -16,12 +16,12 @@ if [[ $PLATFORM == 'Darwin' ]]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   echo "Installing Deps..."
-  brew install neovim/neovim/neovim git tig ruby zsh cmake cmatrix
+  brew install vim git tig ruby zsh cmake cmatrix
   sudo gem install git-smart
 elif which apt-get > /dev/null; then
   echo "Determined linux with apt..."
   echo "Installing Deps..."
-  sudo apt-get install vim git tig ruby xclip zsh cmake build-essential python-dev
+  sudo apt install vim git tig ruby xclip zsh cmake build-essential python-dev
 else
   echo "Couldnt determine OS... Exiting..."
   exit 1
@@ -31,7 +31,7 @@ echo "setting zsh to default..."
 sudo chsh -s $(which zsh) $CURRENT_USER
 
 echo "Installing nvm..."
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
 
 echo "Installing node..."
 nvm install stable
@@ -50,12 +50,15 @@ git submodule update
 
 echo "Creating symlinks..."
 cd ~
-ln -s ~/dotfiles/gitconfig    ~/.gitconfig
-ln -s ~/dotfiles/gitignore    ~/.gitignore
-ln -s ~/dotfiles/zsh          ~/.config/zsh
-ln -s ~/dotfiles/nvim         ~/.config/nvim
-ln -s ~/.config/zsh/init.zsh  ~/.zshrc
-ln -s ~/dotfiles/zprofile     ~/.zprofile
+ln -s ~/dotfiles/gitconfig     ~/.gitconfig
+ln -s ~/dotfiles/gitignore     ~/.gitignore
+ln -s ~/dotfiles/zsh           ~/.zsh
+ln -s ~/dotfiles/vim           ~/.vim
+ln -s ~/dotfiles/tmux          ~/.tmux
+ln -s ~/dotfiles/zsh/init.zsh  ~/.zshrc
+ln -s ~/dotfiles/vim/init.zsh  ~/.vimrc
+ln -s ~/dotfiles/tmux/init.zsh ~/.tmux.conf
+ln -s ~/dotfiles/zprofile      ~/.zprofile
 
 cd $PREVIOUS_DIR
 

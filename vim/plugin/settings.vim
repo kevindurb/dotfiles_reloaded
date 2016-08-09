@@ -5,9 +5,6 @@ augroup special_file_types
   autocmd BufRead,BufNewFile *.ejs set ft=html
 augroup END
 
-" run neomake on write
-autocmd! BufWritePost * Neomake
-
 " change the cursor in different modes
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
@@ -109,10 +106,10 @@ set noerrorbells
 syntax enable
 
 " folding
-set foldenable
-set foldmethod=indent
-set foldnestmax=10
-set foldlevel=0
+" set foldenable
+" set foldmethod=indent
+" set foldnestmax=10
+" set foldlevel=0
 
 " session saving
 set ssop-=options

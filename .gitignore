@@ -1,7 +1,12 @@
 # ignore these
-nvim/plugged/*
+vim/plugged/*
 .DS_Store
-nvim/backup/*
+vim/backup/*
+tmux/plugins/*
+tmux/resurrect/*
 
 # dont ignore these
-!nvim/backup/.gitkeep
+!vim/backup/.gitkeep
+!vim/plugged/.gitkeep
+!tmux/plugins/.gitkeep
+!tmux/resurrect/.gitkeep

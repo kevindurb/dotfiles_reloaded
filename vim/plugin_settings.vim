@@ -20,17 +20,20 @@ let g:vdebug_options = {
 let g:sqlutil_keyword_case = '\U'
 let g:sqlutil_align_comma = 1
 
-" syntastic cool symbols
+" syntastic settings
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_mode_map={ 'mode': 'active', 'passive_filetypes': ['css', 'scss'] }
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 1
+
+" syntastic javascript
+let g:syntastic_javascript_checkers = ['eslint']
 
 " syntastic html settings
 let g:syntastic_html_validator_parser='html'
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute "]
-
-" syntastic check files on open
-let g:syntastic_check_on_open=1
 
 " autoclose
 let g:AutoCloseExpandSpace = 0

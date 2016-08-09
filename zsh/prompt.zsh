@@ -24,7 +24,8 @@ function prompt_carrot {
 autoload -U colors && colors
 
 PROMPT='
-$(prompt_git) $(prompt_carrot)'
+$(prompt_me) $(prompt_path) $(prompt_git)
+$(prompt_carrot)'
 
 RPROMPT=''
 

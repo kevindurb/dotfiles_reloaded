@@ -2,7 +2,7 @@
 set nocompatible
 
 " give me a home variable to work with
-let $VIMHOME = $HOME."/.config/nvim"
+let $VIMHOME = $HOME."/.vim"
 
 source $VIMHOME/plugin_settings.vim
 
@@ -20,7 +20,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'cakebaker/scss-syntax.vim',    { 'for' : ['scss', 'css'] }
 Plug 'hail2u/vim-css3-syntax',       { 'for' : ['scss', 'css'] }
 Plug 'jelera/vim-javascript-syntax', { 'for' : 'javascript' }
-Plug 'pangloss/vim-javascript',      { 'for' : 'javascript' }
+" Plug 'pangloss/vim-javascript',      { 'for' : 'javascript' }
 Plug 'mxw/vim-jsx',                  { 'for' : 'javascript' }
 Plug 'moll/vim-node',                { 'for' : 'javascript' }
 Plug 'suan/vim-instant-markdown',    { 'for' : 'markdown' }
@@ -28,9 +28,10 @@ Plug 'plasticboy/vim-markdown',      { 'for' : 'markdown' }
 Plug 'helino/vim-json',              { 'for' : 'json' }
 Plug 'othree/html5.vim',             { 'for' : 'html' }
 Plug 'StanAngeloff/php.vim',         { 'for' : 'php' }
+Plug 'lambdatoast/elm.vim',          { 'for' : 'javascript' }
 
 " syntax checking and completion
-Plug 'benekastah/neomake'
+Plug 'scrooloose/syntastic'
 Plug 'ervandew/supertab'
 
 " project navigation
@@ -49,14 +50,13 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'alvan/vim-closetag'
 
 " other
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'matchit.zip'
 Plug 'xolox/vim-misc'
-Plug 'junegunn/vim-emoji'
-Plug 'joonty/vdebug'
 Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()

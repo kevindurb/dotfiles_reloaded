@@ -2,9 +2,9 @@
 let mapleader=","
 
 " map jj to escape for mor speed!!
-inoremap jj <ESC>
-tnoremap jj <ESC>
-tnoremap <ESC> <c-\><c-n>
+" inoremap jj <ESC>
+" tnoremap jj <ESC>
+" tnoremap <ESC> <c-\><c-n>
 
 " nerd tree
 map <leader>[ :NERDTreeToggle<CR>
@@ -22,9 +22,9 @@ map <leader>bd :bdel<CR>
 nnoremap <leader>v		 :vsp<CR>
 nnoremap <leader><S-v> :sp<CR>
 nnoremap <leader>z		 <c-w>o
-tnoremap <leader>v		 :vsp<CR>
-tnoremap <leader><S-v> :sp<CR>
-tnoremap <leader>z		 <c-w>o
+" tnoremap <leader>v		 :vsp<CR>
+" tnoremap <leader><S-v> :sp<CR>
+" tnoremap <leader>z		 <c-w>o
 
 " fix nvim bug
 " nnoremap <BS> <C-w>h
@@ -33,8 +33,8 @@ tnoremap <leader>z		 <c-w>o
 " pane resizing
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
-tnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-tnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+" tnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+" tnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " disable arrow keys
 inoremap <up>	    <nop>
@@ -49,6 +49,19 @@ vnoremap <up>	    <nop>
 vnoremap <down>	  <nop>
 vnoremap <left>	  <nop>
 vnoremap <right>	<nop>
+
+" nnoremap <C-h> <C-w><C-h>
+" nnoremap <C-j> <C-w><C-j>
+" nnoremap <C-k> <C-w><C-k>
+" nnoremap <C-l> <C-w><C-l>
+" inoremap <C-h> <C-w><C-h>
+" inoremap <C-j> <C-w><C-j>
+" inoremap <C-k> <C-w><C-k>
+" inoremap <C-l> <C-w><C-l>
+" vnoremap <C-h> <C-w><C-h>
+" vnoremap <C-j> <C-w><C-j>
+" vnoremap <C-k> <C-w><C-k>
+" vnoremap <C-l> <C-w><C-l>
 
 " folding fun
 	" shortcut to fold an HTML tag

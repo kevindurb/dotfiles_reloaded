@@ -1,7 +1,7 @@
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias lsd="ls -lAFd */"
-alias rmvimswp="rm -rf ~/.config/nvim/backup/*"
+alias rmvimswp="rm -rf ~/.vim/backup/*"
 alias c="clear"
 alias reqtime="curl -o /dev/null -s -w %{time_total}\\\n"
 alias zzz="osascript -e 'tell application \"Finder\" to sleep'"
@@ -24,7 +24,7 @@ alias spr="spotify repeat"
 alias sps="spotify shuffle"
 
 # use nvim
-alias vim="nvim"
+alias vim="/usr/local/bin/vim"
 
 # use tmux
 alias tmux="TERM=xterm-256color tmux"
