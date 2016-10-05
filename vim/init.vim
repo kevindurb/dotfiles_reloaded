@@ -16,19 +16,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ntpeters/vim-better-whitespace'
 
-" syntax
-Plug 'cakebaker/scss-syntax.vim',    { 'for' : ['scss', 'css'] }
-Plug 'hail2u/vim-css3-syntax',       { 'for' : ['scss', 'css'] }
-Plug 'jelera/vim-javascript-syntax', { 'for' : 'javascript' }
-" Plug 'pangloss/vim-javascript',      { 'for' : 'javascript' }
-Plug 'mxw/vim-jsx',                  { 'for' : 'javascript' }
-Plug 'moll/vim-node',                { 'for' : 'javascript' }
-Plug 'suan/vim-instant-markdown',    { 'for' : 'markdown' }
-Plug 'plasticboy/vim-markdown',      { 'for' : 'markdown' }
-Plug 'helino/vim-json',              { 'for' : 'json' }
-Plug 'othree/html5.vim',             { 'for' : 'html' }
-Plug 'StanAngeloff/php.vim',         { 'for' : 'php' }
-Plug 'lambdatoast/elm.vim',          { 'for' : 'javascript' }
+" one syntax to rule them all...
+Plug 'sheerun/vim-polyglot'
 
 " syntax checking and completion
 Plug 'scrooloose/syntastic'
@@ -53,10 +42,11 @@ Plug 'tpope/vim-repeat'
 Plug 'alvan/vim-closetag'
 
 " other
+Plug 'tpope/vim-heroku'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-dispatch'
 Plug 'matchit.zip'
 Plug 'xolox/vim-misc'
-Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()

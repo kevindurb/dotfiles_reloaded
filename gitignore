@@ -18,3 +18,4 @@ vdebug_log
 .tern-project
 app/resources/assets
 .agignore
+.vscode

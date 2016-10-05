@@ -1,3 +1,8 @@
+if has('gui_running')
+  set guifont=Source\ Code\ Pro:h12
+  set transparency=10
+endif
+
 " special file types
 augroup special_file_types
   autocmd!
@@ -10,8 +15,8 @@ let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
 
 " open nerd tree when no file is specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " close vim when only nerdtree is left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

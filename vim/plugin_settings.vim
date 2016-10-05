@@ -51,7 +51,7 @@ let g:bufferline_echo = 0
 let delimitMate_matchpairs = "(:),[:],{:}"
 
 " ctrl p exclude
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard', 'node_modules/']
+let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
 
 " hide ycm preview window
 set completeopt-=preview

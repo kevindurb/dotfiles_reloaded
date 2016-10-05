@@ -14,6 +14,3 @@ export MYVIMSETTINGS=$HOME/.vim/plugin/settings.vim
 
 # nvm
 export NVM_DIR=~/.nvm
-
-# docker
-export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
