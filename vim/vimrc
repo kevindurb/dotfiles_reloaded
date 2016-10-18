@@ -5,6 +5,7 @@ set nocompatible
 " give me a home variable to work with
 let $VIMHOME = $HOME."/.vim"
 
+" start plug
 call plug#begin('~/.vim/plugged')
 
 " look and feel
@@ -42,16 +43,20 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
+" motion
+Plug 'easymotion/vim-easymotion'
+Plug 'wikitopian/hardmode'
+Plug 'matchit.zip'
+
 " other
 Plug 'tpope/vim-heroku'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-vinegar'
-Plug 'matchit.zip'
 Plug 'xolox/vim-misc'
-Plug 'wikitopian/hardmode'
 
+" end plug
 call plug#end()
 " }}}
 
