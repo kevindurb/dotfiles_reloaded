@@ -50,6 +50,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-vinegar'
 Plug 'matchit.zip'
 Plug 'xolox/vim-misc'
+Plug 'wikitopian/hardmode'
 
 call plug#end()
 " }}}
@@ -65,6 +66,7 @@ let g:syntastic_auto_loc_list = 1
 
 " syntastic javascript
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_jsx_checkers = ['eslint']
 
 " syntastic html settings
 let g:syntastic_html_validator_parser='html'
@@ -102,6 +104,8 @@ if has('gui_running')
   set guifont=Source\ Code\ Pro:h12
   set transparency=10
 endif
+
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " special file types
 augroup special_file_types
@@ -229,6 +233,8 @@ set ttyfast
 " VIM Keymaps {{{
 " map leader to comma for speed!!!
 let mapleader=","
+
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " nerd tree
 map <leader>[ :NERDTreeToggle<CR>
