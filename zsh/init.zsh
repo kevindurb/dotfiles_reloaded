@@ -9,10 +9,18 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions src
 antigen bundle olivierverdier/zsh-git-prompt
 antigen bundle git
+antigen bundle osx
 antigen bundle heroku
 antigen bundle npm
+antigen bundle nvm
+antigen bundle node
 antigen bundle brew
 antigen bundle command-not-found
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle colored-man-pages
+antigen bundle colorize
+antigen bundle compleat
 
 # exports
 source $ZSH/exports.zsh

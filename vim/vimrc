@@ -45,7 +45,6 @@ Plug 'honza/vim-snippets'
 
 " motion
 Plug 'easymotion/vim-easymotion'
-Plug 'wikitopian/hardmode'
 Plug 'matchit.zip'
 
 " other
@@ -109,8 +108,6 @@ if has('gui_running')
   set guifont=Source\ Code\ Pro:h12
   set transparency=10
 endif
-
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " special file types
 augroup special_file_types
