@@ -3,15 +3,13 @@ ZSH=$HOME/dotfiles/zsh
 # antigen
 source $ZSH/antigen/antigen.zsh
 
-# antigen use oh-my-zsh
-
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-completions src
 antigen bundle olivierverdier/zsh-git-prompt
 antigen bundle git
 antigen bundle osx
 antigen bundle heroku
-antigen bundle npm
 antigen bundle nvm
 antigen bundle node
 antigen bundle brew
@@ -40,7 +38,7 @@ zstyle -e ':completion:*:(ssh|scp|sftp|rsh|rsync):hosts' hosts 'reply=(${=${${(f
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
-autoload -U compinit && compinit
-
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+autoload -U compinit && compinit

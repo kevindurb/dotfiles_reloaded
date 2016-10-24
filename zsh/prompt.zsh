@@ -21,13 +21,21 @@ function prompt_carrot {
   echo "%{$fg_bold[magenta]%}>%{$fg_bold[blue]%}>%{$fg_bold[white]%}> "
 }
 
+function prompt_collapsed_path {
+  echo $(pwd | perl -pe "
+   BEGIN {
+      binmode STDIN,  ':encoding(UTF-8)';
+      binmode STDOUT, ':encoding(UTF-8)';
+   }; s|^$HOME|~|g; s|/([^/])[^/]*(?=/)|/\$1|g
+")
+}
+
 autoload -U colors && colors
 
 PROMPT='
-$(prompt_me) $(prompt_path) $(prompt_git)
-$(prompt_carrot)'
+$(prompt_collapsed_path) $(prompt_carrot)'
 
-RPROMPT=''
+RPROMPT='$(prompt_git)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
