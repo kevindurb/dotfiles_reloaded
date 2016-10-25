@@ -28,6 +28,7 @@ Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-scripts/gitignore'
 Plug 'rking/ag.vim'
+Plug 'kshenoy/vim-signature'
 
 " text manipulation
 Plug 'Align'
@@ -42,6 +43,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+Plug 'chip/vim-fat-finger'
 
 " motion
 Plug 'easymotion/vim-easymotion'
@@ -94,20 +96,10 @@ let delimitMate_matchpairs = "(:),[:],{:}"
 " ctrl p exclude
 let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
 
-" hide ycm preview window
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
-
 " easytags use local tag files
 set tags=./tags
 let g:easytags_dynamic_files = 1
 " }}}
-
-" VIM Settings {{{
-if has('gui_running')
-  set guifont=Source\ Code\ Pro:h12
-  set transparency=10
-endif
 
 " special file types
 augroup special_file_types
@@ -137,7 +129,6 @@ cabbrev Q q
 set number
 
 " show the status line
-set laststatus=2
 set noshowmode
 
 " more natural split directions
@@ -149,17 +140,8 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set autoindent
 set smartindent
-set smarttab
 set shiftround
-
-" cursorline!
-augroup language_tabbing
-  autocmd!
-  autocmd InsertLeave,WinEnter * set cursorline
-  autocmd InsertEnter,WinLeave * set nocursorline
-augroup END
 
 " per language tabbing
 augroup language_tabbing
@@ -180,17 +162,12 @@ augroup sparkup_types
 augroup END
 
 " various stuff
-set autowrite
-set cursorline
-set nowrap
-set backspace=indent,eol,start
-set wildmode=longest:list,full
-set wildmenu
+set spell
+set autowrite  " save when you change buffers
+set cursorline " turn on cursor horizontal line
+set nowrap     " NO WRAPPING LINES
 set showmatch  " highlight matching brace
-
-" dont get too close to the edge
-set scrolloff=3
-set sidescrolloff=3
+set wildmode=longest:list,full
 
 " make search awesome
 set ignorecase " ignore search case
@@ -216,9 +193,6 @@ set title
 set visualbell
 set noerrorbells
 
-" syntax highlighting
-syntax enable
-
 " session saving
 set ssop-=options
 set ssop-=folds
@@ -226,10 +200,6 @@ set ssop-=folds
 " colorscheme stuff
 set background=dark
 colorscheme brogrammer
-
-" make vim draw faster
-set lazyredraw
-set ttyfast
 " }}}
 
 " VIM Keymaps {{{

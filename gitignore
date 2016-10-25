@@ -19,3 +19,4 @@ vdebug_log
 app/resources/assets
 .agignore
 .vscode
+node_modules
