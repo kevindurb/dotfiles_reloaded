@@ -9,7 +9,7 @@ let $VIMHOME = $HOME."/.vim"
 call plug#begin('~/.vim/plugged')
 
 " look and feel
-Plug 'marciomazza/vim-brogrammer-theme'
+Plug 'fxn/vim-monochrome'
 Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
@@ -24,7 +24,6 @@ Plug 'scrooloose/syntastic'
 Plug 'ervandew/supertab'
 
 " project navigation
-Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-scripts/gitignore'
 Plug 'rking/ag.vim'
@@ -46,7 +45,6 @@ Plug 'honza/vim-snippets'
 Plug 'chip/vim-fat-finger'
 
 " motion
-Plug 'easymotion/vim-easymotion'
 Plug 'matchit.zip'
 
 " other
@@ -162,7 +160,6 @@ augroup sparkup_types
 augroup END
 
 " various stuff
-set spell
 set autowrite  " save when you change buffers
 set cursorline " turn on cursor horizontal line
 set nowrap     " NO WRAPPING LINES
@@ -199,7 +196,7 @@ set ssop-=folds
 
 " colorscheme stuff
 set background=dark
-colorscheme brogrammer
+colorscheme monochrome
 " }}}
 
 " VIM Keymaps {{{
@@ -215,10 +212,14 @@ map <leader>[ :NERDTreeToggle<CR>
 map <leader>] :TagbarToggle<CR>
 
 " choose buffer faster
-map <leader>b :b
 map <leader>bn :bnext<CR>
 map <leader>bp :bprev<CR>
 map <leader>bd :bdel<CR>
+
+" location list stuff
+map <leader>ll :ll<CR>
+map <leader>ln :lnext<CR>
+map <leader>lp :lprev<CR>
 
 " pane control
 nnoremap <leader>v		 :vsp<CR>
@@ -267,7 +268,7 @@ nnoremap <leader>fb zfa{
 nnoremap <C-g> :Ag<space>
 
 " stop doing ex mode
-nnoremap Q gq
+" nnoremap Q gq
 
 " insert filename
 inoremap <leader>fn <C-R>=expand("%:t")<CR>
