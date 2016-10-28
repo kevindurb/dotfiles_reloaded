@@ -26,7 +26,7 @@ Plug 'ervandew/supertab'
 " project navigation
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-scripts/gitignore'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'kshenoy/vim-signature'
 
 " text manipulation
@@ -97,6 +97,14 @@ let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
 " easytags use local tag files
 set tags=./tags
 let g:easytags_dynamic_files = 1
+
+" use ack to run Ag
+let g:ackprg = 'ag --vimgrep --smart-case'                                                   
+cnoreabbrev ag Ack                                                                           
+cnoreabbrev aG Ack                                                                           
+cnoreabbrev Ag Ack                                                                           
+cnoreabbrev AG Ack
+
 " }}}
 
 " special file types
@@ -107,11 +115,9 @@ augroup special_file_types
 augroup END
 
 " change the cursor in different modes
-let &t_SI = "\e[5 q"
-let &t_EI = "\e[2 q"
-
-" close vim when only nerdtree is left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " Silver Searcher shortcut
 cabbrev ag Ag
@@ -190,10 +196,6 @@ set title
 set visualbell
 set noerrorbells
 
-" session saving
-set ssop-=options
-set ssop-=folds
-
 " colorscheme stuff
 set background=dark
 colorscheme monochrome
@@ -202,14 +204,6 @@ colorscheme monochrome
 " VIM Keymaps {{{
 " map leader to comma for speed!!!
 let mapleader=","
-
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
-
-" nerd tree
-map <leader>[ :NERDTreeToggle<CR>
-
-" tagbar
-map <leader>] :TagbarToggle<CR>
 
 " choose buffer faster
 map <leader>bn :bnext<CR>
