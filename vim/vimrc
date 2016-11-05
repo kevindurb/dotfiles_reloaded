@@ -264,6 +264,9 @@ vnoremap <C-j> <C-w><C-j>
 vnoremap <C-k> <C-w><C-k>
 vnoremap <C-l> <C-w><C-l>
 
+" K will Ag word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 " folding fun
 	" shortcut to fold an HTML tag
 nnoremap <leader>ft Vatzf
