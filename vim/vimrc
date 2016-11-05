@@ -11,51 +11,30 @@ let $VIMHOME = $HOME."/.vim"
 " start plug
 call plug#begin('~/.vim/plugged')
 
-" look and feel
-Plug 'fxn/vim-monochrome'
-Plug 'airblade/vim-gitgutter'
-Plug 'skammer/vim-css-color'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-sensible'                " a good place to start
 
-" one syntax to rule them all...
-Plug 'sheerun/vim-polyglot'
+Plug 'fxn/vim-monochrome'                " color scheme
+Plug 'vim-airline/vim-airline'           " pretty status line
+Plug 'vim-airline/vim-airline-themes'    " pretty status line themes
 
-" syntax checking and completion
-Plug 'scrooloose/syntastic'
-Plug 'ervandew/supertab'
+Plug 'tpope/vim-commentary'              " sweet commenting
+Plug 'tpope/vim-repeat'                  " better repeating plugin commands
+Plug 'tpope/vim-surround'                " surround with things
+Plug 'tpope/vim-vinegar'                 " use minus (-) to go up a dir
 
-" project navigation
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-scripts/gitignore'
-Plug 'kshenoy/vim-signature'
-
-" text manipulation
-Plug 'Align'
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plug 'terryma/vim-multiple-cursors'
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'alvan/vim-closetag'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-Plug 'chip/vim-fat-finger'
-
-" motion
-Plug 'matchit.zip'
-
-" other
-Plug 'tpope/vim-heroku'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-vinegar'
-Plug 'xolox/vim-misc'
+Plug 'airblade/vim-gitgutter'            " git status in gutter
+Plug 'chip/vim-fat-finger'               " easy fixes for my bad lesdixia
+Plug 'ctrlpvim/ctrlp.vim'                " find files quickly
+Plug 'ervandew/supertab'                 " trigger completion with tab
+Plug 'kshenoy/vim-signature'             " show marks in gutter
+Plug 'matchit.zip'                       " matching with % for more things
+Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
+Plug 'Raimondi/delimitMate'              " auto complete brackets and quotes
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " easily create html from css selectors
+Plug 'scrooloose/syntastic'              " syntax linter
+Plug 'sheerun/vim-polyglot'              " all the syntax files!
+Plug 'skammer/vim-css-color'             " turns hex and rgb into colors
+Plug 'terryma/vim-multiple-cursors'      " multiple cursors in vim
 
 " end plug
 call plug#end()
