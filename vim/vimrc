@@ -5,36 +5,35 @@
 " we are iMproved
 set nocompatible
 
-" give me a home variable to work with
-let $VIMHOME = $HOME."/.vim"
-
 " start plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'                " a good place to start
+Plug 'tpope/vim-sensible'                           " a good place to start
 
-Plug 'fxn/vim-monochrome'                " color scheme
-Plug 'vim-airline/vim-airline'           " pretty status line
-Plug 'vim-airline/vim-airline-themes'    " pretty status line themes
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'} " color scheme!!
 
-Plug 'tpope/vim-commentary'              " sweet commenting
-Plug 'tpope/vim-repeat'                  " better repeating plugin commands
-Plug 'tpope/vim-surround'                " surround with things
-Plug 'tpope/vim-vinegar'                 " use minus (-) to go up a dir
+Plug 'vim-airline/vim-airline'                      " pretty status line
+Plug 'vim-airline/vim-airline-themes'               " pretty status line themes
 
-Plug 'airblade/vim-gitgutter'            " git status in gutter
-Plug 'chip/vim-fat-finger'               " easy fixes for my bad lesdixia
-Plug 'ctrlpvim/ctrlp.vim'                " find files quickly
-Plug 'ervandew/supertab'                 " trigger completion with tab
-Plug 'kshenoy/vim-signature'             " show marks in gutter
-Plug 'matchit.zip'                       " matching with % for more things
-Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
-Plug 'Raimondi/delimitMate'              " auto complete brackets and quotes
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " easily create html from css selectors
-Plug 'scrooloose/syntastic'              " syntax linter
-Plug 'sheerun/vim-polyglot'              " all the syntax files!
-Plug 'skammer/vim-css-color'             " turns hex and rgb into colors
-Plug 'terryma/vim-multiple-cursors'      " multiple cursors in vim
+Plug 'tpope/vim-commentary'                         " sweet commenting
+Plug 'tpope/vim-repeat'                             " better repeating plugin commands
+Plug 'tpope/vim-surround'                           " surround with things
+Plug 'tpope/vim-vinegar'                            " use minus (-) to go up a dir
+Plug 'tpope/vim-unimpaired'                         " common mappings forr cool things with '[]'
+
+Plug 'airblade/vim-gitgutter'                       " git status in gutter
+Plug 'chip/vim-fat-finger'                          " easy fixes for my bad lesdixia
+Plug 'ctrlpvim/ctrlp.vim'                           " find files quickly
+Plug 'ervandew/supertab'                            " trigger completion with tab
+Plug 'kshenoy/vim-signature'                        " show marks in gutter
+Plug 'matchit.zip'                                  " matching with % for more things
+Plug 'ntpeters/vim-better-whitespace'               " show extra whitespace
+Plug 'Raimondi/delimitMate'                         " auto complete brackets and quotes
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}            " easily create html from css selectors
+Plug 'scrooloose/syntastic'                         " syntax linter
+Plug 'sheerun/vim-polyglot'                         " all the syntax files!
+Plug 'skammer/vim-css-color'                        " turns hex and rgb into colors
+Plug 'terryma/vim-multiple-cursors'                 " multiple cursors in vim
 
 " end plug
 call plug#end()
@@ -44,20 +43,9 @@ call plug#end()
 " #################################################################################################
 
 " syntastic settings
-let g:syntastic_error_symbol='❌'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_mode_map={ 'mode': 'active', 'passive_filetypes': ['css', 'scss'] }
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-
-" syntastic javascript
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_jsx_checkers = ['eslint']
-
-" syntastic html settings
-let g:syntastic_html_validator_parser='html'
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute "]
 
 " autoclose
 let g:AutoCloseExpandSpace = 0
@@ -77,49 +65,12 @@ let delimitMate_matchpairs = "(:),[:],{:}"
 " ctrl p exclude
 let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
 
+" disable markdown in polyglot
+let g:polyglot_disabled = ['markdown']
+
 " #################################################################################################
-" Vim Settings ####################################################################################
+" File Type Settings ##############################################################################
 " #################################################################################################
-
-" special file types
-augroup special_file_types
-  autocmd!
-  autocmd BufRead,BufNewFile *.scss set ft=scss
-  autocmd BufRead,BufNewFile *.ejs set ft=html
-augroup END
-
-" change the cursor in different modes
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
-" Silver Searcher shortcut
-cabbrev ag Ag
-
-" fix my constant need to type Wa instead of wa
-cabbrev Wa wa
-cabbrev Wq wq
-cabbrev Wqa wqa
-cabbrev W w
-cabbrev Q q
-
-" add line numbers
-set number
-
-" show the status line
-set noshowmode
-
-" more natural split directions
-set splitbelow
-set splitright
-
-" tab stuff
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set smartindent
-set shiftround
 
 " per language tabbing
 augroup language_tabbing
@@ -139,43 +90,48 @@ augroup sparkup_types
   autocmd Filetype javascript runtime! ftplugin/html/sparkup.vim
 augroup END
 
-" various stuff
-set autowrite  " save when you change buffers
-set cursorline " turn on cursor horizontal line
-set nowrap     " NO WRAPPING LINES
-set showmatch  " highlight matching brace
-set wildmode=longest:list,full
+" #################################################################################################
+" Vim Settings ####################################################################################
+" #################################################################################################
 
-" make search awesome
-set ignorecase " ignore search case
-set smartcase  " dont ignore case once you use a capital letter
-set hlsearch   " highlight all search matches
-set incsearch  " jump to search
+" change the cursor in different modes
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-" copy and paste in system clipboard
-set clipboard=unnamed
+set tabstop=2                   " columns per tab
+set shiftwidth=2                " spaces per indent
+set softtabstop=2               " spaces per tab
+set expandtab                   " use soft tabs
+set smartindent                 " auto indents c-like blocks
+set shiftround                  " round indent to shiftwidth
 
-" go back forever!
-set history=1000
-set undolevels=1000
-
-" change backup dir
-set backupdir=$VIMHOME/backup
-set directory=$VIMHOME/backup
-
-" change the term title
-set title
-
-" no more freaking bells!
-set visualbell
-set noerrorbells
-
-" color line at 100 columns
-set colorcolumn=100
+set noshowmode                  " let airline deal with showing mode
+set splitbelow                  " horizontal splits open down
+set splitright                  " vertical splits open right
+set relativenumber              " relative line numbers
+set number                      " but still show current line number
+set nowrap                      " NO WRAPPING LINES
+set autowrite                   " save when you change buffers
+set showmatch                   " highlight matching brace
+set cursorline                  " turn on cursor horizontal line
+set cursorcolumn                " turn on cursor vertical line
+set wildmode=longest:list,full  " make command completion more like zsh
+set ignorecase                  " ignore search case
+set smartcase                   " dont ignore case once you use a capital letter
+set hlsearch                    " highlight all search matches
+set incsearch                   " jump to search
+set clipboard=unnamed           " copy and paste in system clipboard
+set history=1000                " holds last 1000 commands in command line
+set undolevels=1000             " holds last 1000 undos
+set backupdir=$HOME/.vim/backup " backup files in one place
+set directory=$HOME/.vim/backup " swp files in one place
+set title                       " set title in terminal
+set colorcolumn=100             " color line at 100 columns
 
 " colorscheme stuff
 set background=dark
-colorscheme monochrome
+colorscheme tomorrow-night
 
 " The Silver Searcher
 if executable('ag')
@@ -196,24 +152,10 @@ endif
 " map leader to comma for speed!!!
 let mapleader=","
 
-" choose buffer faster
-map <leader>bn :bnext<CR>
-map <leader>bp :bprev<CR>
-map <leader>bd :bdel<CR>
-
-" location list stuff
-map <leader>ll :ll<CR>
-map <leader>ln :lnext<CR>
-map <leader>lp :lprev<CR>
-
-" pane control
+" split control
 nnoremap <leader>v		 :vsp<CR>
 nnoremap <leader><S-v> :sp<CR>
 nnoremap <leader>z		 <c-w>o
-
-" pane resizing
-nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " disable arrow keys
 inoremap <up>	    <nop>
@@ -229,7 +171,7 @@ vnoremap <down>	  <nop>
 vnoremap <left>	  <nop>
 vnoremap <right>	<nop>
 
-" awesome moving between buffers
+" awesome moving between splits
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
@@ -246,34 +188,5 @@ vnoremap <C-l> <C-w><C-l>
 " K will Ag word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-" folding fun
-	" shortcut to fold an HTML tag
-nnoremap <leader>ft Vatzf
-	" shortcut to fold braces (must be inside braces to fold)
-nnoremap <leader>fb zfa{
-
-" shortcut for Silver Searcher
-nnoremap <C-g> :Ag<space>
-
-" stop doing ex mode
-" nnoremap Q gq
-
-" insert filename
-inoremap <leader>fn <C-R>=expand("%:t")<CR>
-
-" save session
-nnoremap <leader>s :mksession! session.vim<CR>
-
 " remove highlight
 nnoremap <leader>n :noh<CR>
-
-" switch between relative and absolute line numbers
-function! NumberToggle()
-  if(&relativenumber ==1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunc
-
-nnoremap <C-n> :call NumberToggle()<CR>
