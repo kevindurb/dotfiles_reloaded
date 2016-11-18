@@ -26,14 +26,10 @@ Plug 'airblade/vim-gitgutter'                       " git status in gutter
 Plug 'chip/vim-fat-finger'                          " easy fixes for my bad lesdixia
 Plug 'ctrlpvim/ctrlp.vim'                           " find files quickly
 Plug 'ervandew/supertab'                            " trigger completion with tab
-Plug 'kshenoy/vim-signature'                        " show marks in gutter
-Plug 'matchit.zip'                                  " matching with % for more things
 Plug 'ntpeters/vim-better-whitespace'               " show extra whitespace
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}            " easily create html from css selectors
 Plug 'scrooloose/syntastic'                         " syntax linter
 Plug 'sheerun/vim-polyglot'                         " all the syntax files!
-Plug 'skammer/vim-css-color'                        " turns hex and rgb into colors
-Plug 'terryma/vim-multiple-cursors'                 " multiple cursors in vim
 
 " end plug
 call plug#end()
@@ -46,9 +42,6 @@ call plug#end()
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_jsx_checkers = ['eslint']
-
-" autoclose
-let g:AutoCloseExpandSpace = 0
 
 " airline look pretty
 let g:airline#extensions#tabline#enabled = 1
@@ -63,33 +56,8 @@ let g:bufferline_echo = 0
 " dont match carrots
 let delimitMate_matchpairs = "(:),[:],{:}"
 
-" ctrl p exclude
+" ctrl p root markers
 let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
-
-" disable markdown in polyglot
-let g:polyglot_disabled = ['markdown']
-
-" #################################################################################################
-" File Type Settings ##############################################################################
-" #################################################################################################
-
-" per language tabbing
-augroup language_tabbing
-  autocmd!
-  autocmd Filetype php        setlocal ts=4 sts=4 sw=4 noexpandtab
-  autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd Filetype scss       setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd Filetype ruby       setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd Filetype coffee     setlocal foldmethod=indent nofoldenable
-augroup END
-
-" run sparkup for jsx
-augroup sparkup_types
-  autocmd!
-  autocmd Filetype javascript runtime! ftplugin/html/sparkup.vim
-augroup END
 
 " #################################################################################################
 " Vim Settings ####################################################################################
@@ -116,7 +84,6 @@ set nowrap                      " NO WRAPPING LINES
 set autowrite                   " save when you change buffers
 set showmatch                   " highlight matching brace
 set cursorline                  " turn on cursor horizontal line
-set cursorcolumn                " turn on cursor vertical line
 set wildmode=longest:list,full  " make command completion more like zsh
 set ignorecase                  " ignore search case
 set smartcase                   " dont ignore case once you use a capital letter
@@ -147,6 +114,19 @@ if executable('ag')
 endif
 
 " #################################################################################################
+" File Type Settings ##############################################################################
+" #################################################################################################
+
+" per language tabbing
+augroup language_tabbing
+  autocmd!
+  autocmd Filetype php        setlocal ts=4 sts=4 sw=4 noexpandtab
+  autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
+augroup END
+
+" #################################################################################################
 " Keymaps #########################################################################################
 " #################################################################################################
 
@@ -157,20 +137,6 @@ let mapleader = ','
 nnoremap <leader>v		 :vsp<CR>
 nnoremap <leader><S-v> :sp<CR>
 nnoremap <leader>z		 <c-w>o
-
-" disable arrow keys
-inoremap <up>	    <nop>
-inoremap <down>	  <nop>
-inoremap <left>	  <nop>
-inoremap <right>	<nop>
-nnoremap <up>	    <nop>
-nnoremap <down>	  <nop>
-nnoremap <left>	  <nop>
-nnoremap <right>	<nop>
-vnoremap <up>	    <nop>
-vnoremap <down>	  <nop>
-vnoremap <left>	  <nop>
-vnoremap <right>	<nop>
 
 " awesome moving between splits
 nnoremap <C-h> <C-w><C-h>
@@ -185,6 +151,11 @@ vnoremap <C-h> <C-w><C-h>
 vnoremap <C-j> <C-w><C-j>
 vnoremap <C-k> <C-w><C-k>
 vnoremap <C-l> <C-w><C-l>
+
+" disable visual mode cause Trey says I need to be better
+nnoremap v <nop>
+nnoremap V <nop>
+nnoremap <c-v> <nop>
 
 " K will Ag word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
