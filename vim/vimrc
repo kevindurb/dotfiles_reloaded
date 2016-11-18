@@ -152,11 +152,6 @@ vnoremap <C-j> <C-w><C-j>
 vnoremap <C-k> <C-w><C-k>
 vnoremap <C-l> <C-w><C-l>
 
-" disable visual mode cause Trey says I need to be better
-nnoremap v <nop>
-nnoremap V <nop>
-nnoremap <c-v> <nop>
-
 " K will Ag word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
