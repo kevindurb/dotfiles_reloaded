@@ -30,6 +30,7 @@ Plug 'ntpeters/vim-better-whitespace'               " show extra whitespace
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}            " easily create html from css selectors
 Plug 'scrooloose/syntastic'                         " syntax linter
 Plug 'sheerun/vim-polyglot'                         " all the syntax files!
+Plug 'christoomey/vim-tmux-navigator'               " navigate in and out of tmux
 
 " end plug
 call plug#end()
@@ -139,18 +140,18 @@ nnoremap <leader><S-v> :sp<CR>
 nnoremap <leader>z		 <c-w>o
 
 " awesome moving between splits
-nnoremap <C-h> <C-w><C-h>
-nnoremap <C-j> <C-w><C-j>
-nnoremap <C-k> <C-w><C-k>
-nnoremap <C-l> <C-w><C-l>
-inoremap <C-h> <C-w><C-h>
-inoremap <C-j> <C-w><C-j>
-inoremap <C-k> <C-w><C-k>
-inoremap <C-l> <C-w><C-l>
-vnoremap <C-h> <C-w><C-h>
-vnoremap <C-j> <C-w><C-j>
-vnoremap <C-k> <C-w><C-k>
-vnoremap <C-l> <C-w><C-l>
+" nnoremap <C-h> <C-w><C-h>
+" nnoremap <C-j> <C-w><C-j>
+" nnoremap <C-k> <C-w><C-k>
+" nnoremap <C-l> <C-w><C-l>
+" inoremap <C-h> <C-w><C-h>
+" inoremap <C-j> <C-w><C-j>
+" inoremap <C-k> <C-w><C-k>
+" inoremap <C-l> <C-w><C-l>
+" vnoremap <C-h> <C-w><C-h>
+" vnoremap <C-j> <C-w><C-j>
+" vnoremap <C-k> <C-w><C-k>
+" vnoremap <C-l> <C-w><C-l>
 
 " K will Ag word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
