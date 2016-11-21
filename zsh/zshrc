@@ -20,9 +20,6 @@ zplug "sindresorhus/pure", use:pure.zsh
 # other
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
 
-if ! zplug check; then
-  zplug install
-fi
 zplug load
 
 # colorized ls
@@ -34,14 +31,10 @@ export USE_LOCAL_PHP=1
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"
-alias lsd="ls -lAFd */"
-alias rmvimswp="rm -rf ~/.vim/backup/*"
 alias c="clear"
-
-# jump to a project from anywhere
-go () { cd ~/projects/$1; }
-_go () { _files -W ~/projects -/; }
-compdef _go go
 
 # load nvm
 [ -f $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh
+
+# autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh

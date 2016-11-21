@@ -9,4 +9,5 @@ tmux/resurrect/*
 !vim/backup/.gitkeep
 !vim/plugged/.gitkeep
 !tmux/plugins/.gitkeep
+!tmux/plugins/tpm
 !tmux/resurrect/.gitkeep
