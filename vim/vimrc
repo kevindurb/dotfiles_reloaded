@@ -85,6 +85,7 @@ set nowrap                      " NO WRAPPING LINES
 set autowrite                   " save when you change buffers
 set showmatch                   " highlight matching brace
 set cursorline                  " turn on cursor horizontal line
+set cursorcolumn                " turn on cursor vertical line
 set wildmode=longest:list,full  " make command completion more like zsh
 set ignorecase                  " ignore search case
 set smartcase                   " dont ignore case once you use a capital letter
