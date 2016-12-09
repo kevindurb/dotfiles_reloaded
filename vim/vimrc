@@ -63,11 +63,6 @@ let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
 " Vim Settings ####################################################################################
 " #################################################################################################
 
-" change the cursor in different modes
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
 set tabstop=2                   " columns per tab
 set shiftwidth=2                " spaces per indent
 set softtabstop=2               " spaces per tab
@@ -84,7 +79,6 @@ set nowrap                      " NO WRAPPING LINES
 set autowrite                   " save when you change buffers
 set showmatch                   " highlight matching brace
 set cursorline                  " turn on cursor horizontal line
-set cursorcolumn                " turn on cursor vertical line
 set wildmode=longest:list,full  " make command completion more like zsh
 set ignorecase                  " ignore search case
 set smartcase                   " dont ignore case once you use a capital letter
@@ -98,9 +92,8 @@ set directory=$HOME/.vim/backup " swp files in one place
 set title                       " set title in terminal
 set colorcolumn=100             " color line at 100 columns
 
-" colorscheme stuff
-set background=dark
-colorscheme tomorrow-night
+set background=dark             " dark background
+colorscheme tomorrow-night      " dark version of tomorrow theme
 
 " The Silver Searcher
 if executable('ag')
@@ -113,6 +106,9 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+" add Ag command
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
 " #################################################################################################
 " File Type Settings ##############################################################################
@@ -138,20 +134,6 @@ let mapleader = ','
 nnoremap <leader>v		 :vsp<CR>
 nnoremap <leader><S-v> :sp<CR>
 nnoremap <leader>z		 <c-w>o
-
-" awesome moving between splits
-" nnoremap <C-h> <C-w><C-h>
-" nnoremap <C-j> <C-w><C-j>
-" nnoremap <C-k> <C-w><C-k>
-" nnoremap <C-l> <C-w><C-l>
-" inoremap <C-h> <C-w><C-h>
-" inoremap <C-j> <C-w><C-j>
-" inoremap <C-k> <C-w><C-k>
-" inoremap <C-l> <C-w><C-l>
-" vnoremap <C-h> <C-w><C-h>
-" vnoremap <C-j> <C-w><C-j>
-" vnoremap <C-k> <C-w><C-k>
-" vnoremap <C-l> <C-w><C-l>
 
 " K will Ag word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>

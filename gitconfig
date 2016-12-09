@@ -24,16 +24,12 @@
 	changed = red
 	untracked = cyan
 [alias]
-	s = status
   aa = add --all
-	st = status
+	s = status
 	ci = commit
-	br = branch
 	co = checkout
 	switch = checkout
-	sw = checkout
   mk = checkout -b
-	df = diff
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	m = merge --no-commit
 	info = config --list

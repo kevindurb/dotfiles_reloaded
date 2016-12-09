@@ -6,7 +6,6 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # prezto plugins
-zplug "modules/autosuggestions", from:prezto
 zplug "modules/completion", from:prezto
 zplug "modules/homebrew", from:prezto
 zplug "modules/history", from:prezto
@@ -32,6 +31,10 @@ export USE_LOCAL_PHP=1
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias c="clear"
+
+# history search
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # load nvm
 [ -f $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh
