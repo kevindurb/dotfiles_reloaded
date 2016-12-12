@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'                           " a good place to start
 
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'} " color scheme!!
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'} " color scheme!!
 
 Plug 'vim-airline/vim-airline'                      " pretty status line
 Plug 'vim-airline/vim-airline-themes'               " pretty status line themes
@@ -93,7 +93,7 @@ set title                       " set title in terminal
 set colorcolumn=100             " color line at 100 columns
 
 set background=dark             " dark background
-colorscheme tomorrow-night      " dark version of tomorrow theme
+colorscheme Tomorrow-Night      " dark version of tomorrow theme
 
 " The Silver Searcher
 if executable('ag')
