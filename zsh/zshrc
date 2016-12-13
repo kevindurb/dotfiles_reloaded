@@ -2,7 +2,7 @@
 
 ZSH=$HOME/dotfiles/zsh
 
-export ZPLUG_HOME=$HOME/dotfiles/zplug
+export ZPLUG_HOME=$ZSH/zplug
 source $ZPLUG_HOME/init.zsh
 
 # prezto plugins
@@ -14,7 +14,8 @@ zplug "mafredri/zsh-async", on:sindresorhus/pure
 zplug "sindresorhus/pure", use:pure.zsh
 
 # other
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
 
 # check to see if everything is loaded
 # and install if not
@@ -35,8 +36,9 @@ alias lss="ls -lAF"
 alias c="clear"
 
 # history search
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
 
 # load nvm
 [ -f $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh
