@@ -10,14 +10,13 @@ zplug "modules/completion", from:prezto
 zplug "modules/homebrew", from:prezto
 zplug "modules/history", from:prezto
 zplug "modules/git", from:prezto
-zplug "modules/osx", from:prezto
 
 # theme
 zplug "mafredri/zsh-async", on:sindresorhus/pure
 zplug "sindresorhus/pure", use:pure.zsh
 
 # other
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 zplug load
 
