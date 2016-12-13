@@ -2,14 +2,12 @@
 
 ZSH=$HOME/dotfiles/zsh
 
-export ZPLUG_HOME=$HOME/.zplug
+export ZPLUG_HOME=$HOME/dotfiles/zplug
 source $ZPLUG_HOME/init.zsh
 
 # prezto plugins
 zplug "modules/completion", from:prezto
-zplug "modules/homebrew", from:prezto
 zplug "modules/history", from:prezto
-zplug "modules/git", from:prezto
 
 # theme
 zplug "mafredri/zsh-async", on:sindresorhus/pure
@@ -18,6 +16,11 @@ zplug "sindresorhus/pure", use:pure.zsh
 # other
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
+# check to see if everything is loaded
+# and install if not
+if ! zplug check; then
+  zplug install
+fi
 zplug load
 
 # colorized ls
