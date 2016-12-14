@@ -1,0 +1,7 @@
+Host web01
+  HostName kevindurbin.com
+  User web
+
+Host dev01
+  HostName dev.kevindurbin.com
+  User kevindurb
