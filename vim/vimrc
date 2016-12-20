@@ -1,11 +1,12 @@
+" ################################################################################################
+" Vim Settings - Kevin Durbin
+" ################################################################################################
+set nocompatible
+
 " #################################################################################################
 " Plugins
 " #################################################################################################
 
-" we are iMproved
-set nocompatible
-
-" start plug
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'                           " a good place to start
@@ -20,7 +21,6 @@ Plug 'tpope/vim-repeat'                             " better repeating plugin co
 Plug 'tpope/vim-surround'                           " surround with things
 Plug 'tpope/vim-unimpaired'                         " common mappings forr cool things with '[]'
 
-Plug 'airblade/vim-gitgutter'                       " git status in gutter
 Plug 'chip/vim-fat-finger'                          " easy fixes for my bad lesdixia
 Plug 'ctrlpvim/ctrlp.vim'                           " find files quickly
 Plug 'ervandew/supertab'                            " trigger completion with tab
@@ -29,7 +29,6 @@ Plug 'scrooloose/syntastic'                         " syntax linter
 Plug 'sheerun/vim-polyglot'                         " all the syntax files!
 Plug 'christoomey/vim-tmux-navigator'               " navigate in and out of tmux
 
-" end plug
 call plug#end()
 
 " #################################################################################################
@@ -94,21 +93,12 @@ colorscheme Tomorrow-Night      " dark version of tomorrow theme
 " #################################################################################################
 
 if executable('ag')
-  " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
 
-" add Ag command
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-
-" K will Ag word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " #################################################################################################
 " Project Explorer, Netrw
@@ -116,12 +106,12 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+let g:netrw_bufsettings="noma nomod nu nobl nowrap ro rnu"
 
 " #################################################################################################
 " File Type Settings
 " #################################################################################################
 
-" per language tabbing
 augroup language_tabbing
   autocmd!
   autocmd Filetype php        setlocal ts=4 sts=4 sw=4 noexpandtab
@@ -134,5 +124,4 @@ augroup END
 " Keymaps
 " #################################################################################################
 
-" map leader to comma for speed!!!
-let mapleader = ','
+" I HAVE NO CUSTOM KEYMAPS
