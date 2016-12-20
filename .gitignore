@@ -4,7 +4,8 @@ vim/plugged/*
 vim/backup/*
 tmux/plugins/*
 tmux/resurrect/*
-vim/.netrwhist
+.netrwhist
+NetrwTreeListing*
 
 # dont ignore these
 !vim/backup/.gitkeep

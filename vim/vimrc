@@ -20,7 +20,6 @@ Plug 'tpope/vim-repeat'                             " better repeating plugin co
 Plug 'tpope/vim-surround'                           " surround with things
 Plug 'tpope/vim-unimpaired'                         " common mappings forr cool things with '[]'
 
-Plug 'Raimondi/delimitMate'                         " auto complete brackets and quotes
 Plug 'airblade/vim-gitgutter'                       " git status in gutter
 Plug 'chip/vim-fat-finger'                          " easy fixes for my bad lesdixia
 Plug 'ctrlpvim/ctrlp.vim'                           " find files quickly
@@ -50,9 +49,6 @@ let g:airline_right_sep = ''
 
 " dont echo the bufferline
 let g:bufferline_echo = 0
-
-" dont match carrots
-let delimitMate_matchpairs = "(:),[:],{:}"
 
 " ctrl p root markers
 let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
