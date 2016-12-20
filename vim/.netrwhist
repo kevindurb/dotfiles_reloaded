@@ -1,7 +1,7 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/kevindurb/dotfiles/vim'
-let g:netrw_dirhist_2='/home/kevindurb/dotfiles/vim/plugged'
-let g:netrw_dirhist_3='/home/kevindurb/dotfiles/vim/plugged/tomorrow-theme'
-let g:netrw_dirhist_4='/home/kevindurb/dotfiles/vim/plugged/tomorrow-theme/vim'
-let g:netrw_dirhist_5='/home/kevindurb/dotfiles/vim/plugged/tomorrow-theme/vim/colors'
+let g:netrw_dirhist_1='/Users/kdurbin/dotfiles/vim'
+let g:netrw_dirhist_2='/Users/kdurbin/dotfiles'
+let g:netrw_dirhist_3='/Users/kdurbin/dotfiles/vim'
+let g:netrw_dirhist_4='/Users/kdurbin/dotfiles'
+let g:netrw_dirhist_5='/Users/kdurbin'

@@ -1,5 +1,5 @@
 " #################################################################################################
-" Plug ############################################################################################
+" Plugins
 " #################################################################################################
 
 " we are iMproved
@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'                           " a good place to start
 
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'} " color scheme!!
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}  " color scheme!!
 
 Plug 'vim-airline/vim-airline'                      " pretty status line
 Plug 'vim-airline/vim-airline-themes'               " pretty status line themes
@@ -19,7 +19,6 @@ Plug 'tpope/vim-commentary'                         " sweet commenting
 Plug 'tpope/vim-repeat'                             " better repeating plugin commands
 Plug 'tpope/vim-surround'                           " surround with things
 Plug 'tpope/vim-unimpaired'                         " common mappings forr cool things with '[]'
-Plug 'tpope/vim-vinegar'                            " use minus (-) to go up a dir
 
 Plug 'Raimondi/delimitMate'                         " auto complete brackets and quotes
 Plug 'airblade/vim-gitgutter'                       " git status in gutter
@@ -27,7 +26,6 @@ Plug 'chip/vim-fat-finger'                          " easy fixes for my bad lesd
 Plug 'ctrlpvim/ctrlp.vim'                           " find files quickly
 Plug 'ervandew/supertab'                            " trigger completion with tab
 Plug 'ntpeters/vim-better-whitespace'               " show extra whitespace
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'}            " easily create html from css selectors
 Plug 'scrooloose/syntastic'                         " syntax linter
 Plug 'sheerun/vim-polyglot'                         " all the syntax files!
 Plug 'christoomey/vim-tmux-navigator'               " navigate in and out of tmux
@@ -36,7 +34,7 @@ Plug 'christoomey/vim-tmux-navigator'               " navigate in and out of tmu
 call plug#end()
 
 " #################################################################################################
-" Plugin Settings #################################################################################
+" Plugin Settings
 " #################################################################################################
 
 " syntastic settings
@@ -60,7 +58,7 @@ let delimitMate_matchpairs = "(:),[:],{:}"
 let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
 
 " #################################################################################################
-" Vim Settings ####################################################################################
+" Vim Settings
 " #################################################################################################
 
 set tabstop=2                   " columns per tab
@@ -95,7 +93,10 @@ set colorcolumn=100             " color line at 100 columns
 set background=dark             " dark background
 colorscheme Tomorrow-Night      " dark version of tomorrow theme
 
-" The Silver Searcher
+" #################################################################################################
+" Vimgrep, Silver Searcher
+" #################################################################################################
+
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -108,10 +109,24 @@ if executable('ag')
 endif
 
 " add Ag command
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+augroup ag_command
+  autocmd!
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+augroup END
+
+" K will Ag word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " #################################################################################################
-" File Type Settings ##############################################################################
+" Project Drawer, Netrw
+" #################################################################################################
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+nnoremap - :Explore<CR>
+
+" #################################################################################################
+" File Type Settings
 " #################################################################################################
 
 " per language tabbing
@@ -124,19 +139,8 @@ augroup language_tabbing
 augroup END
 
 " #################################################################################################
-" Keymaps #########################################################################################
+" Keymaps
 " #################################################################################################
 
 " map leader to comma for speed!!!
 let mapleader = ','
-
-" split control
-nnoremap <leader>v		 :vsp<CR>
-nnoremap <leader><S-v> :sp<CR>
-nnoremap <leader>z		 <c-w>o
-
-" K will Ag word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" remove highlight
-nnoremap <leader>n :noh<CR>
