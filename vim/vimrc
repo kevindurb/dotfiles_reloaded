@@ -73,6 +73,7 @@ set backupdir=$HOME/.vim/backup " backup files in one place
 set directory=$HOME/.vim/backup " swp files in one place
 set title                       " set title in terminal
 set colorcolumn=100             " color line at 100 columns
+set complete+=kspell            " add dictionary to completion
 
 set background=dark             " dark background
 colorscheme Tomorrow-Night      " dark version of tomorrow theme
@@ -108,6 +109,13 @@ augroup language_tabbing
   autocmd Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
   autocmd Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
 augroup END
+
+" set markdown to 80 characters wide
+au BufRead,BufNewFile *.md setlocal textwidth=80
+
+" spelling in markdown and commit messages
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
 
 " #################################################################################################
 " Keymaps

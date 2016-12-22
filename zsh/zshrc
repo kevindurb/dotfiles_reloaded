@@ -34,6 +34,7 @@ export USE_LOCAL_PHP=1
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias c="clear"
+alias t="todo.sh"
 
 # history search
 autoload -U history-search-end

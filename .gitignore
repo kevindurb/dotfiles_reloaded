@@ -6,6 +6,7 @@ tmux/plugins/*
 tmux/resurrect/*
 .netrwhist
 NetrwTreeListing*
+vim/spell/en.utf-8.add.spl
 
 # dont ignore these
 !vim/backup/.gitkeep
