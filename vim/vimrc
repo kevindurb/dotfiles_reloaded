@@ -13,8 +13,7 @@ Plug 'tpope/vim-sensible'                           " a good place to start
 
 Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}  " color scheme!!
 
-Plug 'vim-airline/vim-airline'                      " pretty status line
-Plug 'vim-airline/vim-airline-themes'               " pretty status line themes
+Plug 'itchyny/lightline.vim'                        " a light status line
 
 Plug 'tpope/vim-commentary'                         " sweet commenting
 Plug 'tpope/vim-repeat'                             " better repeating plugin commands
@@ -27,7 +26,6 @@ Plug 'ervandew/supertab'                            " trigger completion with ta
 Plug 'ntpeters/vim-better-whitespace'               " show extra whitespace
 Plug 'scrooloose/syntastic'                         " syntax linter
 Plug 'sheerun/vim-polyglot'                         " all the syntax files!
-Plug 'christoomey/vim-tmux-navigator'               " navigate in and out of tmux
 
 call plug#end()
 
@@ -39,15 +37,6 @@ call plug#end()
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_jsx_checkers = ['eslint']
-
-" airline look pretty
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-
-" dont echo the bufferline
-let g:bufferline_echo = 0
 
 " ctrl p root markers
 let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
@@ -124,4 +113,15 @@ augroup END
 " Keymaps
 " #################################################################################################
 
-" I HAVE NO CUSTOM KEYMAPS
+" remap leader
+let mapleader=','
+
+" split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" quick splits
+nnoremap <leader>v :vsp<CR>
+nnoremap <leader>V :sp<CR>
