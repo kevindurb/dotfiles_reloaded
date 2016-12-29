@@ -1,37 +1,39 @@
-" #################################################################################################
+" #############################################################################
 " Vim Settings - Kevin Durbin
-" #################################################################################################
+" #############################################################################
 set nocompatible
 
-" #################################################################################################
+" #############################################################################
 " Plugins
-" #################################################################################################
+" #############################################################################
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'                           " a good place to start
+Plug 'tpope/vim-sensible'             " a good place to start
 
-Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim'}  " color scheme!!
+Plug 'NLKNguyen/papercolor-theme'     " color scheme!!
 
-Plug 'itchyny/lightline.vim'                        " a light status line
+Plug 'itchyny/lightline.vim'          " a light status line
 
-Plug 'tpope/vim-commentary'                         " sweet commenting
-Plug 'tpope/vim-repeat'                             " better repeating plugin commands
-Plug 'tpope/vim-surround'                           " surround with things
-Plug 'tpope/vim-unimpaired'                         " common mappings forr cool things with '[]'
+Plug 'tpope/vim-commentary'           " sweet commenting
+Plug 'tpope/vim-repeat'               " better repeating plugin commands
+Plug 'tpope/vim-surround'             " surround with things
+Plug 'tpope/vim-unimpaired'           " common mappings forr cool things with '
+Plug 'tpope/vim-vinegar'              " browser directories with -
 
-Plug 'chip/vim-fat-finger'                          " easy fixes for my bad lesdixia
-Plug 'ctrlpvim/ctrlp.vim'                           " find files quickly
-Plug 'ervandew/supertab'                            " trigger completion with tab
-Plug 'ntpeters/vim-better-whitespace'               " show extra whitespace
-Plug 'scrooloose/syntastic'                         " syntax linter
-Plug 'sheerun/vim-polyglot'                         " all the syntax files!
+Plug 'chip/vim-fat-finger'            " easy fixes for my bad lesdixia
+Plug 'ctrlpvim/ctrlp.vim'             " find files quickly
+Plug 'ervandew/supertab'              " trigger completion with tab
+Plug 'ntpeters/vim-better-whitespace' " show extra whitespace
+Plug 'scrooloose/syntastic'           " syntax linter
+Plug 'sheerun/vim-polyglot'           " all the syntax files!
+Plug 'moll/vim-node'                  " add gf capabilities for js imports
 
 call plug#end()
 
-" #################################################################################################
+" #############################################################################
 " Plugin Settings
-" #################################################################################################
+" #############################################################################
 
 " syntastic settings
 let g:syntastic_always_populate_loc_list = 1
@@ -41,9 +43,14 @@ let g:syntastic_javascript_jsx_checkers = ['eslint']
 " ctrl p root markers
 let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
 
-" #################################################################################################
+" lightline
+let g:lightline = {
+  \ 'colorscheme': 'PaperColor_light',
+  \ }
+
+" #############################################################################
 " Vim Settings
-" #################################################################################################
+" #############################################################################
 
 set tabstop=2                   " columns per tab
 set shiftwidth=2                " spaces per indent
@@ -63,7 +70,7 @@ set showmatch                   " highlight matching brace
 set cursorline                  " turn on cursor horizontal line
 set wildmode=longest:list,full  " make command completion more like zsh
 set ignorecase                  " ignore search case
-set smartcase                   " dont ignore case once you use a capital letter
+set smartcase                   " dont ignore case once you use a capital lette
 set hlsearch                    " highlight all search matches
 set incsearch                   " jump to search
 set clipboard=unnamed           " copy and paste in system clipboard
@@ -72,35 +79,27 @@ set undolevels=1000             " holds last 1000 undos
 set backupdir=$HOME/.vim/backup " backup files in one place
 set directory=$HOME/.vim/backup " swp files in one place
 set title                       " set title in terminal
-set colorcolumn=100             " color line at 100 columns
+set colorcolumn=80              " color line at 100 columns
 set complete+=kspell            " add dictionary to completion
 
-set background=dark             " dark background
-colorscheme Tomorrow-Night      " dark version of tomorrow theme
+set background=light            " dark background
+colorscheme PaperColor          " dark version of tomorrow theme
 
-" #################################################################################################
+" #############################################################################
 " Vimgrep, Silver Searcher
-" #################################################################################################
+" #############################################################################
 
 if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=ag\ --vimgrep
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 endif
 
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
-" #################################################################################################
-" Project Explorer, Netrw
-" #################################################################################################
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_bufsettings="noma nomod nu nobl nowrap ro rnu"
-
-" #################################################################################################
+" #############################################################################
 " File Type Settings
-" #################################################################################################
+" #############################################################################
 
 augroup language_tabbing
   autocmd!
@@ -117,9 +116,9 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
 
-" #################################################################################################
+" #############################################################################
 " Keymaps
-" #################################################################################################
+" #############################################################################
 
 " remap leader
 let mapleader=','
