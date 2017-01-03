@@ -9,25 +9,25 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'             " a good place to start
+Plug 'tpope/vim-sensible'               " a good place to start
 
-Plug 'NLKNguyen/papercolor-theme'     " color scheme!!
+Plug 'altercation/vim-colors-solarized' " color scheme!!
 
-Plug 'itchyny/lightline.vim'          " a light status line
+Plug 'itchyny/lightline.vim'            " a light status line
 
-Plug 'tpope/vim-commentary'           " sweet commenting
-Plug 'tpope/vim-repeat'               " better repeating plugin commands
-Plug 'tpope/vim-surround'             " surround with things
-Plug 'tpope/vim-unimpaired'           " common mappings forr cool things with '
-Plug 'tpope/vim-vinegar'              " browser directories with -
+Plug 'tpope/vim-commentary'             " sweet commenting
+Plug 'tpope/vim-repeat'                 " better repeating plugin commands
+Plug 'tpope/vim-surround'               " surround with things
+Plug 'tpope/vim-unimpaired'             " common mappings for things with '
+Plug 'tpope/vim-vinegar'                " browser directories with -
 
-Plug 'chip/vim-fat-finger'            " easy fixes for my bad lesdixia
-Plug 'ctrlpvim/ctrlp.vim'             " find files quickly
-Plug 'ervandew/supertab'              " trigger completion with tab
-Plug 'ntpeters/vim-better-whitespace' " show extra whitespace
-Plug 'scrooloose/syntastic'           " syntax linter
-Plug 'sheerun/vim-polyglot'           " all the syntax files!
-Plug 'moll/vim-node'                  " add gf capabilities for js imports
+Plug 'chip/vim-fat-finger'              " easy fixes for my bad lesdixia
+Plug 'ctrlpvim/ctrlp.vim'               " find files quickly
+Plug 'ervandew/supertab'                " trigger completion with tab
+Plug 'ntpeters/vim-better-whitespace'   " show extra whitespace
+Plug 'scrooloose/syntastic'             " syntax linter
+Plug 'sheerun/vim-polyglot'             " all the syntax files!
+Plug 'moll/vim-node'                    " add gf capabilities for js imports
 
 call plug#end()
 
@@ -70,7 +70,7 @@ set showmatch                   " highlight matching brace
 set cursorline                  " turn on cursor horizontal line
 set wildmode=longest:list,full  " make command completion more like zsh
 set ignorecase                  " ignore search case
-set smartcase                   " dont ignore case once you use a capital lette
+set smartcase                   " dont ignore case once you use a capital
 set hlsearch                    " highlight all search matches
 set incsearch                   " jump to search
 set clipboard=unnamed           " copy and paste in system clipboard
@@ -82,8 +82,8 @@ set title                       " set title in terminal
 set colorcolumn=80              " color line at 100 columns
 set complete+=kspell            " add dictionary to completion
 
-set background=light            " dark background
-colorscheme PaperColor          " dark version of tomorrow theme
+set background=dark             " I live in darkness
+colorscheme solarized           " dark version of tomorrow theme
 
 " #############################################################################
 " Vimgrep, Silver Searcher
