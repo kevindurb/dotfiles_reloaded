@@ -28,6 +28,7 @@ Plug 'ntpeters/vim-better-whitespace'   " show extra whitespace
 Plug 'scrooloose/syntastic'             " syntax linter
 Plug 'sheerun/vim-polyglot'             " all the syntax files!
 Plug 'moll/vim-node'                    " add gf capabilities for js imports
+Plug 'christoomey/vim-tmux-navigator'   " add keymaps to move around better
 
 call plug#end()
 
@@ -122,12 +123,6 @@ autocmd FileType gitcommit setlocal spell
 
 " remap leader
 let mapleader=','
-
-" split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " quick splits
 nnoremap <leader>v :vsp<CR>
