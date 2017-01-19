@@ -9,26 +9,26 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'               " a good place to start
+Plug 'tpope/vim-sensible'             " a good place to start
 
-Plug 'altercation/vim-colors-solarized' " color scheme!!
+Plug 'chriskempson/tomorrow-theme', {'rtp':'./vim'} " color scheme!!
 
-Plug 'itchyny/lightline.vim'            " a light status line
+Plug 'itchyny/lightline.vim'          " a light status line
 
-Plug 'tpope/vim-commentary'             " sweet commenting
-Plug 'tpope/vim-repeat'                 " better repeating plugin commands
-Plug 'tpope/vim-surround'               " surround with things
-Plug 'tpope/vim-unimpaired'             " common mappings for things with '
-Plug 'tpope/vim-vinegar'                " browser directories with -
+Plug 'tpope/vim-commentary'           " sweet commenting
+Plug 'tpope/vim-repeat'               " better repeating plugin commands
+Plug 'tpope/vim-surround'             " surround with things
+Plug 'tpope/vim-unimpaired'           " common mappings for things with '
+Plug 'tpope/vim-vinegar'              " browser directories with -
 
-Plug 'chip/vim-fat-finger'              " easy fixes for my bad lesdixia
-Plug 'ctrlpvim/ctrlp.vim'               " find files quickly
-Plug 'ervandew/supertab'                " trigger completion with tab
-Plug 'ntpeters/vim-better-whitespace'   " show extra whitespace
-Plug 'scrooloose/syntastic'             " syntax linter
-Plug 'sheerun/vim-polyglot'             " all the syntax files!
-Plug 'moll/vim-node'                    " add gf capabilities for js imports
-Plug 'christoomey/vim-tmux-navigator'   " add keymaps to move around better
+Plug 'chip/vim-fat-finger'            " easy fixes for my bad lesdixia
+Plug 'ctrlpvim/ctrlp.vim'             " find files quickly
+Plug 'ervandew/supertab'              " trigger completion with tab
+Plug 'ntpeters/vim-better-whitespace' " show extra whitespace
+Plug 'scrooloose/syntastic'           " syntax linter
+Plug 'sheerun/vim-polyglot'           " all the syntax files!
+Plug 'moll/vim-node'                  " add gf capabilities for js imports
+Plug 'christoomey/vim-tmux-navigator' " add keymaps to move around better
 
 call plug#end()
 
@@ -46,7 +46,7 @@ let g:ctrlp_root_markers = ['package.json', '.eslintrc.js', '.tern-project']
 
 " lightline
 let g:lightline = {
-  \ 'colorscheme': 'solarized',
+  \ 'colorscheme': 'Tomorrow',
   \ }
 
 " #############################################################################
@@ -83,8 +83,8 @@ set title                       " set title in terminal
 set colorcolumn=80              " color line at 100 columns
 set complete+=kspell            " add dictionary to completion
 
-set background=dark             " I live in darkness
-colorscheme solarized           " dark version of tomorrow theme
+set background=light            " Bringing light into the darkness
+colorscheme tomorrow            " dark version of tomorrow theme
 
 " #############################################################################
 " Vimgrep, Silver Searcher
