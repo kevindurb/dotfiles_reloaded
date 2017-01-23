@@ -84,7 +84,7 @@ set colorcolumn=80              " color line at 100 columns
 set complete+=kspell            " add dictionary to completion
 
 set background=light            " Bringing light into the darkness
-colorscheme tomorrow            " dark version of tomorrow theme
+colorscheme Tomorrow            " dark version of tomorrow theme
 
 " #############################################################################
 " Vimgrep, Silver Searcher
