@@ -28,7 +28,6 @@ Plug 'ervandew/supertab'                 " trigger completion with tab
 Plug 'moll/vim-node'                     " add gf capabilities for js imports
 Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
 Plug 'sheerun/vim-polyglot'              " all the syntax files!
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " easy html from selectors
 Plug 'w0rp/ale'                          " syntax and style checking
 
 call plug#end()
@@ -126,6 +125,25 @@ autocmd FileType gitcommit setlocal spell
 
 " run sparkup in jsx
 autocmd FileType javascript.jsx runtime! ftplugin/html/sparkup.vim
+
+" #############################################################################
+" Cscope
+" #############################################################################
+
+if has('cscope')
+  set cscopetag cscopeverbose
+
+  if has('quickfix')
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
+  endif
+
+  cnoreabbrev csa cs add
+  cnoreabbrev csf cs find
+  cnoreabbrev csk cs kill
+  cnoreabbrev csr cs reset
+  cnoreabbrev css cs show
+  cnoreabbrev csh cs help
+endif
 
 " #############################################################################
 " Keymaps
