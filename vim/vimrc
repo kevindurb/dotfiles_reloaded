@@ -9,26 +9,27 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'             " a good place to start
+Plug 'tpope/vim-sensible'                " a good place to start
 
 Plug 'chriskempson/tomorrow-theme', {'rtp':'./vim'} " color scheme!!
 
-Plug 'itchyny/lightline.vim'          " a light status line
+Plug 'itchyny/lightline.vim'             " a light status line
 
-Plug 'tpope/vim-commentary'           " sweet commenting
-Plug 'tpope/vim-repeat'               " repeating plugin commands
-Plug 'tpope/vim-surround'             " surround with things
-Plug 'tpope/vim-unimpaired'           " mappings for things with '['
-Plug 'tpope/vim-vinegar'              " browse directories with -
+Plug 'tpope/vim-commentary'              " sweet commenting
+Plug 'tpope/vim-repeat'                  " repeating plugin commands
+Plug 'tpope/vim-surround'                " surround with things
+Plug 'tpope/vim-unimpaired'              " mappings for things with '['
+Plug 'tpope/vim-vinegar'                 " browse directories with -
 
-Plug 'chip/vim-fat-finger'            " lesdixia
-Plug 'christoomey/vim-tmux-navigator' " pane navigation
-Plug 'ctrlpvim/ctrlp.vim'             " find files quickly
-Plug 'ervandew/supertab'              " trigger completion with tab
-Plug 'moll/vim-node'                  " add gf capabilities for js imports
-Plug 'ntpeters/vim-better-whitespace' " show extra whitespace
-Plug 'sheerun/vim-polyglot'           " all the syntax files!
-Plug 'w0rp/ale'                       " syntax and style checking
+Plug 'chip/vim-fat-finger'               " lesdixia
+Plug 'christoomey/vim-tmux-navigator'    " pane navigation
+Plug 'ctrlpvim/ctrlp.vim'                " find files quickly
+Plug 'ervandew/supertab'                 " trigger completion with tab
+Plug 'moll/vim-node'                     " add gf capabilities for js imports
+Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
+Plug 'sheerun/vim-polyglot'              " all the syntax files!
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'} " easy html from selectors
+Plug 'w0rp/ale'                          " syntax and style checking
 
 call plug#end()
 
@@ -123,6 +124,9 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
 
+" run sparkup in jsx
+autocmd FileType javascript.jsx runtime! ftplugin/html/sparkup.vim
+
 " #############################################################################
 " Keymaps
 " #############################################################################
@@ -133,3 +137,6 @@ let mapleader=','
 " quick splits
 nnoremap <leader>v :vsp<CR>
 nnoremap <leader>V :sp<CR>
+
+" complete a tag
+imap <C-e> <Esc>yi>f>a</<Esc>pa><Esc>F<i
