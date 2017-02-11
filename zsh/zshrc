@@ -29,12 +29,15 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # set my editor
 export EDITOR='vim'
 # use local php at work for faster test running
-export USE_LOCAL_PHP=1
+export USE_LOCAL_PHP=0
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias c="clear"
 alias t="todo.sh"
+
+# chrome from cli!!
+alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
 
 # history search
 autoload -U history-search-end
