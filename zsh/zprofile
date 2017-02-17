@@ -17,13 +17,14 @@ X11_BIN=/opt/X11/bin
 GIT_BIN=/usr/local/git/bin
 DEV_SCRIPTS=$HOME/Development/scripts
 CARGO_BIN=$HOME/.cargo/bin
+HOME_BIN=$HOME/bin
 
 # path
-export PATH=$CARGO_BIN:$DEV_SCRIPTS:$DROPBOX_BIN:$HEROKU_BIN:$HOME_BIN:$NPM_BIN:$PEAR_BIN:$RUBY_BIN:$USR_LOCAL_BIN:$USR_LOCAL_SBIN:$USR_BIN:$USR_SBIN:$ROOT_BIN:$ROOT_SBIN:$X11_BIN:$GIT_BIN
+export PATH=$HOME_BIN:$CARGO_BIN:$DEV_SCRIPTS:$DROPBOX_BIN:$HEROKU_BIN:$HOME_BIN:$NPM_BIN:$PEAR_BIN:$RUBY_BIN:$USR_LOCAL_BIN:$USR_LOCAL_SBIN:$USR_BIN:$USR_SBIN:$ROOT_BIN:$ROOT_SBIN:$X11_BIN:$GIT_BIN
 
 # add yarn global
 export PATH="$PATH:`yarn global bin`"
 
-# nvm
+# load nvm
 export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
