@@ -42,6 +42,3 @@ alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chro
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
-
-# load nvm
-[ -f $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh
