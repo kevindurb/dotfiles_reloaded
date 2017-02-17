@@ -34,7 +34,6 @@ export USE_LOCAL_PHP=0
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias c="clear"
-alias t="todo.sh"
 
 # chrome from cli!!
 alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
@@ -46,8 +45,3 @@ bindkey "^[[A" history-beginning-search-backward-end
 
 # load nvm
 [ -f $HOME/.nvm/nvm.sh ] && source $HOME/.nvm/nvm.sh
-
-# autojump
-if hash brew 2>/dev/null; then
-  [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-fi
