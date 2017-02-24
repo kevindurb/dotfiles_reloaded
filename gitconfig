@@ -28,11 +28,8 @@
 	s = status
 	ci = commit
 	co = checkout
-	switch = checkout
   mk = checkout -b
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	m = merge --no-commit
-	info = config --list
 	amend = commit --amend
 	up = fetch
 	d = difftool
@@ -42,8 +39,6 @@
   putsup = push --set-upstream origin
   cp = cherry-pick
   a = amend
-	out = fire
-	appraise = !/Users/kdurbin/go/bin/git-appraise
 [diff]
 	tool = vimdiff
 [push]
