@@ -30,15 +30,8 @@
 	co = checkout
   mk = checkout -b
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	amend = commit --amend
-	up = fetch
-	d = difftool
 	diff = diff -w
-  pu = pull
-  puts = push origin
-  putsup = push --set-upstream origin
   cp = cherry-pick
-  a = amend
 [diff]
 	tool = vimdiff
 [push]

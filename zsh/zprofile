@@ -24,7 +24,3 @@ export PATH=$HOME_BIN:$CARGO_BIN:$DEV_SCRIPTS:$DROPBOX_BIN:$HEROKU_BIN:$HOME_BIN
 
 # add yarn global
 export PATH="$PATH:`yarn global bin`"
-
-# load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

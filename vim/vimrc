@@ -21,14 +21,13 @@ Plug 'tpope/vim-surround'                " surround with things
 Plug 'tpope/vim-unimpaired'              " mappings for things with '['
 Plug 'tpope/vim-vinegar'                 " browse directories with -
 
-Plug 'chip/vim-fat-finger'               " lesdixia
 Plug 'christoomey/vim-tmux-navigator'    " pane navigation
-Plug 'ctrlpvim/ctrlp.vim'                " find files quickly
 Plug 'ervandew/supertab'                 " trigger completion with tab
 Plug 'moll/vim-node'                     " add gf capabilities for js imports
 Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
 Plug 'sheerun/vim-polyglot'              " all the syntax files!
 Plug 'w0rp/ale'                          " syntax and style checking
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 
@@ -98,8 +97,6 @@ colorscheme Tomorrow-Night      " dark version of tomorrow theme
 
 if executable('ag')
   set grepprg=ag\ --vimgrep
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
 endif
 
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
@@ -158,3 +155,6 @@ nnoremap <leader>V :sp<CR>
 
 " complete a tag
 imap <C-e> <Esc>yi>f>a</<Esc>pa><Esc>F<i
+
+" run FZF on Ctrl-p
+nnoremap <C-p> :FZF<CR>

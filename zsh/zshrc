@@ -30,6 +30,8 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export EDITOR='vim'
 # use local php at work for faster test running
 export USE_LOCAL_PHP=0
+# use ag for fzf
+export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"
@@ -42,3 +44,10 @@ alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chro
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
+
+# load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# load fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
