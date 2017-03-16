@@ -21,13 +21,15 @@ Plug 'tpope/vim-surround'                " surround with things
 Plug 'tpope/vim-unimpaired'              " mappings for things with '['
 Plug 'tpope/vim-vinegar'                 " browse directories with -
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'                  " fzf mappings
+
 Plug 'christoomey/vim-tmux-navigator'    " pane navigation
 Plug 'ervandew/supertab'                 " trigger completion with tab
 Plug 'moll/vim-node'                     " add gf capabilities for js imports
 Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
 Plug 'sheerun/vim-polyglot'              " all the syntax files!
 Plug 'w0rp/ale'                          " syntax and style checking
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 
@@ -157,4 +159,4 @@ nnoremap <leader>V :sp<CR>
 imap <C-e> <Esc>yi>f>a</<Esc>pa><Esc>F<i
 
 " run FZF on Ctrl-p
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> :Files<CR>
