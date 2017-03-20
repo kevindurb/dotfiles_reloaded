@@ -20,6 +20,7 @@ Plug 'tpope/vim-repeat'                  " repeating plugin commands
 Plug 'tpope/vim-surround'                " surround with things
 Plug 'tpope/vim-unimpaired'              " mappings for things with '['
 Plug 'tpope/vim-vinegar'                 " browse directories with -
+Plug 'tpope/vim-fugitive'                " git commands in vim
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                  " fzf mappings
@@ -42,14 +43,6 @@ let g:ale_linters = {
 \ 'javascript': ['eslint'],
 \ 'javascript jsx': ['eslint'],
 \}
-
-" ctrl p root markers
-let g:ctrlp_root_markers = [
-\ 'package.json',
-\ '.eslintrc.js',
-\ '.tern-project',
-\ '.git',
-\]
 
 " lightline
 let g:lightline = {
@@ -121,28 +114,6 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 " spelling in markdown and commit messages
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
-
-" run sparkup in jsx
-autocmd FileType javascript.jsx runtime! ftplugin/html/sparkup.vim
-
-" #############################################################################
-" Cscope
-" #############################################################################
-
-if has('cscope')
-  set cscopetag cscopeverbose
-
-  if has('quickfix')
-    set cscopequickfix=s-,c-,d-,i-,t-,e-
-  endif
-
-  cnoreabbrev csa cs add
-  cnoreabbrev csf cs find
-  cnoreabbrev csk cs kill
-  cnoreabbrev csr cs reset
-  cnoreabbrev css cs show
-  cnoreabbrev csh cs help
-endif
 
 " #############################################################################
 " Keymaps
