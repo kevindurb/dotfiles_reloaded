@@ -11,9 +11,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'                " a good place to start
 
-Plug 'chriskempson/tomorrow-theme', {'rtp':'./vim'} " color scheme!!
-
-Plug 'itchyny/lightline.vim'             " a light status line
+Plug 'treycucco/vim-monotonic'           " trey's theme
 
 Plug 'tpope/vim-commentary'              " sweet commenting
 Plug 'tpope/vim-repeat'                  " repeating plugin commands
@@ -42,11 +40,6 @@ call plug#end()
 let g:ale_linters = {
 \ 'javascript': ['eslint'],
 \ 'javascript jsx': ['eslint'],
-\}
-
-" lightline
-let g:lightline = {
-\ 'colorscheme': 'Tomorrow_Night',
 \}
 
 " #############################################################################
@@ -84,7 +77,7 @@ set colorcolumn=80              " color line at 80 columns
 set complete+=kspell            " add dictionary to completion
 
 set background=dark             " Bringing light into the darkness
-colorscheme Tomorrow-Night      " dark version of tomorrow theme
+colorscheme monotonic           " dark version of tomorrow theme
 
 " #############################################################################
 " Vimgrep, Silver Searcher
@@ -131,3 +124,24 @@ imap <C-e> <Esc>yi>f>a</<Esc>pa><Esc>F<i
 
 " run FZF on Ctrl-p
 nnoremap <C-p> :Files<CR>
+
+" #############################################################################
+" Status Line
+" #############################################################################
+
+set statusline=\                    " space
+set statusline+=%t                  " path to the file
+set statusline+=\                   " space
+set statusline+=%{fugitive#head(5)} " git status
+set statusline+=\                   " space
+set statusline+=%m                  " modified
+set statusline+=\                   " space
+set statusline+=%r                  " readonly
+set statusline+=\                   " space
+set statusline+=%q                  " quickfix / locationlist
+set statusline+=%=                  " switch to the right side
+set statusline+=%y                  " file type
+set statusline+=%4l                 " current line
+set statusline+=/                   " separator
+set statusline+=%4L                 " total lines
+set statusline+=\                   " space
