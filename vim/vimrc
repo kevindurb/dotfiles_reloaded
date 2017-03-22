@@ -125,6 +125,9 @@ imap <C-e> <Esc>yi>f>a</<Esc>pa><Esc>F<i
 " run FZF on Ctrl-p
 nnoremap <C-p> :Files<CR>
 
+" reload vimrc
+nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
+
 " #############################################################################
 " Status Line
 " #############################################################################
@@ -141,7 +144,10 @@ set statusline+=\                   " space
 set statusline+=%q                  " quickfix / locationlist
 set statusline+=%=                  " switch to the right side
 set statusline+=%y                  " file type
-set statusline+=%4l                 " current line
-set statusline+=/                   " separator
-set statusline+=%4L                 " total lines
+set statusline+=\                   " space
+set statusline+=%2c                 " current column
+set statusline+=-                   " hyphen
+set statusline+=%3l                 " current line
+set statusline+=/                   " slash
+set statusline+=%3L                 " total lines
 set statusline+=\                   " space
