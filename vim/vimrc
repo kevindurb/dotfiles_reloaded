@@ -29,6 +29,7 @@ Plug 'moll/vim-node'                     " add gf capabilities for js imports
 Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
 Plug 'sheerun/vim-polyglot'              " all the syntax files!
 Plug 'w0rp/ale'                          " syntax and style checking
+Plug 'kshenoy/vim-signature'             " show marks in gutter
 
 call plug#end()
 
