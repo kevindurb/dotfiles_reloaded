@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'                " a good place to start
 
-Plug 'treycucco/vim-monotonic'           " trey's theme
+Plug 'treycucco/vim-monotonic'           " @treycucco's theme
 
 Plug 'tpope/vim-commentary'              " sweet commenting
 Plug 'tpope/vim-repeat'                  " repeating plugin commands
@@ -76,9 +76,10 @@ set directory=$HOME/.vim/backup " swp files in one place
 set title                       " set title in terminal
 set colorcolumn=80              " color line at 80 columns
 set complete+=kspell            " add dictionary to completion
+set tags=tags;/                 " make ctags look up from cwd for tags file
 
 set background=dark             " Bringing light into the darkness
-colorscheme monotonic           " dark version of tomorrow theme
+colorscheme monotonic           " @treycucco's theme
 
 " #############################################################################
 " Vimgrep, Silver Searcher

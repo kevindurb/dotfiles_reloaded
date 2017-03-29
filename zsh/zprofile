@@ -24,3 +24,8 @@ export PATH=$HOME_BIN:$CARGO_BIN:$DEV_SCRIPTS:$DROPBOX_BIN:$HEROKU_BIN:$HOME_BIN
 
 # add yarn global
 export PATH="$PATH:`yarn global bin`"
+
+VAGRANT_HELPERS=$HOME/Dropbox\ (CCBHQ)/Vagrant/.vagrant_helpers
+
+# Added by VagrantFile Thu Jan 14 13:42:50 MST 2016
+[ -f $VAGRANT_HELPERS ] && source $VAGRANT_HELPERS
