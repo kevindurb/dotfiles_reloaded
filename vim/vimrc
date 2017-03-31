@@ -30,6 +30,7 @@ Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
 Plug 'sheerun/vim-polyglot'              " all the syntax files!
 Plug 'w0rp/ale'                          " syntax and style checking
 Plug 'kshenoy/vim-signature'             " show marks in gutter
+Plug 'wikitopian/hardmode'               " hard mode
 
 call plug#end()
 
@@ -134,24 +135,35 @@ nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
 " Status Line
 " #############################################################################
 
-set statusline=\                      " space
-set statusline+=%t                    " path to the file
-set statusline+=\                     " space
-set statusline+=%{fugitive#head(5)}   " git status
-set statusline+=\                     " space
-set statusline+=%m                    " modified
-set statusline+=\                     " space
-set statusline+=%r                    " readonly
-set statusline+=\                     " space
-set statusline+=%q                    " quickfix / locationlist
-set statusline+=%=                    " switch to the right side
-set statusline+=%{ALEGetStatusLine()} " errors and warnings
-set statusline+=\                     " space
-set statusline+=%y                    " file type
-set statusline+=\                     " space
-set statusline+=%c                    " current column
-set statusline+=,                     " hyphen
-set statusline+=%l                    " current line
-set statusline+=/                     " slash
-set statusline+=%L                    " total lines
-set statusline+=\                     " space
+set statusline=\                          " space
+set statusline+=%t                        " path to the file
+set statusline+=\                         " space
+set statusline+=%{fugitive#head(5)}       " git status
+set statusline+=\                         " space
+set statusline+=%m                        " modified
+set statusline+=\                         " space
+set statusline+=%r                        " readonly
+set statusline+=\                         " space
+set statusline+=%q                        " quickfix / locationlist
+set statusline+=%=                        " switch to the right side
+set statusline+=%{g:HardMode_currentMode} " hardmode status
+set statusline+=\                         " space
+set statusline+=%{ALEGetStatusLine()}     " errors and warnings
+set statusline+=\                         " space
+set statusline+=%y                        " file type
+set statusline+=\                         " space
+set statusline+=%c                        " current column
+set statusline+=,                         " hyphen
+set statusline+=%l                        " current line
+set statusline+=/                         " slash
+set statusline+=%L                        " total lines
+set statusline+=\                         " space
+
+" #############################################################################
+" Hard Mode Fridays!
+" #############################################################################
+
+if strftime('%w') == 5
+  set norelativenumber
+  autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+endif
