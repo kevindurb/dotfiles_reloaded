@@ -37,6 +37,7 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 alias lss="ls -lAF"
 alias c="clear"
 alias maketags="ctags -exclude=@.gitignore -R ."
+alias weather="curl wttr.in"
 
 # chrome from cli!!
 alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"

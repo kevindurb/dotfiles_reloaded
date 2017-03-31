@@ -30,7 +30,6 @@ Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
 Plug 'sheerun/vim-polyglot'              " all the syntax files!
 Plug 'w0rp/ale'                          " syntax and style checking
 Plug 'kshenoy/vim-signature'             " show marks in gutter
-Plug 'wikitopian/hardmode'               " hard mode
 
 call plug#end()
 
@@ -58,7 +57,6 @@ set shiftround                  " round indent to shiftwidth
 set noshowmode                  " let airline deal with showing mode
 set splitbelow                  " horizontal splits open down
 set splitright                  " vertical splits open right
-set relativenumber              " relative line numbers
 set number                      " but still show current line number
 set nowrap                      " NO WRAPPING LINES
 set autowrite                   " save when you change buffers
@@ -146,8 +144,6 @@ set statusline+=%r                        " readonly
 set statusline+=\                         " space
 set statusline+=%q                        " quickfix / locationlist
 set statusline+=%=                        " switch to the right side
-set statusline+=%{g:HardMode_currentMode} " hardmode status
-set statusline+=\                         " space
 set statusline+=%{ALEGetStatusLine()}     " errors and warnings
 set statusline+=\                         " space
 set statusline+=%y                        " file type
@@ -158,12 +154,3 @@ set statusline+=%l                        " current line
 set statusline+=/                         " slash
 set statusline+=%L                        " total lines
 set statusline+=\                         " space
-
-" #############################################################################
-" Hard Mode Fridays!
-" #############################################################################
-
-if strftime('%w') == 5
-  set norelativenumber
-  autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-endif
