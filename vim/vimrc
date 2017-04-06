@@ -20,11 +20,6 @@ Plug 'tpope/vim-unimpaired'              " mappings for things with '['
 Plug 'tpope/vim-vinegar'                 " browse directories with -
 Plug 'tpope/vim-fugitive'                " git commands in vim
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'                  " fzf mappings
-
-Plug 'christoomey/vim-tmux-navigator'    " pane navigation
-Plug 'ervandew/supertab'                 " trigger completion with tab
 Plug 'moll/vim-node'                     " add gf capabilities for js imports
 Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
 Plug 'sheerun/vim-polyglot'              " all the syntax files!
@@ -76,9 +71,16 @@ set title                       " set title in terminal
 set colorcolumn=80              " color line at 80 columns
 set complete+=kspell            " add dictionary to completion
 set tags=tags;/                 " make ctags look up from cwd for tags file
+set path+=**                    " find all the files recursively
 
 set background=dark             " Bringing light into the darkness
 colorscheme monotonic           " @treycucco's theme
+
+" #############################################################################
+" Custom Commands
+" #############################################################################
+
+command! MakeTags !ctags -R .
 
 " #############################################################################
 " Vimgrep, Silver Searcher
@@ -117,17 +119,17 @@ autocmd FileType gitcommit setlocal spell
 let mapleader=','
 
 " quick splits
-nnoremap <leader>v :vsp<CR>
-nnoremap <leader>V :sp<CR>
+nmap <leader>v :vsp<CR>
+nmap <leader>V :sp<CR>
 
-" complete a tag
-imap <C-e> <Esc>yi>f>a</<Esc>pa><Esc>F<i
-
-" run FZF on Ctrl-p
-nnoremap <C-p> :Files<CR>
+" split navigation
+nmap <C-h> <C-w><C-h>
+nmap <C-j> <C-w><C-j>
+nmap <C-k> <C-w><C-k>
+nmap <C-l> <C-w><C-l>
 
 " reload vimrc
-nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
+nmap <leader>r :so $HOME/.vim/vimrc<CR>
 
 " #############################################################################
 " Status Line

@@ -39,6 +39,9 @@ alias c="clear"
 alias maketags="ctags -exclude=@.gitignore -R ."
 alias weather="curl wttr.in"
 
+# jira searches
+alias wcrtr="jira search \"status = closed and 'SE Team' = 'Web Components'\""
+
 # chrome from cli!!
 alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
 
@@ -51,5 +54,5 @@ bindkey "^[[A" history-beginning-search-backward-end
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-# load fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
