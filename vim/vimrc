@@ -76,6 +76,7 @@ set colorcolumn=80              " color line at 80 columns
 set complete+=kspell            " add dictionary to completion
 set tags=tags;/                 " make ctags look up from cwd for tags file
 set foldmethod=indent           " fold code based on intentation
+set showtabline=2               " always show the tabline
 
 set background=dark             " Bringing light into the darkness
 colorscheme PaperColor          " colorscheme
@@ -147,7 +148,7 @@ nmap <leader>r :so $HOME/.vim/vimrc<CR>
 " #############################################################################
 
 set statusline=\                          " space
-set statusline+=%t                        " path to the file
+set statusline+=%f                        " path to the file
 set statusline+=\                         " space
 set statusline+=%{fugitive#head(5)}       " git status
 set statusline+=\                         " space
