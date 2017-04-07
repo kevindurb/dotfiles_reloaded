@@ -9,22 +9,22 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'                " a good place to start
+Plug 'tpope/vim-sensible'             " a good place to start
 
-Plug 'treycucco/vim-monotonic'           " @treycucco's theme
+Plug 'NLKNguyen/papercolor-theme'     " paper color scheme
 
-Plug 'tpope/vim-commentary'              " sweet commenting
-Plug 'tpope/vim-repeat'                  " repeating plugin commands
-Plug 'tpope/vim-surround'                " surround with things
-Plug 'tpope/vim-unimpaired'              " mappings for things with '['
-Plug 'tpope/vim-vinegar'                 " browse directories with -
-Plug 'tpope/vim-fugitive'                " git commands in vim
+Plug 'tpope/vim-commentary'           " sweet commenting
+Plug 'tpope/vim-repeat'               " repeating plugin commands
+Plug 'tpope/vim-surround'             " surround with things
+Plug 'tpope/vim-unimpaired'           " mappings for things with '['
+Plug 'tpope/vim-vinegar'              " browse directories with -
+Plug 'tpope/vim-fugitive'             " git commands in vim
 
-Plug 'moll/vim-node'                     " add gf capabilities for js imports
-Plug 'ntpeters/vim-better-whitespace'    " show extra whitespace
-Plug 'sheerun/vim-polyglot'              " all the syntax files!
-Plug 'w0rp/ale'                          " syntax and style checking
-Plug 'kshenoy/vim-signature'             " show marks in gutter
+Plug 'moll/vim-node'                  " add gf capabilities for js imports
+Plug 'ntpeters/vim-better-whitespace' " show extra whitespace
+Plug 'sheerun/vim-polyglot'           " all the syntax files!
+Plug 'w0rp/ale'                       " syntax and style checking
+Plug 'ctrlpvim/ctrlp.vim'             " fuzzy searching
 
 call plug#end()
 
@@ -37,6 +37,9 @@ let g:ale_linters = {
 \ 'javascript': ['eslint'],
 \ 'javascript jsx': ['eslint'],
 \}
+
+" search tags with ctrl p
+let g:ctrlp_extensions = ['tag']
 
 " #############################################################################
 " Vim Settings
@@ -53,6 +56,7 @@ set noshowmode                  " let airline deal with showing mode
 set splitbelow                  " horizontal splits open down
 set splitright                  " vertical splits open right
 set number                      " but still show current line number
+set relativenumber              " show relative line numbers
 set nowrap                      " NO WRAPPING LINES
 set autowrite                   " save when you change buffers
 set showmatch                   " highlight matching brace
@@ -71,10 +75,10 @@ set title                       " set title in terminal
 set colorcolumn=80              " color line at 80 columns
 set complete+=kspell            " add dictionary to completion
 set tags=tags;/                 " make ctags look up from cwd for tags file
-set path+=**                    " find all the files recursively
+set foldmethod=indent           " fold code based on intentation
 
 set background=dark             " Bringing light into the darkness
-colorscheme monotonic           " @treycucco's theme
+colorscheme PaperColor          " colorscheme
 
 " #############################################################################
 " Custom Commands
@@ -83,14 +87,21 @@ colorscheme monotonic           " @treycucco's theme
 command! MakeTags !ctags -R .
 
 " #############################################################################
-" Vimgrep, Silver Searcher
+" Vimgrep, Silver Searcher, Ctrl-P
 " #############################################################################
 
+" if you have ag use ag for vimgrep and ctrlp
 if executable('ag')
   set grepprg=ag\ --vimgrep
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
 endif
 
+" Ag command for searching in vim
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+" K keymap for searching word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " #############################################################################
 " File Type Settings
