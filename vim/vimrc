@@ -21,7 +21,6 @@ Plug 'tpope/vim-vinegar'              " browse directories with -
 Plug 'tpope/vim-fugitive'             " git commands in vim
 
 Plug 'moll/vim-node'                  " add gf capabilities for js imports
-Plug 'ntpeters/vim-better-whitespace' " show extra whitespace
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'ctrlpvim/ctrlp.vim'             " fuzzy searching
@@ -80,6 +79,17 @@ set showtabline=2               " always show the tabline
 
 set background=dark             " Bringing light into the darkness
 colorscheme PaperColor          " colorscheme
+
+" #############################################################################
+" Trailing Whitespace
+" #############################################################################
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 " #############################################################################
 " Custom Commands
