@@ -1,11 +1,7 @@
-" #############################################################################
-" Vim Settings - Kevin Durbin
-" #############################################################################
-set nocompatible
+" vimrc - vim settings
+" Author: Kevin Durbin
 
-" #############################################################################
-" Plugins
-" #############################################################################
+" {{{ Plugins
 
 call plug#begin('~/.vim/plugged')
 
@@ -33,9 +29,9 @@ Plug 'ctrlpvim/ctrlp.vim'             " fuzzy searching
 
 call plug#end()
 
-" #############################################################################
-" Plugin Settings
-" #############################################################################
+" }}}
+
+" {{{ Plugin Settings
 
 " ale settings
 let g:ale_linters = {
@@ -54,16 +50,16 @@ let g:ctrlp_root_markers = [
 \ '.git',
 \]
 
-" #############################################################################
-" Colorscheme
-" #############################################################################
+" }}}
+
+" {{{ Colorscheme
 
 set background=dark             " Bringing light into the darkness
 colorscheme PaperColor          " colorscheme
 
-" #############################################################################
-" Trailing Whitespace
-" #############################################################################
+" }}}
+
+" {{{ Trailing Whitespace
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -72,15 +68,15 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" #############################################################################
-" Custom Commands
-" #############################################################################
+" }}}
+
+" {{{ Custom Commands
 
 command! MakeTags !ctags -R .
 
-" #############################################################################
-" File Type Settings
-" #############################################################################
+" }}}
+
+" {{{ File Type Settings
 
 " set markdown to 80 characters wide
 au BufRead,BufNewFile *.md setlocal textwidth=80
@@ -89,12 +85,23 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
 
-" #############################################################################
-" Keymaps
-" #############################################################################
+" enable folding my vimrc
+augroup filetype_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+" }}}
+
+" {{{ Keymaps
 
 " remap leader
 let mapleader=','
 
 " reload vimrc
-nmap <leader>r :so $HOME/.vim/vimrc<CR>
+nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
+
+" kill all buffers
+nnoremap <leader>q :bufdo bd<CR>
+
+" }}}
