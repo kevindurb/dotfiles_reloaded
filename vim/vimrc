@@ -13,12 +13,18 @@ Plug 'tpope/vim-sensible'             " a good place to start
 
 Plug 'NLKNguyen/papercolor-theme'     " paper color scheme
 
+Plug 'kevindurb/vim-statusline'       " statusline
+Plug 'kevindurb/vim-editor'           " basic editor settings
+Plug 'kevindurb/vim-splits'           " split settings and keymaps
+Plug 'kevindurb/vim-quicksilver'      " use ag for amazing things
+
 Plug 'tpope/vim-commentary'           " sweet commenting
+Plug 'tpope/vim-fugitive'             " git commands in vim
 Plug 'tpope/vim-repeat'               " repeating plugin commands
+Plug 'tpope/vim-sleuth'               " auto detect tab settings
 Plug 'tpope/vim-surround'             " surround with things
 Plug 'tpope/vim-unimpaired'           " mappings for things with '['
 Plug 'tpope/vim-vinegar'              " browse directories with -
-Plug 'tpope/vim-fugitive'             " git commands in vim
 
 Plug 'moll/vim-node'                  " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
@@ -40,6 +46,7 @@ let g:ale_linters = {
 " search tags with ctrl p
 let g:ctrlp_extensions = ['tag']
 
+" start ctrl p in the right place
 let g:ctrlp_root_markers = [
 \ 'package.json',
 \ '.eslintrc.js',
@@ -48,41 +55,8 @@ let g:ctrlp_root_markers = [
 \]
 
 " #############################################################################
-" Vim Settings
+" Colorscheme
 " #############################################################################
-
-set tabstop=2                   " columns per tab
-set shiftwidth=2                " spaces per indent
-set softtabstop=2               " spaces per tab
-set expandtab                   " use soft tabs
-set smartindent                 " auto indents c-like blocks
-set shiftround                  " round indent to shiftwidth
-
-set noshowmode                  " let airline deal with showing mode
-set splitbelow                  " horizontal splits open down
-set splitright                  " vertical splits open right
-set number                      " but still show current line number
-set relativenumber              " show relative line numbers
-set nowrap                      " NO WRAPPING LINES
-set autowrite                   " save when you change buffers
-set showmatch                   " highlight matching brace
-set cursorline                  " turn on cursor horizontal line
-set wildmode=longest:list,full  " make command completion more like zsh
-set ignorecase                  " ignore search case
-set smartcase                   " dont ignore case once you use a capital
-set hlsearch                    " highlight all search matches
-set incsearch                   " jump to search
-set clipboard=unnamed           " copy and paste in system clipboard
-set history=1000                " holds last 1000 commands in command line
-set undolevels=1000             " holds last 1000 undos
-set backupdir=$HOME/.vim/backup " backup files in one place
-set directory=$HOME/.vim/backup " swp files in one place
-set title                       " set title in terminal
-set colorcolumn=80              " color line at 80 columns
-set complete+=kspell            " add dictionary to completion
-set tags=tags;/                 " make ctags look up from cwd for tags file
-set foldmethod=indent           " fold code based on intentation
-set showtabline=2               " always show the tabline
 
 set background=dark             " Bringing light into the darkness
 colorscheme PaperColor          " colorscheme
@@ -105,33 +79,8 @@ autocmd BufWinLeave * call clearmatches()
 command! MakeTags !ctags -R .
 
 " #############################################################################
-" Vimgrep, Silver Searcher, Ctrl-P
-" #############################################################################
-
-" if you have ag use ag for vimgrep and ctrlp
-if executable('ag')
-  set grepprg=ag\ --vimgrep
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
-endif
-
-" Ag command for searching in vim
-command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-
-" K keymap for searching word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" #############################################################################
 " File Type Settings
 " #############################################################################
-
-augroup language_tabbing
-  autocmd!
-  autocmd Filetype php        setlocal ts=4 sts=4 sw=4 noexpandtab
-  autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
-augroup END
 
 " set markdown to 80 characters wide
 au BufRead,BufNewFile *.md setlocal textwidth=80
@@ -147,41 +96,5 @@ autocmd FileType gitcommit setlocal spell
 " remap leader
 let mapleader=','
 
-" quick splits
-nmap <leader>v :vsp<CR>
-nmap <leader>V :sp<CR>
-
-" split navigation
-nmap <C-h> <C-w><C-h>
-nmap <C-j> <C-w><C-j>
-nmap <C-k> <C-w><C-k>
-nmap <C-l> <C-w><C-l>
-
 " reload vimrc
 nmap <leader>r :so $HOME/.vim/vimrc<CR>
-
-" #############################################################################
-" Status Line
-" #############################################################################
-
-set statusline=\                          " space
-set statusline+=%f                        " path to the file
-set statusline+=\                         " space
-set statusline+=%{fugitive#head(5)}       " git status
-set statusline+=\                         " space
-set statusline+=%m                        " modified
-set statusline+=\                         " space
-set statusline+=%r                        " readonly
-set statusline+=\                         " space
-set statusline+=%q                        " quickfix / locationlist
-set statusline+=%=                        " switch to the right side
-set statusline+=%{ALEGetStatusLine()}     " errors and warnings
-set statusline+=\                         " space
-set statusline+=%y                        " file type
-set statusline+=\                         " space
-set statusline+=%c                        " current column
-set statusline+=,                         " hyphen
-set statusline+=%l                        " current line
-set statusline+=/                         " slash
-set statusline+=%L                        " total lines
-set statusline+=\                         " space
