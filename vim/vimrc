@@ -6,28 +6,29 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'             " a good place to start
+Plug 'tpope/vim-sensible'         " a good place to start
 
-Plug 'NLKNguyen/papercolor-theme'     " paper color scheme
+Plug 'NLKNguyen/papercolor-theme' " paper color scheme
 
-Plug 'kevindurb/vim-statusline'       " statusline
-Plug 'kevindurb/vim-editor'           " basic editor settings
-Plug 'kevindurb/vim-splits'           " split settings and keymaps
-Plug 'kevindurb/vim-quicksilver'      " use ag for amazing things
-Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
+Plug 'kevindurb/vim-statusline'   " statusline
+Plug 'kevindurb/vim-editor'       " basic editor settings
+Plug 'kevindurb/vim-splits'       " split settings and keymaps
+Plug 'kevindurb/vim-quicksilver'  " use ag for amazing things
+Plug 'kevindurb/vim-whiteout'     " show trailing whitespace
 
-Plug 'tpope/vim-commentary'           " sweet commenting
-Plug 'tpope/vim-fugitive'             " git commands in vim
-Plug 'tpope/vim-repeat'               " repeating plugin commands
-Plug 'tpope/vim-sleuth'               " auto detect tab settings
-Plug 'tpope/vim-surround'             " surround with things
-Plug 'tpope/vim-unimpaired'           " mappings for things with '['
-Plug 'tpope/vim-vinegar'              " browse directories with -
+Plug 'tpope/vim-commentary'       " sweet commenting
+Plug 'tpope/vim-fugitive'         " git commands in vim
+Plug 'tpope/vim-repeat'           " repeating plugin commands
+Plug 'tpope/vim-sleuth'           " auto detect tab settings
+Plug 'tpope/vim-surround'         " surround with things
+Plug 'tpope/vim-unimpaired'       " mappings for things with '['
+Plug 'tpope/vim-vinegar'          " browse directories with -
+Plug 'tpope/vim-dispatch'         " run builds and tests within vim
 
-Plug 'moll/vim-node'                  " add gf capabilities for js imports
-Plug 'sheerun/vim-polyglot'           " all the syntax files!
-Plug 'w0rp/ale'                       " syntax and style checking
-Plug 'ctrlpvim/ctrlp.vim'             " fuzzy searching
+Plug 'moll/vim-node'              " add gf capabilities for js imports
+Plug 'sheerun/vim-polyglot'       " all the syntax files!
+Plug 'w0rp/ale'                   " syntax and style checking
+Plug 'ctrlpvim/ctrlp.vim'         " fuzzy searching
 
 call plug#end()
 
