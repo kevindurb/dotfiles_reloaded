@@ -30,8 +30,6 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export EDITOR='vim'
 # use local php at work for faster test running
 export USE_LOCAL_PHP=0
-# use ag for fzf
-export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"

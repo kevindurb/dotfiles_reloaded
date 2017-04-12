@@ -1,5 +1,6 @@
 " vimrc - vim settings
 " Author: Kevin Durbin
+" vim: set fdm=marker expandtab ts=2 sw=2:
 
 " {{{ Plugins
 
@@ -13,6 +14,7 @@ Plug 'kevindurb/vim-statusline'       " statusline
 Plug 'kevindurb/vim-editor'           " basic editor settings
 Plug 'kevindurb/vim-splits'           " split settings and keymaps
 Plug 'kevindurb/vim-quicksilver'      " use ag for amazing things
+Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
 
 Plug 'tpope/vim-commentary'           " sweet commenting
 Plug 'tpope/vim-fugitive'             " git commands in vim
@@ -54,19 +56,8 @@ let g:ctrlp_root_markers = [
 
 " {{{ Colorscheme
 
-set background=dark             " Bringing light into the darkness
-colorscheme PaperColor          " colorscheme
-
-" }}}
-
-" {{{ Trailing Whitespace
-
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+set background=dark    " Bringing light into the darkness
+colorscheme PaperColor " colorscheme
 
 " }}}
 
@@ -84,12 +75,6 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 " spelling in markdown and commit messages
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
-
-" enable folding my vimrc
-augroup filetype_vim
-  autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
-augroup END
 
 " }}}
 
