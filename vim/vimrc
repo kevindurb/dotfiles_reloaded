@@ -10,7 +10,6 @@ Plug 'tpope/vim-sensible'             " a good place to start
 
 Plug 'NLKNguyen/papercolor-theme'     " paper color scheme
 
-Plug 'kevindurb/vim-statusline'       " statusline
 Plug 'kevindurb/vim-splits'           " split settings and keymaps
 Plug 'kevindurb/vim-quicksilver'      " use ag for amazing things
 Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
@@ -81,6 +80,18 @@ set undolevels=1000             " holds last 1000 undos
 set backupdir=$HOME/.vim/backup " backup files in one place
 set directory=$HOME/.vim/backup " swp files in one place
 
+" }}}
+
+" {{{ Look And Feel
+
+set background=dark    " Bringing light into the darkness
+colorscheme PaperColor " colorscheme
+
+" use powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 " change the cursor for insert mode
 if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
@@ -89,13 +100,6 @@ else
     let &t_SI = "\e[5 q"
     let &t_EI = "\e[2 q"
 endif
-
-" }}}
-
-" {{{ Colorscheme
-
-set background=dark    " Bringing light into the darkness
-colorscheme PaperColor " colorscheme
 
 " }}}
 

@@ -10,8 +10,8 @@ zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
 
 # theme
-zplug "mafredri/zsh-async", on:sindresorhus/pure
-zplug "sindresorhus/pure", use:pure.zsh
+# zplug "mafredri/zsh-async", on:sindresorhus/pure
+# zplug "sindresorhus/pure", use:pure.zsh
 
 # other
 zplug "zsh-users/zsh-history-substring-search", defer:3
@@ -54,3 +54,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# powerline
+powerline-daemon -q
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
