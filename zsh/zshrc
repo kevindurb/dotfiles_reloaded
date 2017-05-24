@@ -1,56 +1,70 @@
-# vi: ft=zsh
+# zshrc - zsh settings
+# Author: Kevin Durbin
+# vim: set fdm=marker expandtab ts=2 sw=2 ft=zsh:
 
-ZSH=$HOME/dotfiles/zsh
+# {{{ Exports
 
-export ZPLUG_HOME=$ZSH/zplug
+export ZSH_HOME=$HOME/dotfiles/zsh
+export ZPLUG_HOME=$ZSH_HOME/zplug
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export EDITOR='vim'
+
+# }}}
+
+# {{{ Plugins
+
 source $ZPLUG_HOME/init.zsh
 
-# emojis!!!
 zplug "stedolan/jq", from:gh-r, as:command, rename-to:jq
 zplug "b4b4r07/emoji-cli", on:"stedolan/jq"
 
-# prezto plugins
 zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
 
-# theme
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
-# other
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 
-# check to see if everything is loaded
-# and install if not
+zplug "sharat87/zsh-vim-mode"
+
 if ! zplug check; then
   zplug install
 fi
 zplug load
 
-# load base16
+# }}}
+
+# {{{ Base16
+
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-# set my colorscheme
 base16_tomorrow-night
 
-# colorized ls
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-# set my editor
-export EDITOR='vim'
+# }}}
 
-# other aliases to make stuff faster
+# {{{ Aliases
+
 alias lss="ls -lAF"
 alias c="clear"
 alias maketags="ctags -exclude=@.gitignore -R ."
 alias weather="curl wttr.in"
 
-# history search
+# }}}
+
+# {{{ History Search
+
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 
-# load nvm
+# }}}
+
+# {{{ Nvm
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# }}}
