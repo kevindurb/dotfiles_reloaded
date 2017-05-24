@@ -5,13 +5,17 @@ ZSH=$HOME/dotfiles/zsh
 export ZPLUG_HOME=$ZSH/zplug
 source $ZPLUG_HOME/init.zsh
 
+# emojis!!!
+zplug "stedolan/jq", from:gh-r, as:command, rename-to:jq
+zplug "b4b4r07/emoji-cli", on:"stedolan/jq"
+
 # prezto plugins
 zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
 
 # theme
-zplug "mafredri/zsh-async", on:sindresorhus/pure
-zplug "sindresorhus/pure", use:pure.zsh
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
 # other
 zplug "zsh-users/zsh-history-substring-search", defer:3
