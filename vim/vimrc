@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'             " a good place to start
 
-Plug 'NLKNguyen/papercolor-theme'     " paper color scheme
+Plug 'chriskempson/base16-vim'        " base16 colorscheme
 
 Plug 'kevindurb/vim-statusline'       " statusline
 Plug 'kevindurb/vim-splits'           " split settings and keymaps
@@ -94,8 +94,10 @@ endif
 
 " {{{ Colorscheme
 
-set background=dark    " Bringing light into the darkness
-colorscheme PaperColor " colorscheme
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 " }}}
 

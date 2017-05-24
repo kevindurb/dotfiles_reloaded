@@ -28,20 +28,12 @@ zplug load
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # set my editor
 export EDITOR='vim'
-# use local php at work for faster test running
-export USE_LOCAL_PHP=0
 
 # other aliases to make stuff faster
 alias lss="ls -lAF"
 alias c="clear"
 alias maketags="ctags -exclude=@.gitignore -R ."
 alias weather="curl wttr.in"
-
-# jira searches
-alias wcrtr="jira search \"status = closed and 'SE Team' = 'Web Components'\""
-
-# chrome from cli!!
-alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
 
 # history search
 autoload -U history-search-end
@@ -52,5 +44,9 @@ bindkey "^[[A" history-beginning-search-backward-end
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-# autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# load base16
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+# set my colorscheme
+base16_tomorrow-night
