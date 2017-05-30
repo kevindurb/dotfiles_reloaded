@@ -14,6 +14,7 @@ Plug 'kevindurb/vim-statusline'       " statusline
 Plug 'kevindurb/vim-splits'           " split settings and keymaps
 Plug 'kevindurb/vim-quicksilver'      " use ag for amazing things
 Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
+Plug 'kevindurb/vim-magiccursor'      " cursor pipe / block
 
 Plug 'tpope/vim-commentary'           " sweet commenting
 Plug 'tpope/vim-fugitive'             " git commands in vim
@@ -80,15 +81,6 @@ set hlsearch                    " highlight all search matches
 set undolevels=1000             " holds last 1000 undos
 set backupdir=$HOME/.vim/backup " backup files in one place
 set directory=$HOME/.vim/backup " swp files in one place
-
-" change the cursor for insert mode
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
-else
-    let &t_SI = "\e[5 q"
-    let &t_EI = "\e[2 q"
-endif
 
 " }}}
 
