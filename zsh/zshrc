@@ -3,41 +3,32 @@
 # vim: set fdm=marker expandtab ts=2 sw=2 ft=zsh:
 
 # {{{ Exports
-
 export ZSH_HOME=$HOME/dotfiles/zsh
 export ZPLUG_HOME=$ZSH_HOME/zplug
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export EDITOR='vim'
-
+export NVM_DIR="$HOME/.nvm"
 # }}}
 
 # {{{ Plugins
-
 source $ZPLUG_HOME/init.zsh
-
-zplug "stedolan/jq", from:gh-r, as:command, rename-to:jq
-zplug "b4b4r07/emoji-cli", on:"stedolan/jq"
 
 zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
-
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
-
 zplug "sharat87/zsh-vim-mode"
+zplug "horosgrisa/autoenv"
 
 if ! zplug check; then
   zplug install
 fi
 zplug load
-
 # }}}
 
 # {{{ Base16
-
 BASE16_SHELL=$HOME/.config/base16-shell
 THEME_FILE=$HOME/.base16_theme
 BASE16_PROFILE_HELPER=$BASE16_SHELL/profile_helper.sh
@@ -53,29 +44,31 @@ then
     _base16 "$BASE16_SHELL/scripts/base16-tomorrow-night.sh" tomorrow-night
   fi
 fi
-
 # }}}
 
 # {{{ Aliases
-
 alias lss="ls -lAF"
 alias c="clear"
 alias maketags="ctags --exclude=@.gitignore -R ."
 alias weather="curl wttr.in"
+# }}}
 
+# {{{ Config
+setopt autocd
+setopt correctall
 # }}}
 
 # {{{ History Search
-
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
-
 # }}}
 
-# {{{ Nvm
+# {{{ Brew Stuff
+BREW_PREFIX="$(brew --prefix)"
+NVM="$BREW_PREFIX/opt/nvm/nvm.sh"
+AUTOJUMP="$BREW_PREFIX/etc/profile.d/autojump.sh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
+[ -s "$NVM" ] && . "$NVM"
+[ -s "$AUTOJUMP" ] && . "$AUTOJUMP"
 # }}}

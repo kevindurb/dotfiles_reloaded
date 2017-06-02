@@ -3,7 +3,6 @@
 " vim: set fdm=marker expandtab ts=2 sw=2:
 
 " {{{ Plugins
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'             " a good place to start
@@ -32,11 +31,9 @@ Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'ctrlpvim/ctrlp.vim'             " fuzzy searching
 
 call plug#end()
-
 " }}}
 
 " {{{ Plugin Settings
-
 " ale settings
 let g:ale_linters = {
 \ 'javascript': ['eslint'],
@@ -53,11 +50,9 @@ let g:ctrlp_root_markers = [
 \ '.tern-project',
 \ '.git',
 \]
-
 " }}}
 
 " {{{ Base Editor Config
-
 set title                       " set title in terminal
 set wildmode=longest:list,full  " make command completion more like zsh
 set autowrite                   " save when you change buffers
@@ -81,37 +76,29 @@ set hlsearch                    " highlight all search matches
 set undolevels=1000             " holds last 1000 undos
 set backupdir=$HOME/.vim/backup " backup files in one place
 set directory=$HOME/.vim/backup " swp files in one place
-
 " }}}
 
 " {{{ Colorscheme
-
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
-
 " }}}
 
 " {{{ Custom Commands
-
 command! MakeTags !ctags -R .
-
 " }}}
 
 " {{{ File Type Settings
-
 " set markdown to 80 characters wide
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " spelling in markdown and commit messages
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
-
 " }}}
 
 " {{{ Keymaps
-
 " remap leader
 let mapleader=','
 
@@ -120,5 +107,4 @@ nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
 
 " kill all buffers
 nnoremap <leader>q :bufdo bd<CR>
-
 " }}}
