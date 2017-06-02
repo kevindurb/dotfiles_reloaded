@@ -35,11 +35,12 @@
 
     ```bash
     cd ~
-    ln -s ~/dotfiles/gitignore .gitignore
-    ln -s ~/dotfiles/gitconfig .gitconfig
+    ln -s ~/dotfiles/git/gitignore .gitignore
+    ln -s ~/dotfiles/git/gitconfig .gitconfig
     ```
 
 ## Extras
 Zsh config is pre-setup for a couple cool things
 - nvm
 - autojump
+- base16
