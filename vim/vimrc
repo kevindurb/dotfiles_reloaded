@@ -29,6 +29,8 @@ Plug 'moll/vim-node'                  " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'ctrlpvim/ctrlp.vim'             " fuzzy searching
+Plug 'xolox/vim-notes'                " note taking
+Plug 'xolox/vim-misc'                 " required for vim-notes
 
 call plug#end()
 " }}}
@@ -60,7 +62,6 @@ set clipboard=unnamed           " copy and paste in system clipboard
 set showtabline=2               " always show the tabline
 set complete+=kspell            " add dictionary to completion
 set tags=tags;/                 " make ctags look up from cwd for tags file
-set foldmethod=indent           " fold code based on intentation
 set nowrap                      " NO WRAPPING LINES
 set smartindent                 " auto indents c-like blocks
 set shiftround                  " round indent to shiftwidth
