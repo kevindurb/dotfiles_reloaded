@@ -47,7 +47,7 @@ fi
 # }}}
 
 # {{{ Aliases
-alias lss="ls -lAF"
+alias lss="colorls -1 -l -a"
 alias c="clear"
 alias maketags="ctags --exclude=@.gitignore -R ."
 alias weather="curl wttr.in"
