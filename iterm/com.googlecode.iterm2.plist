@@ -57,15 +57,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1096 97 793 279 0 0 1920 1080 </string>
+	<string>526 101 793 94 0 0 1440 900 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 207 599 388 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>501 1719 918 512 -114 1200 1920 1080 </string>
+	<string>352 353 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-111 1208 1914 1064 -114 1200 1920 1080 </string>
+	<string>3 697 650 452 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-111 1820 650 452 -114 1200 1920 1080 </string>
+	<string>3 11 1914 1183 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>271 -1009 1274 873 114 -1050 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -601,7 +601,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Hack-Regular 14</string>
+			<string>KnackNerdFontC-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
