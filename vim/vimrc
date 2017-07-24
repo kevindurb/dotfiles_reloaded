@@ -29,8 +29,7 @@ Plug 'moll/vim-node'                  " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'ctrlpvim/ctrlp.vim'             " fuzzy searching
-Plug 'xolox/vim-notes'                " note taking
-Plug 'xolox/vim-misc'                 " required for vim-notes
+Plug 'benmills/vimux'                 " send commands to tmux
 
 call plug#end()
 " }}}
@@ -108,4 +107,8 @@ nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
 
 " kill all buffers
 nnoremap <leader>q :bufdo bd<CR>
+
+" vimux
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vr :VimuxRunLastCommand<CR>
 " }}}
