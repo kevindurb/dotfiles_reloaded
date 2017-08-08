@@ -57,13 +57,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>526 101 793 94 0 0 1440 900 </string>
+	<string>450 434 793 77 0 0 1440 900 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 207 599 388 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>352 353 796 473 0 0 1440 900 </string>
+	<string>415 299 918 495 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 697 650 452 0 0 1920 1200 </string>
+	<string>3 5 1434 894 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>3 11 1914 1183 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -301,7 +301,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>tmux attach -t base || tmux new-session -s base</string>
+			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -659,7 +659,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1</real>
+			<real>0.9990881494728916</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
