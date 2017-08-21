@@ -20,7 +20,6 @@ zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "sharat87/zsh-vim-mode"
-zplug "horosgrisa/autoenv"
 
 if ! zplug check; then
   zplug install

@@ -22,14 +22,14 @@ Plug 'tpope/vim-sleuth'               " auto detect tab settings
 Plug 'tpope/vim-surround'             " surround with things
 Plug 'tpope/vim-unimpaired'           " mappings for things with '['
 Plug 'tpope/vim-vinegar'              " browse directories with -
-Plug 'tpope/vim-dispatch'             " run builds and tests within vim
 
 Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
 Plug 'moll/vim-node'                  " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'ctrlpvim/ctrlp.vim'             " fuzzy searching
-Plug 'benmills/vimux'                 " send commands to tmux
+Plug 'flowtype/vim-flow'              " facebook flow
+Plug 'ervandew/supertab'              " easy completion with tab
 
 call plug#end()
 " }}}
@@ -37,8 +37,8 @@ call plug#end()
 " {{{ Plugin Settings
 " ale settings
 let g:ale_linters = {
-\ 'javascript': ['eslint'],
-\ 'javascript jsx': ['eslint'],
+\ 'javascript': ['eslint', 'flow'],
+\ 'javascript jsx': ['eslint', 'flow'],
 \}
 
 " search tags with ctrl p
@@ -51,6 +51,13 @@ let g:ctrlp_root_markers = [
 \ '.tern-project',
 \ '.git',
 \]
+
+" flow hide quickfix
+let g:flow#showquickfix = 0
+
+" supertab use omni complete by default
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
 " }}}
 
 " {{{ Base Editor Config
@@ -104,11 +111,4 @@ let mapleader=','
 
 " reload vimrc
 nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
-
-" kill all buffers
-nnoremap <leader>q :bufdo bd<CR>
-
-" vimux
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vr :VimuxRunLastCommand<CR>
 " }}}

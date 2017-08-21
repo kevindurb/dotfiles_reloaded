@@ -25,12 +25,12 @@
 	untracked = cyan
 [alias]
   aa = add --all
-	s = status
-	ci = commit
-	co = checkout
+  s = status
+  ci = commit
+  co = checkout
   mk = checkout -b
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-	diff = diff -w
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  diff = diff -w
   cp = cherry-pick
 [diff]
 	tool = vimdiff
