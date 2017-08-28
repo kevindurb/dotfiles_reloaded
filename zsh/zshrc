@@ -67,7 +67,10 @@ bindkey "^[[A" history-beginning-search-backward-end
 BREW_PREFIX="$(brew --prefix)"
 NVM="$BREW_PREFIX/opt/nvm/nvm.sh"
 AUTOJUMP="$BREW_PREFIX/etc/profile.d/autojump.sh"
+FZF="$HOME/.fzf.zsh"
 
 [ -s "$NVM" ] && . "$NVM"
 [ -s "$AUTOJUMP" ] && . "$AUTOJUMP"
+[ -f "$FZF" ] && source "$FZF"
 # }}}
+

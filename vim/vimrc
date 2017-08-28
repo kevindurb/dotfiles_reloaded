@@ -11,9 +11,7 @@ Plug 'chriskempson/base16-vim'        " base16 colorscheme
 
 Plug 'kevindurb/vim-statusline'       " statusline
 Plug 'kevindurb/vim-splits'           " split settings and keymaps
-Plug 'kevindurb/vim-quicksilver'      " use ag for amazing things
 Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
-Plug 'kevindurb/vim-magiccursor'      " cursor pipe / block
 
 Plug 'tpope/vim-commentary'           " sweet commenting
 Plug 'tpope/vim-fugitive'             " git commands in vim
@@ -27,9 +25,8 @@ Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
 Plug 'moll/vim-node'                  " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
-Plug 'ctrlpvim/ctrlp.vim'             " fuzzy searching
 Plug 'flowtype/vim-flow'              " facebook flow
-Plug 'ervandew/supertab'              " easy completion with tab
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 " }}}
@@ -40,24 +37,6 @@ let g:ale_linters = {
 \ 'javascript': ['eslint', 'flow'],
 \ 'javascript jsx': ['eslint', 'flow'],
 \}
-
-" search tags with ctrl p
-let g:ctrlp_extensions = ['tag']
-
-" start ctrl p in the right place
-let g:ctrlp_root_markers = [
-\ 'package.json',
-\ '.eslintrc.js',
-\ '.tern-project',
-\ '.git',
-\]
-
-" flow hide quickfix
-let g:flow#showquickfix = 0
-
-" supertab use omni complete by default
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-
 " }}}
 
 " {{{ Base Editor Config
@@ -96,6 +75,19 @@ endif
 command! MakeTags !ctags -R .
 " }}}
 
+" {{{ Searching
+" if you have ag use ag for vimgrep and ctrlp
+if executable('rg')
+  set grepprg=rg\ --vimgrep
+endif
+
+" Ag command for searching in vim
+command! -nargs=+ -complete=file -bar Rg silent! grep! <args>|cwindow|redraw!
+
+" K keymap for searching word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" }}}
+
 " {{{ File Type Settings
 " set markdown to 80 characters wide
 au BufRead,BufNewFile *.md setlocal textwidth=80
@@ -111,4 +103,7 @@ let mapleader=','
 
 " reload vimrc
 nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
+
+" FZF on ctrl-p
+nnoremap <c-p> :FZF<CR>
 " }}}
