@@ -69,6 +69,9 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+
+hi StatusLine   ctermfg=00 ctermbg=12 cterm=NONE
+hi StatusLineNC ctermfg=20 ctermbg=19 cterm=NONE
 " }}}
 
 " {{{ Custom Commands
