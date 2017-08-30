@@ -13,6 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 # {{{ Plugins
 source $ZPLUG_HOME/init.zsh
 
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
 zplug "mafredri/zsh-async", from:github
@@ -61,6 +62,10 @@ setopt correctall
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
+# }}}
+
+# {{{ FZF Options
+export FZF_DEFAULT_COMMAND='rg --files'
 # }}}
 
 # {{{ Brew Stuff
