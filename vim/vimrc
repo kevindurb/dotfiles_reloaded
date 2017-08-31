@@ -25,7 +25,7 @@ Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
 Plug 'moll/vim-node'                  " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
-Plug 'flowtype/vim-flow'              " facebook flow
+" Plug 'flowtype/vim-flow'              " facebook flow
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
