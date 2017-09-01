@@ -14,12 +14,17 @@ export NVM_DIR="$HOME/.nvm"
 source $ZPLUG_HOME/init.zsh
 
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-zplug "modules/completion", from:prezto
-zplug "modules/history", from:prezto
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug "zsh-users/zsh-autosuggestions"
+
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure", use:pure.zsh, as:theme
+
+zplug "modules/completion", from:prezto
+zplug "modules/history", from:prezto
+
 zplug "sharat87/zsh-vim-mode"
 
 if ! zplug check; then
