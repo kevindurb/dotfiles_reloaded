@@ -26,6 +26,7 @@ zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
 
 zplug "sharat87/zsh-vim-mode"
+zplug "chrissicool/zsh-256color"
 
 if ! zplug check; then
   zplug install
