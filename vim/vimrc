@@ -9,7 +9,6 @@ Plug 'tpope/vim-sensible'             " a good place to start
 
 Plug 'chriskempson/base16-vim'        " base16 colorscheme
 
-Plug 'kevindurb/vim-statusline'       " statusline
 Plug 'kevindurb/vim-splits'           " split settings and keymaps
 Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
 
@@ -25,7 +24,6 @@ Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
 Plug 'moll/vim-node'                  " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
-" Plug 'flowtype/vim-flow'              " facebook flow
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
@@ -72,9 +70,6 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
-
-hi StatusLine   ctermfg=00 ctermbg=12 cterm=NONE
-hi StatusLineNC ctermfg=20 ctermbg=19 cterm=NONE
 " }}}
 
 " {{{ Custom Commands
@@ -112,4 +107,10 @@ nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
 
 " FZF on ctrl-p
 nnoremap <c-p> :FZF<CR>
+" }}}
+
+" {{{ Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 " }}}

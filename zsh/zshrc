@@ -19,9 +19,6 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-autosuggestions"
 
-zplug "mafredri/zsh-async"
-zplug "sindresorhus/pure", use:pure.zsh, as:theme
-
 zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
 
@@ -85,3 +82,9 @@ FZF="$HOME/.fzf.zsh"
 [ -f "$FZF" ] && source "$FZF"
 # }}}
 
+# {{{ Powerline
+PYTHON_PREFIX="/usr/local/lib/python2.7/site-packages"
+POWERLINE_ZSH="$PYTHON_PREFIX/powerline/bindings/zsh/powerline.zsh"
+powerline-daemon -q
+[ -s "$POWERLINE_ZSH" ] && . "$POWERLINE_ZSH"
+# }}}
