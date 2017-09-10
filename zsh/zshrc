@@ -17,7 +17,6 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
-zplug "zsh-users/zsh-autosuggestions"
 
 zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
@@ -58,7 +57,6 @@ alias weather="curl wttr.in"
 
 # {{{ Config
 setopt autocd
-setopt correctall
 # }}}
 
 # {{{ History Search
@@ -88,3 +86,5 @@ POWERLINE_ZSH="$PYTHON_PREFIX/powerline/bindings/zsh/powerline.zsh"
 powerline-daemon -q
 [ -s "$POWERLINE_ZSH" ] && . "$POWERLINE_ZSH"
 # }}}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

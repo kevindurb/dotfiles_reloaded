@@ -15,10 +15,8 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Development/churchcommunitybuilder/app/resources/web-app</string>
+	<string>~/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -51,25 +49,12 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>450 434 793 77 0 0 1440 900 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 207 599 388 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>415 299 918 495 0 0 1440 900 </string>
+	<string>162 148 918 495 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 5 1434 894 0 0 1440 900 </string>
+	<string>1 6 1277 769 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3 11 1914 1183 0 0 1920 1200 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>271 -1009 1274 873 114 -1050 1680 1050 </string>
-	<key>NSWindow Frame iTerm Window 3</key>
-	<string>268 89 650 477 0 0 1920 1080 </string>
+	<string>152 113 570 377 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -601,7 +586,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>KnackNerdFontC-Regular 14</string>
+			<string>KnackNerdFontC-Regular 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1268,7 +1253,7 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>41337067-77E1-40B5-985B-31966C4D9B6D</string>
+	<string>B3AB5C11-4B78-460E-80DB-6A8DE1032217</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1276,7 +1261,7 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>501192163.64600497</real>
+	<real>518059404.80845797</real>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1311,20 +1296,22 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/kdurbin/dotfiles/iterm</string>
+	<string>/Users/durbins/dotfiles/iterm</string>
 	<key>SUEnableAutomaticChecks</key>
-	<false/>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=10</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=35</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
+	<key>SULastCheckTime</key>
+	<date>2017-09-08T00:28:24Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.0.14</string>
+	<string>3.0.15</string>
 </dict>
 </plist>
