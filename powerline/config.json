@@ -1,2 +1,13 @@
 {
+  "ext": {
+    "shell": {
+      "colorscheme": "default"
+    },
+    "tmux": {
+      "colorscheme": "default"
+    },
+    "vim": {
+      "colorscheme": "default"
+    }
+  }
 }

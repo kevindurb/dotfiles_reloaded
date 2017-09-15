@@ -17,13 +17,15 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
-zplug "zsh-users/zsh-autosuggestions"
 
 zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
 
 zplug "sharat87/zsh-vim-mode"
 zplug "chrissicool/zsh-256color"
+
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure", use:pure.zsh, as:theme
 
 if ! zplug check; then
   zplug install
@@ -58,7 +60,6 @@ alias weather="curl wttr.in"
 
 # {{{ Config
 setopt autocd
-setopt correctall
 # }}}
 
 # {{{ History Search
@@ -80,11 +81,4 @@ FZF="$HOME/.fzf.zsh"
 [ -s "$NVM" ] && . "$NVM"
 [ -s "$AUTOJUMP" ] && . "$AUTOJUMP"
 [ -f "$FZF" ] && source "$FZF"
-# }}}
-
-# {{{ Powerline
-PYTHON_PREFIX="/usr/local/lib/python2.7/site-packages"
-POWERLINE_ZSH="$PYTHON_PREFIX/powerline/bindings/zsh/powerline.zsh"
-powerline-daemon -q
-[ -s "$POWERLINE_ZSH" ] && . "$POWERLINE_ZSH"
 # }}}

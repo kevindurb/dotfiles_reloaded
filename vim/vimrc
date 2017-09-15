@@ -9,6 +9,7 @@ Plug 'tpope/vim-sensible'             " a good place to start
 
 Plug 'chriskempson/base16-vim'        " base16 colorscheme
 
+Plug 'kevindurb/vim-statusline'       " statusline
 Plug 'kevindurb/vim-splits'           " split settings and keymaps
 Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
 
@@ -70,6 +71,9 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+
+hi StatusLine   ctermfg=00 ctermbg=12 cterm=NONE
+hi StatusLineNC ctermfg=20 ctermbg=19 cterm=NONE
 " }}}
 
 " {{{ Custom Commands
@@ -107,10 +111,4 @@ nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
 
 " FZF on ctrl-p
 nnoremap <c-p> :FZF<CR>
-" }}}
-
-" {{{ Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
 " }}}
