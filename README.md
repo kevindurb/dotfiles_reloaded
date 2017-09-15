@@ -31,7 +31,16 @@
     # restart your terminal to install plugins automagically
     ```
 
-4. setup git
+4. setup tmux
+
+    ```bash
+    cd ~
+    ln -s ~/dotfiles/tmux .tmux
+    ln -s ~/dotfiles/tmux/tmux.conf .tmux.conf
+    # start up tmux and `C-a I` to install all the plugins
+    ```
+
+5. setup git
 
     ```bash
     cd ~
@@ -44,3 +53,5 @@ Zsh config is pre-setup for a couple cool things
 - nvm
 - autojump
 - base16
+- fzf
+- ripgrep
