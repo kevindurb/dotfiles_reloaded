@@ -5,26 +5,27 @@
 " {{{ Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'             " a good place to start
+Plug 'tpope/vim-sensible'              " a good place to start
 
-Plug 'chriskempson/base16-vim'        " base16 colorscheme
+Plug 'chriskempson/base16-vim'         " base16 colorscheme
 
-Plug 'kevindurb/vim-statusline'       " statusline
-Plug 'kevindurb/vim-splits'           " split settings and keymaps
-Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
+Plug 'kevindurb/vim-statusline'        " statusline
+Plug 'kevindurb/vim-splits'            " split settings and keymaps
+Plug 'kevindurb/vim-whiteout'          " show trailing whitespace
 
-Plug 'tpope/vim-commentary'           " sweet commenting
-Plug 'tpope/vim-fugitive'             " git commands in vim
-Plug 'tpope/vim-repeat'               " repeating plugin commands
-Plug 'tpope/vim-sleuth'               " auto detect tab settings
-Plug 'tpope/vim-surround'             " surround with things
-Plug 'tpope/vim-unimpaired'           " mappings for things with '['
-Plug 'tpope/vim-vinegar'              " browse directories with -
+Plug 'tpope/vim-commentary'            " sweet commenting
+Plug 'tpope/vim-fugitive'              " git commands in vim
+Plug 'tpope/vim-repeat'                " repeating plugin commands
+Plug 'tpope/vim-sleuth'                " auto detect tab settings
+Plug 'tpope/vim-surround'              " surround with things
+Plug 'tpope/vim-unimpaired'            " mappings for things with '['
+Plug 'tpope/vim-vinegar'               " browse directories with -
 
-Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
-Plug 'moll/vim-node'                  " add gf capabilities for js imports
-Plug 'sheerun/vim-polyglot'           " all the syntax files!
-Plug 'w0rp/ale'                       " syntax and style checking
+Plug 'christoomey/vim-tmux-navigator'  " navigate panes in tmux && vim
+Plug 'moll/vim-node'                   " add gf capabilities for js imports
+Plug 'sheerun/vim-polyglot'            " all the syntax files!
+Plug 'w0rp/ale'                        " syntax and style checking
+Plug 'MarcWeber/vim-addon-local-vimrc' " source local vimrcs
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()

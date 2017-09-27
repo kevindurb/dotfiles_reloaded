@@ -1,28 +1,28 @@
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore
-	pager = diff-so-fancy | less --tabs=1,5 -R
+  editor = vim
+  excludesfile = ~/.gitignore
+  pager = diff-so-fancy | less --tabs=1,5 -R
 [user]
-	name = Kevin Durbin
-	email = kevindurb@gmail.com
+  name = Kevin Durbin
+  email = kevindurb@gmail.com
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 [color "status"]
-	added = green
-	changed = red
-	untracked = cyan
+  added = green
+  changed = red
+  untracked = cyan
 [alias]
   aa = add --all
   s = status
@@ -33,21 +33,21 @@
   diff = diff -w
   cp = cherry-pick
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [push]
-	default = tracking
+  default = tracking
 [rerere]
-	enabled = 1
+  enabled = 1
 [mergetool]
-	keepBackup = true
-	prompt = false
+  keepBackup = true
+  prompt = false
 [difftool]
-	prompt = true
+  prompt = true
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+  tool = vimdiff
+  conflictstyle = diff3
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
