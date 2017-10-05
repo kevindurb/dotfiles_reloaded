@@ -27,6 +27,7 @@ Plug 'sheerun/vim-polyglot'            " all the syntax files!
 Plug 'w0rp/ale'                        " syntax and style checking
 Plug 'MarcWeber/vim-addon-local-vimrc' " source local vimrcs
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'Raimondi/delimitMate'            " auto pair brackets and such
 
 call plug#end()
 " }}}
@@ -37,6 +38,11 @@ let g:ale_linters = {
 \ 'javascript': ['eslint', 'flow'],
 \ 'javascript jsx': ['eslint', 'flow'],
 \}
+let g:ale_php_phpcs_standard = '--standard=/Users/kdurbin/Development/churchcommunitybuilder/app/src/phpcs_ruleset.xml'
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 'normal'
 
 " flow dont show quickfix
 let g:flow#showquickfix = 0
