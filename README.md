@@ -1,5 +1,7 @@
 # Dotfiles
 
+![screenshot](https://github.com/kevindurb/dotfiles/raw/master/screenshot.png)
+
 ## Dependencies
 - vim >=8.0
 - zsh >= 4.3.9
