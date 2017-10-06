@@ -16,7 +16,6 @@ Plug 'kevindurb/vim-whiteout'          " show trailing whitespace
 Plug 'tpope/vim-commentary'            " sweet commenting
 Plug 'tpope/vim-fugitive'              " git commands in vim
 Plug 'tpope/vim-repeat'                " repeating plugin commands
-Plug 'tpope/vim-sleuth'                " auto detect tab settings
 Plug 'tpope/vim-surround'              " surround with things
 Plug 'tpope/vim-unimpaired'            " mappings for things with '['
 Plug 'tpope/vim-vinegar'               " browse directories with -
@@ -59,7 +58,6 @@ set tags=tags;/                 " make ctags look up from cwd for tags file
 set nowrap                      " NO WRAPPING LINES
 set smartindent                 " auto indents c-like blocks
 set shiftround                  " round indent to shiftwidth
-set tabstop=2                   " show hard tabs as 2 columns
 set cursorline                  " turn on cursor horizontal line
 set colorcolumn=80              " color line at 80 columns
 set number                      " but still show current line number
@@ -107,6 +105,23 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 " spelling in markdown and commit messages
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
+" }}}
+
+" {{{ Indent Settings
+set tabstop=2                   " columns per tab
+set shiftwidth=2                " spaces per indent
+set softtabstop=2               " spaces per tab
+set expandtab                   " use soft tabs
+set smartindent                 " auto indents c-like blocks
+set shiftround                  " round indent to shiftwidth
+
+augroup language_tabbing
+  autocmd!
+  autocmd Filetype php        setlocal ts=4 sts=4 sw=4 noexpandtab
+  autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd Filetype css        setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd Filetype html       setlocal ts=2 sts=2 sw=2 expandtab
+augroup END
 " }}}
 
 " {{{ Keymaps

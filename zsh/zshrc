@@ -5,6 +5,7 @@
 # {{{ Exports
 export ZSH_HOME=$HOME/dotfiles/zsh
 export ZPLUG_HOME=$ZSH_HOME/zplug
+export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export EDITOR='vim'
 export NVM_DIR="$HOME/.nvm"
@@ -52,7 +53,7 @@ fi
 # }}}
 
 # {{{ Aliases
-alias lss="colorls -1 -l -a"
+alias lss="ls -lAhF"
 alias c="clear"
 alias maketags="ctags --exclude=@.gitignore -R ."
 alias weather="curl wttr.in"
