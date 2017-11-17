@@ -15,9 +15,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'              " a good place to start
 
-Plug 'chriskempson/base16-vim'         " base16 colorscheme
+Plug 'NLKNguyen/papercolor-theme'      " colorscheme
 
-Plug 'kevindurb/vim-statusline'        " statusline
 Plug 'kevindurb/vim-splits'            " split settings and keymaps
 Plug 'kevindurb/vim-whiteout'          " show trailing whitespace
 
@@ -28,12 +27,11 @@ Plug 'tpope/vim-surround'              " surround with things
 Plug 'tpope/vim-unimpaired'            " mappings for things with '['
 Plug 'tpope/vim-vinegar'               " browse directories with -
 
+Plug 'itchyny/lightline.vim'           " status line
 Plug 'christoomey/vim-tmux-navigator'  " navigate panes in tmux && vim
 Plug 'moll/vim-node'                   " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'            " all the syntax files!
 Plug 'w0rp/ale'                        " syntax and style checking
-Plug 'Raimondi/delimitMate'            " auto pair brackets and such
-Plug 'ElmCast/elm-vim'                 " elm fun!
 Plug 'SirVer/ultisnips'                " snippet engine
 Plug 'honza/vim-snippets'              " default snippets
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -55,6 +53,11 @@ let g:ale_lint_on_text_changed = 'normal'
 
 " utisnippets
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
+
+" lightline
+let g:lightline = {
+\ 'colorscheme': 'PaperColor_dark',
+\ }
 " }}}
 
 " {{{ Base Editor Config
@@ -82,13 +85,8 @@ set directory=$HOME/.vim/backup " swp files in one place
 " }}}
 
 " {{{ Colorscheme
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
-
-hi StatusLine   ctermfg=00 ctermbg=12 cterm=NONE
-hi StatusLineNC ctermfg=20 ctermbg=19 cterm=NONE
+set background=dark
+colorscheme PaperColor
 " }}}
 
 " {{{ Custom Commands
