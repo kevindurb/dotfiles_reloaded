@@ -34,24 +34,6 @@ fi
 zplug load
 # }}}
 
-# {{{ Base16
-# BASE16_SHELL=$HOME/.config/base16-shell
-# THEME_FILE=$HOME/.base16_theme
-# BASE16_PROFILE_HELPER=$BASE16_SHELL/profile_helper.sh
-
-# if [ -n "$PS1" ] && [ -s "$BASE16_PROFILE_HELPER" ]
-# then
-#   eval "$($BASE16_PROFILE_HELPER)"
-
-#   if [ -s "$THEME_FILE" ]
-#   then
-#     . "$THEME_FILE"
-#   else
-#     _base16 "$BASE16_SHELL/scripts/base16-tomorrow-night.sh" tomorrow-night
-#   fi
-# fi
-# }}}
-
 # {{{ Aliases
 alias lss="ls -lAhF"
 alias c="clear"
