@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'               " a good place to start
 
-Plug 'altercation/vim-colors-solarized' " theme
+Plug 'jnurmine/Zenburn'                 " theme
 
 Plug 'kevindurb/vim-splits'             " split settings and keymaps
 Plug 'kevindurb/vim-whiteout'           " show trailing whitespace
@@ -87,7 +87,7 @@ set directory=$HOME/.vim/backup " swp files in one place
 
 " {{{ Colorscheme
 set background=dark
-colorscheme solarized
+colorscheme zenburn
 " }}}
 
 " {{{ Custom Commands
