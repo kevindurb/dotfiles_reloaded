@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'               " a good place to start
 
-Plug 'jnurmine/Zenburn'                 " theme
+Plug 'acepukas/vim-zenburn'             " theme
 
 Plug 'kevindurb/vim-splits'             " split settings and keymaps
 Plug 'kevindurb/vim-whiteout'           " show trailing whitespace
@@ -57,7 +57,7 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
 
 " lightline
 let g:lightline = {
-\ 'colorscheme': 'solarized',
+\ 'colorscheme': 'zenburn',
 \ }
 " }}}
 
