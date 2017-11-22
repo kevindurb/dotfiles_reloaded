@@ -65,5 +65,3 @@ FZF="$HOME/.fzf.zsh"
 [ -s "$AUTOJUMP" ] && . "$AUTOJUMP"
 [ -f "$FZF" ] && source "$FZF"
 # }}}
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

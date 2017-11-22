@@ -32,8 +32,6 @@ Plug 'christoomey/vim-tmux-navigator'   " navigate panes in tmux && vim
 Plug 'moll/vim-node'                    " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'             " all the syntax files!
 Plug 'w0rp/ale'                         " syntax and style checking
-Plug 'SirVer/ultisnips'                 " snippet engine
-Plug 'honza/vim-snippets'               " default snippets
 Plug 'junegunn/goyo.vim'                " distraction free viming
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
@@ -52,9 +50,6 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'normal'
 
-" utisnippets
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
-
 " lightline
 let g:lightline = {
 \ 'colorscheme': 'zenburn',
@@ -65,7 +60,7 @@ let g:lightline = {
 set title                       " set title in terminal
 set wildmode=longest:list,full  " make command completion more like zsh
 set autowrite                   " save when you change buffers
-" set clipboard=unnamed           " copy and paste in system clipboard
+set clipboard=unnamed           " copy and paste in system clipboard
 set showtabline=2               " always show the tabline
 set complete+=kspell            " add dictionary to completion
 set tags=tags;/                 " make ctags look up from cwd for tags file
