@@ -33,6 +33,7 @@ Plug 'moll/vim-node'                    " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'             " all the syntax files!
 Plug 'w0rp/ale'                         " syntax and style checking
 Plug 'junegunn/goyo.vim'                " distraction free viming
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
@@ -53,6 +54,13 @@ let g:ale_lint_on_text_changed = 'normal'
 " lightline
 let g:lightline = {
 \ 'colorscheme': 'zenburn',
+\ 'active': {
+\   'left': [ [ 'mode', 'paste' ],
+\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+\ },
+\ 'component_function': {
+\   'gitbranch': 'fugitive#head'
+\ },
 \ }
 " }}}
 
@@ -103,6 +111,11 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " }}}
 
 " {{{ File Type Settings
+" make js files identify as ts
+augroup filetypedetect
+  au BufRead,BufNewFile *.js set filetype=typescript
+augroup END
+
 " set markdown to 80 characters wide
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
