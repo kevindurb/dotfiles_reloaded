@@ -13,26 +13,26 @@
 " {{{ Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'               " a good place to start
+Plug 'tpope/vim-sensible'             " a good place to start
 
-Plug 'acepukas/vim-zenburn'             " theme
+Plug 'acepukas/vim-zenburn'           " theme
+Plug 'itchyny/lightline.vim'          " status line
 
-Plug 'kevindurb/vim-splits'             " split settings and keymaps
-Plug 'kevindurb/vim-whiteout'           " show trailing whitespace
+Plug 'kevindurb/vim-splits'           " split settings and keymaps
+Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
 
-Plug 'tpope/vim-commentary'             " sweet commenting
-Plug 'tpope/vim-fugitive'               " git commands in vim
-Plug 'tpope/vim-repeat'                 " repeating plugin commands
-Plug 'tpope/vim-surround'               " surround with things
-Plug 'tpope/vim-unimpaired'             " mappings for things with '['
-Plug 'tpope/vim-vinegar'                " browse directories with -
+Plug 'tpope/vim-commentary'           " sweet commenting
+Plug 'tpope/vim-fugitive'             " git commands in vim
+Plug 'tpope/vim-repeat'               " repeating plugin commands
+Plug 'tpope/vim-surround'             " surround with things
+Plug 'tpope/vim-unimpaired'           " mappings for things with '['
+Plug 'tpope/vim-vinegar'              " browse directories with -
 
-Plug 'itchyny/lightline.vim'            " status line
-Plug 'christoomey/vim-tmux-navigator'   " navigate panes in tmux && vim
-Plug 'moll/vim-node'                    " add gf capabilities for js imports
-Plug 'sheerun/vim-polyglot'             " all the syntax files!
-Plug 'w0rp/ale'                         " syntax and style checking
-Plug 'junegunn/goyo.vim'                " distraction free viming
+Plug 'joonty/vdebug'                  " debugging!
+Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
+Plug 'moll/vim-node'                  " add gf capabilities for js imports
+Plug 'sheerun/vim-polyglot'           " all the syntax files!
+Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
@@ -62,6 +62,30 @@ let g:lightline = {
 \   'gitbranch': 'fugitive#head'
 \ },
 \ }
+
+" vdebug
+let g:vdebug_options = {}
+let g:vdebug_options['path_maps'] = {
+  \ '/var/www/app': '/Users/kdurbin/Development/churchcommunitybuilder/app'
+  \ }
+let g:vdebug_options['server'] = ''
+let g:vdebug_options['break_on_open'] = 0
+let g:vdebug_options['continuous_mode'] = 0
+let g:vdebug_options['watch_window_style'] = 'compact'
+let g:vdebug_features = {}
+let g:vdebug_features['max_children'] = 1024
+
+" toggle vdebug settings
+function! ToggleVDebugOption(opt)
+  if g:vdebug_options[a:opt] == 0
+    let g:vdebug_options[a:opt] = 1
+    echo 'VDebug ' . a:opt . ': On'
+  else
+    let g:vdebug_options[a:opt] = 0
+    echo 'VDebug ' . a:opt . ': Off'
+  endif
+endfunction
+
 " }}}
 
 " {{{ Base Editor Config
@@ -150,4 +174,8 @@ nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
 
 " FZF on ctrl-p
 nnoremap <c-p> :FZF<CR>
+
+" vdebug options
+map <Leader>dc :call ToggleVDebugOption('continuous_mode')<CR>
+map <Leader>db :call ToggleVDebugOption('break_on_open')<CR>
 " }}}
