@@ -1,9 +1,9 @@
 [core]
   editor = vim
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/kdurbin/.gitignore
 [user]
-  name = Kevin Durbin
-  email = kevindurb@gmail.com
+	name = Kevin Durbin
+	email = kevindurb@gmail.com
 [color]
   diff = auto
   status = auto
@@ -31,10 +31,14 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   diff = diff -w
   cp = cherry-pick
+  start = "!git checkout -b case/se-$1 #"
+  pushnew = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD` #"
+  case = "!git checkout case/se-$1 #"
+  commitcase= "!BRANCH=`git rev-parse --abbrev-ref HEAD | sed \"s/case\\/se\\-//\" `; git commit -m \"[#$BRANCH] $1\" #"
 [diff]
   tool = vimdiff
 [push]
-  default = tracking
+	default = current
 [rerere]
   enabled = 1
 [mergetool]
@@ -50,3 +54,16 @@
   oldHighlight = red bold 52
   newNormal = green bold
   newHighlight = green bold 22
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/kdurbin/.stCommitMsg

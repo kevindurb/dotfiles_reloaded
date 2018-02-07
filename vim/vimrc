@@ -28,13 +28,15 @@ Plug 'tpope/vim-surround'             " surround with things
 Plug 'tpope/vim-unimpaired'           " mappings for things with '['
 Plug 'tpope/vim-vinegar'              " browse directories with -
 
+Plug 'padde/jump.vim'                 " autojump for vim
 Plug 'joonty/vdebug'                  " debugging!
 Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
-Plug 'moll/vim-node'                  " add gf capabilities for js imports
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
+Plug 'jparise/vim-graphql'            " add graphql cause polyglot sucks
 Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/vim-easy-align'        " easy align md tables
 
 call plug#end()
 " }}}
@@ -42,6 +44,7 @@ call plug#end()
 " {{{ Plugin Settings
 " ale settings
 let g:ale_linters = {
+\ 'graphql': ['gqlint'],
 \ 'javascript': ['eslint', 'flow'],
 \ 'javascript jsx': ['eslint', 'flow'],
 \}
@@ -66,9 +69,10 @@ let g:lightline = {
 " vdebug
 let g:vdebug_options = {}
 let g:vdebug_options['path_maps'] = {
-  \ '/var/www/app': '/Users/kdurbin/Development/churchcommunitybuilder/app'
-  \ }
+\ '/var/www/app': '/Users/kdurbin/Development/churchcommunitybuilder/app'
+\ }
 let g:vdebug_options['server'] = ''
+let g:vdebug_options['ide_key'] = 'vagrant'
 let g:vdebug_options['break_on_open'] = 0
 let g:vdebug_options['continuous_mode'] = 0
 let g:vdebug_options['watch_window_style'] = 'compact'
@@ -110,6 +114,8 @@ set hlsearch                    " highlight all search matches
 set undolevels=1000             " holds last 1000 undos
 set backupdir=$HOME/.vim/backup " backup files in one place
 set directory=$HOME/.vim/backup " swp files in one place
+set path=.,src                  " gf search current dir and src dir
+set suffixesadd=.js,/index.js   " gf try adding .js to files
 " }}}
 
 " {{{ Colorscheme
@@ -146,6 +152,12 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 " spelling in markdown and commit messages
 autocmd FileType markdown setlocal spell
 autocmd FileType gitcommit setlocal spell
+
+" folding xml files
+augroup XML
+  autocmd!
+  autocmd FileType xml setlocal foldmethod=indent
+augroup END
 " }}}
 
 " {{{ Indent Settings
