@@ -16,7 +16,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'             " a good place to start
 
 Plug 'acepukas/vim-zenburn'           " theme
-Plug 'itchyny/lightline.vim'          " status line
 
 Plug 'kevindurb/vim-splits'           " split settings and keymaps
 Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
@@ -27,16 +26,14 @@ Plug 'tpope/vim-repeat'               " repeating plugin commands
 Plug 'tpope/vim-surround'             " surround with things
 Plug 'tpope/vim-unimpaired'           " mappings for things with '['
 Plug 'tpope/vim-vinegar'              " browse directories with -
+Plug 'tpope/vim-dispatch'             " add backgrounding
 
-Plug 'padde/jump.vim'                 " autojump for vim
 Plug 'joonty/vdebug'                  " debugging!
 Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
-Plug 'jparise/vim-graphql'            " add graphql cause polyglot sucks
 Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/vim-easy-align'        " easy align md tables
+Plug 'ctrlpvim/ctrlp.vim'             " fuzzy file searching
 
 call plug#end()
 " }}}
@@ -47,24 +44,13 @@ let g:ale_linters = {
 \ 'graphql': ['gqlint'],
 \ 'javascript': ['eslint', 'flow'],
 \ 'javascript jsx': ['eslint', 'flow'],
+\ 'css': ['stylelint'],
 \}
 let g:ale_php_phpcs_standard = '--standard=/Users/kdurbin/Development/churchcommunitybuilder/app/src/phpcs_ruleset.xml'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'normal'
-
-" lightline
-let g:lightline = {
-\ 'colorscheme': 'zenburn',
-\ 'active': {
-\   'left': [ [ 'mode', 'paste' ],
-\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-\ },
-\ 'component_function': {
-\   'gitbranch': 'fugitive#head'
-\ },
-\ }
 
 " vdebug
 let g:vdebug_options = {}
@@ -89,6 +75,9 @@ function! ToggleVDebugOption(opt)
     echo 'VDebug ' . a:opt . ': Off'
   endif
 endfunction
+
+" ctrlp
+let g:ctrlp_working_path_mode = 0
 
 " }}}
 
@@ -121,6 +110,10 @@ set suffixesadd=.js,/index.js   " gf try adding .js to files
 " {{{ Colorscheme
 set background=dark
 colorscheme zenburn
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 " }}}
 
 " {{{ Custom Commands
@@ -128,12 +121,19 @@ command! MakeTags !ctags -R .
 " }}}
 
 " {{{ Searching
-" if you have ag use ag for vimgrep and ctrlp
+" if you have rg use rg for vimgrep and ctrlp
 if executable('rg')
+  " use rg instead of grep
   set grepprg=rg\ --vimgrep
+
+  " Use rg in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+
+  " rg is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
 endif
 
-" Ag command for searching in vim
+" Rg command for searching in vim
 command! -nargs=+ -complete=file -bar Rg silent! grep! <args>|cwindow|redraw!
 
 " K keymap for searching word under cursor
@@ -183,9 +183,6 @@ let mapleader=','
 
 " reload vimrc
 nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
-
-" FZF on ctrl-p
-nnoremap <c-p> :FZF<CR>
 
 " vdebug options
 map <Leader>dc :call ToggleVDebugOption('continuous_mode')<CR>

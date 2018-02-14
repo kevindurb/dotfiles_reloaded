@@ -7,3 +7,5 @@ set guioptions-=e             " dont use native tabs
 set guioptions-=r             " dont show the right scrollbar
 set guioptions-=L             " dont show the left scrollbar
 set mouse=                    " disable mouse
+
+let g:fzf_launcher = $HOME."/.vim/mvim_fzf %s"
