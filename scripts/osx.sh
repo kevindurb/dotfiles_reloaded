@@ -14,7 +14,7 @@ defaults write com.apple.finder QuitMenuItem -bool YES
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
 # make itunes not respond to media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
 # turn on safari develop menu and inspector
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
@@ -32,6 +32,13 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # disable app nap
 defaults write NSGlobalDomain NSAppSleepDisabled -bool YES
 
+# Delete all information saved by Spotlight
+defaults delete com.apple.Spotlight
+
+# Uncomment to prevent Spotlight to always introduce itself as new
+defaults write com.apple.Spotlight useCount 5
+
 # restart to apply settings
 killall Finder
 killall Dock
+killall Spotlight

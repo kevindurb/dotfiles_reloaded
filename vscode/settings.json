@@ -9,6 +9,36 @@
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.fontFamily": "'Source Code Pro'",
     "workbench.statusBar.feedback.visible": false,
-    "workbench.colorTheme": "Zenburn",
     "workbench.iconTheme": "vscode-icons",
+    "search.smartCase": true,
+    "css.validate": false,
+    "stylelint.enable": true,
+    "vim.leader": ",",
+    "gitProjectManager.baseProjectsFolders": [
+        "~/projects",
+    ],
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.confirmSync": false,
+    "editor.tabSize": 2,
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+    },
+    "[php]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false,
+    },
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": true
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "powermode.enabled": false,
 }

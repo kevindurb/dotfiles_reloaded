@@ -1,5 +1,5 @@
 [core]
-  editor = vim
+  editor = code -w
 	excludesfile = /Users/kdurbin/.gitignore
 [user]
 	name = Kevin Durbin
@@ -35,35 +35,23 @@
   pushnew = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD` #"
   case = "!git checkout case/se-$1 #"
   commitcase= "!BRANCH=`git rev-parse --abbrev-ref HEAD | sed \"s/case\\/se\\-//\" `; git commit -m \"[#$BRANCH] $1\" #"
-[diff]
-  tool = vimdiff
 [push]
 	default = current
 [rerere]
   enabled = 1
-[mergetool]
-  keepBackup = true
-  prompt = false
-[difftool]
-  prompt = true
-[merge]
-  tool = vimdiff
-  conflictstyle = diff3
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52
   newNormal = green bold
   newHighlight = green bold 22
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [commit]
-	template = /Users/kdurbin/.stCommitMsg
+  template = /Users/kdurbin/.stCommitMsg
