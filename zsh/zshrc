@@ -7,7 +7,7 @@ export ZSH_HOME=$HOME/dotfiles/zsh
 export ZPLUG_HOME=$ZSH_HOME/zplug
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-export EDITOR='code'
+export EDITOR='vim'
 export NVM_DIR="$HOME/.nvm"
 export SKIP_RESOURCES=1
 # }}}
