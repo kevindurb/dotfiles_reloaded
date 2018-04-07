@@ -33,7 +33,8 @@ Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'ctrlpvim/ctrlp.vim'             " fuzzy file searching
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'galooshi/vim-import-js'
 
 call plug#end()
 " }}}
@@ -76,9 +77,6 @@ function! ToggleVDebugOption(opt)
   endif
 endfunction
 
-" ctrlp
-let g:ctrlp_working_path_mode = 0
-
 " }}}
 
 " {{{ Base Editor Config
@@ -110,10 +108,6 @@ set suffixesadd=.js,/index.js   " gf try adding .js to files
 " {{{ Colorscheme
 set background=dark
 colorscheme zenburn
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
 " }}}
 
 " {{{ Custom Commands
@@ -125,12 +119,6 @@ command! MakeTags !ctags -R .
 if executable('rg')
   " use rg instead of grep
   set grepprg=rg\ --vimgrep
-
-  " Use rg in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-
-  " rg is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
 endif
 
 " Rg command for searching in vim
@@ -187,4 +175,7 @@ nnoremap <leader>r :so $HOME/.vim/vimrc<CR>
 " vdebug options
 map <Leader>dc :call ToggleVDebugOption('continuous_mode')<CR>
 map <Leader>db :call ToggleVDebugOption('break_on_open')<CR>
+
+" fzf
+nnoremap <C-p> :FZF<CR>
 " }}}

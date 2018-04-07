@@ -964,7 +964,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>716 329 937 512 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>483 1 938 898 0 0 1440 900 </string>
+	<string>3 1 1434 898 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>365 378 650 452 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2280,6 +2280,8 @@
 	<real>501192163.64600497</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2315,6 +2317,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/kdurbin/dotfiles/iterm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>

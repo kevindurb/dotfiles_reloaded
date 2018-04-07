@@ -14,9 +14,6 @@
     "css.validate": false,
     "stylelint.enable": true,
     "vim.leader": ",",
-    "gitProjectManager.baseProjectsFolders": [
-        "~/projects",
-    ],
     "liveServer.settings.donotShowInfoMsg": true,
     "git.confirmSync": false,
     "editor.tabSize": 2,
@@ -37,8 +34,20 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": true
+        "suppressResultsExplorerNotice": true,
+        "suppressShowKeyBindingsNotice": true
     },
     "vsicons.dontShowNewVersionMessage": true,
-    "powermode.enabled": false,
+    "editor.minimap.enabled": false,
+    "gitlens.keymap": "alternate",
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.scopes": [
+        "document"
+    ],
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "tslint.autoFixOnSave": true,
+    "workbench.editor.enablePreview": false,
+    "editor.lineNumbers": "relative",
 }

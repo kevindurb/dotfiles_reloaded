@@ -41,6 +41,7 @@ alias c="clear"
 alias maketags="ctags --exclude=@.gitignore -R ."
 alias weather="curl wttr.in"
 alias chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --remote-debugging-port=9222"
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
 # }}}
 
 # {{{ Config
@@ -67,5 +68,3 @@ FZF="$HOME/.fzf.zsh"
 [ -s "$AUTOJUMP" ] && . "$AUTOJUMP"
 [ -f "$FZF" ] && source "$FZF"
 # }}}
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
