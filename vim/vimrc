@@ -109,6 +109,10 @@ set suffixesadd=.js,/index.js   " gf try adding .js to files
 " {{{ Colorscheme
 set background=dark
 colorscheme zenburn
+
+set t_ZH=[3m
+set t_ZR=[23m
+highlight Comment cterm=italic
 " }}}
 
 " {{{ Custom Commands

@@ -3,6 +3,7 @@
 # vim: set fdm=marker expandtab ts=2 sw=2 ft=zsh:
 
 # {{{ Exports
+export TERM=xterm-256color-italic
 export ZSH_HOME=$HOME/dotfiles/zsh
 export ZPLUG_HOME=$ZSH_HOME/zplug
 export CLICOLOR=1
