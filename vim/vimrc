@@ -19,6 +19,7 @@ Plug 'acepukas/vim-zenburn'           " theme
 
 Plug 'kevindurb/vim-splits'           " split settings and keymaps
 Plug 'kevindurb/vim-whiteout'         " show trailing whitespace
+Plug 'kevindurb/vim-statusline'       " statusline
 
 Plug 'tpope/vim-commentary'           " sweet commenting
 Plug 'tpope/vim-fugitive'             " git commands in vim
