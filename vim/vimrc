@@ -35,7 +35,8 @@ Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'galooshi/vim-import-js'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
 
 call plug#end()
 " }}}
@@ -53,6 +54,11 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'normal'
+
+" easytags
+set tags=./tags;
+let g:easytags_async = 1
+let g:easytags_dynamic_files = 1
 
 " vdebug
 let g:vdebug_options = {}
@@ -87,7 +93,6 @@ set autowrite                   " save when you change buffers
 set clipboard=unnamed           " copy and paste in system clipboard
 set showtabline=2               " always show the tabline
 set complete+=kspell            " add dictionary to completion
-set tags=tags;/                 " make ctags look up from cwd for tags file
 set nowrap                      " NO WRAPPING LINES
 set smartindent                 " auto indents c-like blocks
 set shiftround                  " round indent to shiftwidth
