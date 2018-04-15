@@ -22,19 +22,6 @@
   added = green
   changed = red
   untracked = cyan
-[alias]
-  aa = add --all
-  s = status
-  ci = commit
-  co = checkout
-  mk = checkout -b
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  diff = diff -w
-  cp = cherry-pick
-  start = "!git checkout -b case/se-$1 #"
-  pushnew = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD` #"
-  case = "!git checkout case/se-$1 #"
-  commitcase= "!BRANCH=`git rev-parse --abbrev-ref HEAD | sed \"s/case\\/se\\-//\" `; git commit -m \"[#$BRANCH] $1\" #"
 [push]
 	default = current
 [rerere]

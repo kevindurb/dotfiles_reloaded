@@ -37,6 +37,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
+Plug 'Quramy/tsuquyomi'
 
 call plug#end()
 " }}}
@@ -45,15 +46,22 @@ call plug#end()
 " ale settings
 let g:ale_linters = {
 \ 'graphql': ['gqlint'],
-\ 'javascript': ['eslint', 'flow'],
-\ 'javascript jsx': ['eslint', 'flow'],
+\ 'javascript': ['eslint'],
+\ 'javascript jsx': ['eslint'],
 \ 'css': ['stylelint'],
+\ 'typescript': ['tsuquyomi'],
 \}
 let g:ale_php_phpcs_standard = '--standard=/Users/kdurbin/Development/churchcommunitybuilder/app/src/phpcs_ruleset.xml'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'normal'
+
+" you complete me
+let g:ycm_filetype_specific_completion_to_disable = {
+\ 'gitcommit': 1,
+\ 'typescript': 1,
+\}
 
 " easytags
 set tags=./tags;
@@ -139,11 +147,6 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " }}}
 
 " {{{ File Type Settings
-" make js files identify as ts
-augroup filetypedetect
-  au BufRead,BufNewFile *.js set filetype=typescript
-augroup END
-
 " set markdown to 80 characters wide
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
