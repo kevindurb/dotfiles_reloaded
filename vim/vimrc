@@ -29,6 +29,7 @@ Plug 'tpope/vim-unimpaired'           " mappings for things with '['
 Plug 'tpope/vim-vinegar'              " browse directories with -
 Plug 'tpope/vim-dispatch'             " add backgrounding
 
+Plug 'Raimondi/delimitMate'           " auto close
 Plug 'joonty/vdebug'                  " debugging!
 Plug 'christoomey/vim-tmux-navigator' " navigate panes in tmux && vim
 Plug 'sheerun/vim-polyglot'           " all the syntax files!
@@ -37,7 +38,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
-Plug 'Quramy/tsuquyomi'
 
 call plug#end()
 " }}}
@@ -49,7 +49,7 @@ let g:ale_linters = {
 \ 'javascript': ['eslint'],
 \ 'javascript jsx': ['eslint'],
 \ 'css': ['stylelint'],
-\ 'typescript': ['tsuquyomi'],
+\ 'typescript': ['tslint'],
 \}
 let g:ale_php_phpcs_standard = '--standard=/Users/kdurbin/Development/churchcommunitybuilder/app/src/phpcs_ruleset.xml'
 let g:ale_lint_on_enter = 0
@@ -60,7 +60,6 @@ let g:ale_lint_on_text_changed = 'normal'
 " you complete me
 let g:ycm_filetype_specific_completion_to_disable = {
 \ 'gitcommit': 1,
-\ 'typescript': 1,
 \}
 
 " easytags
