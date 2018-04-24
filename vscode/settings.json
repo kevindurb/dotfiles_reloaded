@@ -50,4 +50,5 @@
     "tslint.autoFixOnSave": true,
     "workbench.editor.enablePreview": false,
     "editor.lineNumbers": "relative",
+    "window.zoomLevel": 0,
 }
