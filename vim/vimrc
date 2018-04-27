@@ -28,6 +28,7 @@ Plug 'tpope/vim-surround'             " surround with things
 Plug 'tpope/vim-unimpaired'           " mappings for things with '['
 Plug 'tpope/vim-vinegar'              " browse directories with -
 Plug 'tpope/vim-dispatch'             " add backgrounding
+Plug 'tpope/vim-eunuch'               " add unix commands like Delete and Move
 
 Plug 'Raimondi/delimitMate'           " auto close
 Plug 'joonty/vdebug'                  " debugging!
@@ -36,8 +37,6 @@ Plug 'sheerun/vim-polyglot'           " all the syntax files!
 Plug 'w0rp/ale'                       " syntax and style checking
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
 
 call plug#end()
 " }}}
@@ -50,6 +49,7 @@ let g:ale_linters = {
 \ 'javascript jsx': ['eslint'],
 \ 'css': ['stylelint'],
 \ 'typescript': ['tslint'],
+\ 'ruby': [],
 \}
 let g:ale_php_phpcs_standard = '--standard=/Users/kdurbin/Development/churchcommunitybuilder/app/src/phpcs_ruleset.xml'
 let g:ale_lint_on_enter = 0
@@ -60,12 +60,8 @@ let g:ale_lint_on_text_changed = 'normal'
 " you complete me
 let g:ycm_filetype_specific_completion_to_disable = {
 \ 'gitcommit': 1,
+\ 'ruby': 1,
 \}
-
-" easytags
-set tags=./tags;
-let g:easytags_async = 1
-let g:easytags_dynamic_files = 1
 
 " vdebug
 let g:vdebug_options = {}

@@ -9,8 +9,8 @@ export ZPLUG_HOME=$ZSH_HOME/zplug
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export EDITOR='vim'
-export NVM_DIR="$HOME/.nvm"
 export SKIP_RESOURCES=1
+export FZF_DEFAULT_COMMAND='rg --files'
 # }}}
 
 # {{{ Plugins
@@ -24,9 +24,13 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "modules/completion", from:prezto
 zplug "modules/history", from:prezto
 zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/tmux", from:oh-my-zsh
+zplug "plugins/autojump", from:oh-my-zsh
+zplug "plugins/nvm", from:oh-my-zsh
 
 zplug "sharat87/zsh-vim-mode"
 zplug "chrissicool/zsh-256color"
+zplug "walesmd/caniuse.plugin.zsh"
 
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure", use:pure.zsh, as:theme
@@ -38,6 +42,7 @@ zplug load
 # }}}
 
 # {{{ Aliases
+alias ll="lss"
 alias lss="ls -lAhF"
 alias c="clear"
 alias maketags="ctags --exclude=@.gitignore -R ."
@@ -57,17 +62,8 @@ zle -N history-beginning-search-backward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 # }}}
 
-# {{{ FZF Options
-export FZF_DEFAULT_COMMAND='rg --files'
-# }}}
-
-# {{{ Brew Stuff
-BREW_PREFIX="$(brew --prefix)"
-NVM="$BREW_PREFIX/opt/nvm/nvm.sh"
-AUTOJUMP="$BREW_PREFIX/etc/profile.d/autojump.sh"
+# {{{ Add FZF
 FZF="$HOME/.fzf.zsh"
 
-[ -s "$NVM" ] && . "$NVM"
-[ -s "$AUTOJUMP" ] && . "$AUTOJUMP"
 [ -f "$FZF" ] && source "$FZF"
 # }}}
