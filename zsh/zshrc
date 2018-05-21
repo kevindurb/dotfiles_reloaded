@@ -26,6 +26,7 @@ zplug "modules/history", from:prezto
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/autojump", from:oh-my-zsh
+zplug "plugins/autoenv", from:oh-my-zsh
 zplug "plugins/nvm", from:oh-my-zsh
 
 zplug "sharat87/zsh-vim-mode"

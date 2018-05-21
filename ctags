@@ -29,6 +29,7 @@
 --exclude=*bundle.*
 
 --languages=-javascript,sql
+
 --langdef=clojure
 --langmap=clojure:.clj
 --regex-clojure=/\([ \t]*create-ns[ \t]+([-[:alnum:]*+!_:\/.?]+)/\1/n,namespace/
@@ -56,6 +57,7 @@
 --regex-coffee=/((constructor|initialize):[ \t]*\()@(([A-Za-z][A-Za-z0-9_.]*)+)([ \t]*=[ \t]*[^,)]+)?/\3/f,field/
 
 --langmap=C++:+.mm
+
 --langdef=elm
 --langmap=elm:.elm
 --regex-elm=/^module[ \t]*([A-Z][a-zA-Z0-9'_.]*)/\1/m,module/
