@@ -1,10 +1,5 @@
 #! /bin/bash
 
-if [[ -d "~/dotfiles" ]]; then
-  echo "Dotfiles already installed! Exiting..."
-  exit 1
-fi
-
 echo "Please enter SUDO password"
 sudo echo "Installing..."
 
@@ -17,7 +12,6 @@ if [[ $PLATFORM == 'Darwin' ]]; then
 
   echo "Installing Deps..."
   brew install vim git tig ruby zsh cmake cmatrix
-  sudo gem install git-smart
 elif which apt-get > /dev/null; then
   echo "Determined linux with apt..."
   echo "Installing Deps..."
@@ -41,9 +35,6 @@ nvm alias default stable
 
 PREVIOUS_DIR=`pwd`;
 cd ~
-
-echo "Cloning repo..."
-git clone git@bitbucket.org:kevindurb/dotfiles.git
 
 echo "Setting up repo..."
 cd ~/dotfiles
