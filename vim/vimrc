@@ -64,6 +64,8 @@ let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'normal'
 
 " you complete me
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_filetype_specific_completion_to_disable = {
 \ 'gitcommit': 1,
 \ 'ruby': 1,
