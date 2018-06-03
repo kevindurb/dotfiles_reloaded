@@ -17,16 +17,21 @@ RUN mkdir /home/kevindurb
 RUN useradd kevindurb
 RUN echo 'kevindurb:pass1234' | chpasswd
 RUN chown kevindurb /home/kevindurb
-# USER kevindurb
-# WORKDIR /home/kevindurb
-# ENV HOME /home/kevindurb
 
 # add dotfiles
 RUN mkdir /home/kevindurb/dotfiles
 ADD ./ /home/kevindurb/dotfiles
 
 # setup dotfiles
-# RUN ~/dotfiles/scripts/install.sh
+USER kevindurb
+WORKDIR /home/kevindurb
+ENV HOME /home/kevindurb
+RUN ~/dotfiles/scripts/install.sh
+
+# switch back to root before sshd
+USER root
+WORKDIR /root
+ENV HOME /root
 
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]

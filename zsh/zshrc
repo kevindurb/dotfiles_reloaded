@@ -22,12 +22,13 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 
 zplug "modules/completion", from:prezto
-zplug "modules/history", from:prezto
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/tmux", from:oh-my-zsh
-zplug "plugins/autojump", from:oh-my-zsh
-zplug "plugins/autoenv", from:oh-my-zsh
-zplug "plugins/nvm", from:oh-my-zsh
+zplug "modules/history",    from:prezto
+zplug "plugins/autoenv",    from:oh-my-zsh
+zplug "plugins/autojump",   from:oh-my-zsh
+zplug "plugins/git",        from:oh-my-zsh
+zplug "plugins/nvm",        from:oh-my-zsh
+zplug "plugins/tmux",       from:oh-my-zsh
+zplug "plugins/yarn",       from:oh-my-zsh
 
 zplug "sharat87/zsh-vim-mode"
 zplug "chrissicool/zsh-256color"
@@ -36,9 +37,9 @@ zplug "walesmd/caniuse.plugin.zsh"
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure", use:pure.zsh, as:theme
 
-if ! zplug check; then
-  zplug install
-fi
+# if ! zplug check; then
+#   zplug install
+# fi
 zplug load
 # }}}
 
