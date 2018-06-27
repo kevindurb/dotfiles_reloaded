@@ -35,16 +35,25 @@ Plug 'pangloss/vim-javascript'          " js syntax
 Plug 'mxw/vim-jsx'                      " jsx syntax
 Plug 'leafgarland/typescript-vim'       " typescript syntax
 
+Plug 'SirVer/ultisnips'                 " snippet engine
+Plug 'honza/vim-snippets'               " snippets
 Plug 'Raimondi/delimitMate'             " auto close
 Plug 'christoomey/vim-tmux-navigator'   " navigate panes in tmux && vim
 Plug 'w0rp/ale'                         " syntax and style checking
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'vim-vdebug/vdebug'
 
 call plug#end()
 " }}}
 
 " {{{ Plugin Settings
+" ultisnips
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
 " statusline settings
 let g:airline#extensions#tabline#enabled = 1
 
@@ -54,7 +63,6 @@ let g:ale_linters = {
 \ 'javascript': ['eslint'],
 \ 'javascript jsx': ['eslint'],
 \ 'css': ['stylelint'],
-\ 'typescript': ['tslint'],
 \ 'ruby': [],
 \}
 let g:ale_php_phpcs_standard = '--standard=/Users/kdurbin/Development/churchcommunitybuilder/app/src/phpcs_ruleset.xml'
@@ -64,6 +72,7 @@ let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'normal'
 
 " you complete me
+let g:ycm_show_diagnostics_ui = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_filetype_specific_completion_to_disable = {
@@ -72,17 +81,24 @@ let g:ycm_filetype_specific_completion_to_disable = {
 \}
 
 " vdebug
-let g:vdebug_options = {}
-let g:vdebug_options['path_maps'] = {
-\ '/var/www/app': '/Users/kdurbin/Development/churchcommunitybuilder/app'
+let g:vdebug_options = {
+\   'path_maps': {
+\     '/var/www/app': '/Users/kdurbin/Development/churchcommunitybuilder/app',
+\     '/var/www/am': '/Users/kdurbin/Development/churchcommunitybuilder/am',
+\   },
+\   'port': 9000,
+\   'server': '',
+\   'timeout': 20,
+\   'ide_key': 'vagrant',
+\   'break_on_open': 0,
+\   'continuous_mode': 0,
+\   'watch_window_style': 'compact',
+\   'debug_file': '~/vdebug.log',
+\   'debug_file_level': 2,
 \ }
-let g:vdebug_options['server'] = ''
-let g:vdebug_options['ide_key'] = 'vagrant'
-let g:vdebug_options['break_on_open'] = 0
-let g:vdebug_options['continuous_mode'] = 0
-let g:vdebug_options['watch_window_style'] = 'compact'
-let g:vdebug_features = {}
-let g:vdebug_features['max_children'] = 1024
+let g:vdebug_features = {
+\   'max_children': 2048,
+\ }
 
 " toggle vdebug settings
 function! ToggleVDebugOption(opt)
@@ -104,6 +120,7 @@ set autowrite                   " save when you change buffers
 set clipboard=unnamed           " copy and paste in system clipboard
 set showtabline=2               " always show the tabline
 set complete+=kspell            " add dictionary to completion
+set complete-=i                 " speeds up php
 set nowrap                      " NO WRAPPING LINES
 set smartindent                 " auto indents c-like blocks
 set shiftround                  " round indent to shiftwidth
@@ -197,4 +214,5 @@ map <Leader>db :call ToggleVDebugOption('break_on_open')<CR>
 
 " fzf
 nnoremap <C-p> :FZF<CR>
+nnoremap <leader>b :Buffers<CR>
 " }}}

@@ -11,6 +11,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export EDITOR='vim'
 export SKIP_RESOURCES=1
 export FZF_DEFAULT_COMMAND='rg --files'
+export LESS="-SRXF"
 # }}}
 
 # {{{ Plugins
@@ -69,3 +70,5 @@ FZF="$HOME/.fzf.zsh"
 
 [ -f "$FZF" ] && source "$FZF"
 # }}}
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
