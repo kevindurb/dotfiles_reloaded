@@ -2,43 +2,24 @@
 
 echo "Please enter SUDO password"
 sudo echo "Installing..."
+PREVIOUS_DIR=`pwd`;
+cd ~
 
-PLATFORM=`uname`
-CURRENT_USER=`whoami`
-
-if [[ $PLATFORM == 'Darwin' ]]; then
-  echo "Determined OSX... Installing brew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-  echo "Installing Deps..."
-  brew install vim git tig ruby zsh cmake cmatrix autojump ripgrep tmux yarn watchman autoenv mongodb
-  brew tap caskroom/fonts
-  brew cask install font-fira-code react-native-debugger
-  brew services start mongodb
-  brew install gnu-sed --with-default-names
-elif which apt-get > /dev/null; then
-  echo "Determined linux with apt..."
-  echo "Installing Deps..."
-  sudo apt install vim git tig ruby xclip zsh cmake build-essential python-dev
-else
-  echo "Couldnt determine OS... Exiting..."
-  exit 1
-fi
+echo "Installing deps..."
+~/dotfiles/scripts/install_deps.sh
 
 echo "setting zsh to default..."
+CURRENT_USER=`whoami`
 sudo chsh -s $(which zsh) $CURRENT_USER
 
 echo "Installing nvm..."
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 echo "Installing node..."
-nvm install stable
-nvm alias default stable
-
-PREVIOUS_DIR=`pwd`;
-cd ~
+nvm install lts/*
+nvm alias default lts/*
 
 echo "Setting up repo..."
 cd ~/dotfiles
@@ -51,8 +32,6 @@ echo "Creating symlinks..."
 echo "Creating vim backup dir..."
 mkdir ~/.vim/backup
 
-cd $PREVIOUS_DIR
-
 echo "Installing vim plugins..."
 vim +PlugInstall +qa
 
@@ -60,3 +39,4 @@ echo "Installing italics terminfo"
 tic ~/dotfiles/xterm-256color-italic.terminfo
 
 echo "Dotfiles installed!"
+cd $PREVIOUS_DIR

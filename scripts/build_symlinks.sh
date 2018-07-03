@@ -20,7 +20,7 @@ ln -s ~/dotfiles/vim            ~/.vim
 ln -s ~/dotfiles/tmux           ~/.tmux
 ln -s ~/dotfiles/zsh/zshrc      ~/.zshrc
 ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/zprofile       ~/.zprofile
+ln -s ~/dotfiles/zsh/zprofile   ~/.zprofile
 ln -s ~/dotfiles/git/gitconfig  ~/.gitconfig
 ln -s ~/dotfiles/git/gitignore  ~/.gitignore
 ln -s ~/dotfiles/mycli/myclirc  ~/.myclirc
