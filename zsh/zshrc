@@ -53,6 +53,7 @@ alias weather="curl wttr.in"
 alias chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --remote-debugging-port=9222"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
 alias loadenv='export $(cat .env | xargs)'
+alias unmerged="git diff --name-only --diff-filter=U"
 # }}}
 
 # {{{ Config

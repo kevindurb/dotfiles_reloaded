@@ -46,16 +46,7 @@ git submodule init
 git submodule update
 
 echo "Creating symlinks..."
-cd ~
-ln -s ~/dotfiles/gitconfig      ~/.gitconfig
-ln -s ~/dotfiles/gitignore      ~/.gitignore
-ln -s ~/dotfiles/zsh            ~/.zsh
-ln -s ~/dotfiles/vim            ~/.vim
-ln -s ~/dotfiles/tmux           ~/.tmux
-ln -s ~/dotfiles/zsh/zshrc      ~/.zshrc
-ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/zprofile       ~/.zprofile
-ln -s ~/dotfiles/git/gitconfig  ~/.gitconfig
+~/dotfiles/scripts/build_symlinks.sh
 
 echo "Creating vim backup dir..."
 mkdir ~/.vim/backup
