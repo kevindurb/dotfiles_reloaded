@@ -26,7 +26,7 @@ ln -s ~/dotfiles/git/gitignore  ~/.gitignore
 ln -s ~/dotfiles/mycli/myclirc  ~/.myclirc
 ln -s ~/dotfiles/pgcli/pgclirc  ~/.pgclirc
 ln -s ~/dotfiles/ctags          ~/.ctags
-ln -s ~/bin                     ~/bin
+ln -s ~/dotfiles/bin            ~/bin
 
 echo "done"
 cd $PREVIOUS_DIR

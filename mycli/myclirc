@@ -77,4 +77,5 @@ enable_pager = True
 
 [alias_dsn]
 dev = mysql://ccb_app:iloveccb@localhost:3306/ccb_dev
+ccbcompany = mysql://ccb_app:iloveccb@localhost:3306/ccbcompany
 cuke = mysql://ccb_app:iloveccb@localhost:3306/church_of_cucu_14597

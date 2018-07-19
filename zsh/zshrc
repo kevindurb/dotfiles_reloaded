@@ -31,6 +31,7 @@ zplug "plugins/nvm",        from:oh-my-zsh
 zplug "plugins/tmux",       from:oh-my-zsh
 zplug "plugins/yarn",       from:oh-my-zsh
 
+zplug "supercrabtree/k"
 zplug "sharat87/zsh-vim-mode"
 zplug "chrissicool/zsh-256color"
 zplug "walesmd/caniuse.plugin.zsh"
@@ -45,14 +46,9 @@ zplug load
 # }}}
 
 # {{{ Aliases
-alias ll="lss"
-alias lss="ls -lAhF"
 alias c="clear"
 alias maketags="ctags --exclude=@.gitignore -R ."
 alias weather="curl wttr.in"
-alias chrome="/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --remote-debugging-port=9222"
-alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
-alias loadenv='export $(cat .env | xargs)'
 alias unmerged="git diff --name-only --diff-filter=U"
 # }}}
 
