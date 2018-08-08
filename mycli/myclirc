@@ -74,6 +74,37 @@ enable_pager = True
 
 # Favorite queries.
 [favorite_queries]
+SET_MA = '''
+set @org_id = '10621';
+set @package_number ='3';
+set @ma_id ='1';
+/*
+ * essential = 1
+ * standard = 2
+ * deluxe = 3
+ */
+
+use ccbcompany;
+UPDATE individual SET app_individual_id = @ma_id WHERE organization_id = @organization_id AND contact_ma = 1;
+delete from organization_modules where organization_id=@org_id;
+INSERT IGNORE INTO `organization_modules` (`organization_id`, `module_id`, `creator_id`, `modifier_id`, `date_created`, `date_modified`)
+select @org_id, package_modules.module_id, 0, 0, NOW(), NOW() from package_modules where package_id=@package_number;
+update organization
+set package = case
+when @package_number = '1' then 'e'
+when @package_number = '2' then 's'
+when @package_number = '3' then 'd'
+end
+where id = @org_id;
+
+USE ccb_dev;
+UPDATE individual
+SET login = 'temporary'
+, hashed_password = 'a1da05363f3221b65c8e7470cc268da9d26196c15079f118fcd3966467d95a124335e142dec0d61ad32e524f52e077ba2f62e022bdc5f125b4b55a5851a3aa2b'
+, salt = '5664a162f501b94ca56f240608283d62', inactive=''
+WHERE id = @ma_id;
+UPDATE z_merchant_type SET test_mode = 1;
+'''
 
 [alias_dsn]
 dev = mysql://ccb_app:iloveccb@localhost:3306/ccb_dev

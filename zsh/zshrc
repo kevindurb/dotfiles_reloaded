@@ -10,6 +10,7 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export EDITOR='vim'
 export SKIP_RESOURCES=1
+export APP_NO_CHECKOUT_HOOK=1
 export FZF_DEFAULT_COMMAND='rg --files'
 export LESS="-SRXF"
 # }}}

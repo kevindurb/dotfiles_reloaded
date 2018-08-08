@@ -139,8 +139,7 @@ set backupdir=$HOME/.vim/backup " backup files in one place
 set directory=$HOME/.vim/backup " swp files in one place
 set path=.,src,**               " gf search current, src and recurrsive dir
 set suffixesadd=.js,/index.js   " gf try adding .js to files
-set ttymouse=xterm2             " enable mouse... yea i know
-set mouse=a                     " enable mouse... yea i know
+set lazyredraw                  " dont redraw during macros
 " }}}
 
 " {{{ Colorscheme
