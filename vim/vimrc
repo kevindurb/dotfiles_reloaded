@@ -34,7 +34,6 @@ Plug 'tpope/vim-dispatch'               " add backgrounding
 Plug 'pangloss/vim-javascript'          " js syntax
 Plug 'mxw/vim-jsx'                      " jsx syntax
 Plug 'leafgarland/typescript-vim'       " typescript syntax
-Plug 'nicwest/vim-camelsnek'            " convert camel <-> snake
 
 Plug 'SirVer/ultisnips'                 " snippet engine
 Plug 'honza/vim-snippets'               " snippets
@@ -65,8 +64,10 @@ let g:ale_linters = {
 \ 'javascript jsx': ['eslint'],
 \ 'css': ['stylelint'],
 \ 'ruby': [],
+\ 'php': ['php -l', 'phpcs', 'php-cs-fixer']
 \}
 let g:ale_php_phpcs_standard = '--standard=/Users/kdurbin/Development/churchcommunitybuilder/app/src/phpcs_ruleset.xml'
+let g:ale_php_phpcs_executable = '/Users/kdurbin/Development/churchcommunitybuilder/app/vendor/bin/phpcs'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_save = 1
@@ -140,6 +141,7 @@ set directory=$HOME/.vim/backup " swp files in one place
 set path=.,src,**               " gf search current, src and recurrsive dir
 set suffixesadd=.js,/index.js   " gf try adding .js to files
 set lazyredraw                  " dont redraw during macros
+set noeb vb t_vb=               " turn off the most annoying thing ever
 " }}}
 
 " {{{ Colorscheme
@@ -215,4 +217,8 @@ map <Leader>db :call ToggleVDebugOption('break_on_open')<CR>
 " fzf
 nnoremap <C-p> :FZF<CR>
 nnoremap <leader>b :Buffers<CR>
+
+" nerd tree
+map <C-n> :NERDTreeToggle<CR>
+
 " }}}

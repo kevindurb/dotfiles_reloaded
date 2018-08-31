@@ -1,13 +1,14 @@
 [core]
   editor = vim
 	excludesfile = /Users/kdurbin/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [user]
 	name = Kevin Durbin
 	email = kevindurb@gmail.com
 [color]
   status = auto
   branch = auto
-  ui = auto
+	ui = true
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -27,3 +28,15 @@
   required = true
 [commit]
   template = /Users/kdurbin/.stCommitMsg
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

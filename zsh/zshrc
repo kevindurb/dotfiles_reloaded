@@ -51,6 +51,10 @@ alias c="clear"
 alias maketags="ctags --exclude=@.gitignore -R ."
 alias weather="curl wttr.in"
 alias unmerged="git diff --name-only --diff-filter=U"
+alias cat="bat"
+alias ping="prettyping"
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias lss="ls -lahF"
 # }}}
 
 # {{{ Config
@@ -68,5 +72,3 @@ FZF="$HOME/.fzf.zsh"
 
 [ -f "$FZF" ] && source "$FZF"
 # }}}
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

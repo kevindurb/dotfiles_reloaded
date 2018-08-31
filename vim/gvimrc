@@ -2,10 +2,11 @@
 " MacVim Settings
 " #############################################################################
 
-set guifont=Hack\ Regular:h14 " set font to Hack and size 14
+set guifont=Fira\ Code:h14    " set font to Hack and size 14
+set macligatures
 set guioptions-=e             " dont use native tabs
 set guioptions-=r             " dont show the right scrollbar
 set guioptions-=L             " dont show the left scrollbar
-set mouse=                    " disable mouse
+set vb t_vb=
 
 let g:fzf_launcher = $HOME."/.vim/mvim_fzf %s"
