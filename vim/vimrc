@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'               " a good place to start
 
 Plug 'dracula/vim', { 'as': 'dracula' } " a great theme
+Plug 'jnurmine/Zenburn'                 " a great theme
 
 Plug 'kevindurb/vim-splits'             " split settings and keymaps
 Plug 'kevindurb/vim-whiteout'           " show trailing whitespace
@@ -64,7 +65,6 @@ let g:ale_linters = {
 \ 'javascript jsx': ['eslint'],
 \ 'css': ['stylelint'],
 \ 'ruby': [],
-\ 'php': ['php -l', 'phpcs', 'php-cs-fixer']
 \}
 let g:ale_php_phpcs_standard = '--standard=/Users/kdurbin/Development/churchcommunitybuilder/app/src/phpcs_ruleset.xml'
 let g:ale_php_phpcs_executable = '/Users/kdurbin/Development/churchcommunitybuilder/app/vendor/bin/phpcs'
@@ -93,8 +93,7 @@ let g:vdebug_options = {
 \   'timeout': 20,
 \   'ide_key': 'vagrant',
 \   'break_on_open': 0,
-\   'continuous_mode': 0,
-\   'watch_window_style': 'compact',
+\   'continuous_mode': 1,
 \   'debug_file': '~/vdebug.log',
 \   'debug_file_level': 2,
 \ }
@@ -146,7 +145,7 @@ set noeb vb t_vb=               " turn off the most annoying thing ever
 
 " {{{ Colorscheme
 set background=dark
-colorscheme dracula
+colorscheme zenburn
 
 set t_ZH=[3m
 set t_ZR=[23m
@@ -216,6 +215,7 @@ map <Leader>db :call ToggleVDebugOption('break_on_open')<CR>
 
 " fzf
 nnoremap <C-p> :FZF<CR>
+nnoremap <C-S-o> :BTags<CR>
 nnoremap <leader>b :Buffers<CR>
 
 " nerd tree

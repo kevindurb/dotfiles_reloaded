@@ -55,6 +55,7 @@ alias cat="bat"
 alias ping="prettyping"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias lss="ls -lahF"
+alias vim="nvim"
 # }}}
 
 # {{{ Config
