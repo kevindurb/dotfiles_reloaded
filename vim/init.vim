@@ -1,1 +1,1 @@
-/Users/kdurbin/.vim/vimrc
+./vimrc

@@ -1,5 +1,8 @@
 PREVIOUS_DIR=`pwd`;
 cd ~
+echo "creating .config if it doesnt already exist"
+mkdir -p ~/.config
+
 echo "clearing out old files"
 rm -rf ~/.zsh
 rm -rf ~/.vim
@@ -17,6 +20,7 @@ rm -rf ~/bin
 echo "creating new symlinks"
 ln -s ~/dotfiles/zsh            ~/.zsh
 ln -s ~/dotfiles/vim            ~/.vim
+ln -s ~/dotfiles/vim            ~/.config/.nvim
 ln -s ~/dotfiles/tmux           ~/.tmux
 ln -s ~/dotfiles/zsh/zshrc      ~/.zshrc
 ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf

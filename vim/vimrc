@@ -68,10 +68,10 @@ let g:ale_linters = {
 \}
 let g:ale_php_phpcs_standard = '--standard=/Users/kdurbin/Development/churchcommunitybuilder/app/src/phpcs_ruleset.xml'
 let g:ale_php_phpcs_executable = '/Users/kdurbin/Development/churchcommunitybuilder/app/vendor/bin/phpcs'
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_insert_leave = 1
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 'normal'
+" let g:ale_lint_on_enter = 0
+" let g:ale_lint_on_insert_leave = 1
+" let g:ale_lint_on_save = 1
+" let g:ale_lint_on_text_changed = 'normal'
 
 " you complete me
 let g:ycm_show_diagnostics_ui = 0
@@ -161,7 +161,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " {{{ File Type Settings
 " set markdown to 80 characters wide
-au BufRead,BufNewFile *.md setlocal textwidth=80
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
 " spelling in markdown and commit messages
 autocmd FileType markdown setlocal spell
@@ -171,6 +171,12 @@ autocmd FileType gitcommit setlocal spell
 augroup XML
   autocmd!
   autocmd FileType xml setlocal foldmethod=indent
+augroup END
+
+" add syntax for rollback
+augroup rollback
+  autocmd!
+  autocmd BufNewFile,BufRead *.rollback set syntax=sql
 augroup END
 " }}}
 
