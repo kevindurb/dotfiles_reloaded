@@ -5,7 +5,7 @@ if [[ $PLATFORM == 'Darwin' ]]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
   echo "Installing Deps..."
-  brew install vim git tig ruby zsh cmake cmatrix autojump ripgrep tmux yarn watchman autoenv mongodb coreutils prettyping bat ncdu htop
+  brew install nvim git tig ruby zsh cmake cmatrix autojump ripgrep tmux yarn watchman autoenv mongodb coreutils prettyping bat ncdu htop
   brew tap caskroom/fonts
   brew cask install font-fira-code react-native-debugger
   brew install gnu-sed --with-default-names
