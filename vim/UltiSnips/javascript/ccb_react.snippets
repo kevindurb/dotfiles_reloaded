@@ -38,11 +38,14 @@ snippet ccb_component_test "ccb component test file"
 import { shallowFactory } from 'test/enzymeHelpers';
 import $1 from './$1';
 
-const factory = shallowFactory($1);
+const defaultProps = {
+};
+
+const factory = shallowFactory($1, {}, defaultProps);
 
 describe('<$1 />', () => {
 	test('it renders', () => {
-		expect(factory().exists()).toBe(true);
+		expect(factory()).toExist();
 	});
 });
 endsnippet
