@@ -51,7 +51,7 @@ setopt prompt_subst
 function __git_prompt {
   local DIRTY="%{$fg[yellow]%}*"
   local CLEAN="%{$fg[green]%}✔"
-  local UNMERGED="%{$fg[red]%}!"
+  local UNMERGED="%{$fg[red]%}✘"
   local RESET="%{$terminfo[sgr0]%}"
   git rev-parse --git-dir >& /dev/null
   if [[ $? == 0 ]]
@@ -92,7 +92,7 @@ alias unmerged="git diff --name-only --diff-filter=U"
 alias cat="bat"
 alias ping="prettyping"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
-alias lss="ls -lahF"
+alias ll="ls -lahF"
 alias vim="nvim"
 alias tasks='grep --exclude-dir=.git -rEI "TODO|FIXME" . 2>/dev/null'
 alias mysqlccb='mysql -u ccb_app -p ccb_dev -h 127.0.0.1'

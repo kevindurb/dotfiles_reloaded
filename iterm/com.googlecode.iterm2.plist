@@ -1534,9 +1534,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 207 599 388 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>630 628 770 429 0 0 2560 1600 </string>
+	<string>401 384 937 514 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1600 0 0 2560 1600 </string>
+	<string>963 0 954 1200 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>365 466 650 427 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2267,7 +2267,7 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>

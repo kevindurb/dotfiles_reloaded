@@ -38,6 +38,20 @@ defaults delete com.apple.Spotlight
 # Uncomment to prevent Spotlight to always introduce itself as new
 defaults write com.apple.Spotlight useCount 5
 
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+defaults write -g QLPanelAnimationDuration -float 0
+
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+defaults write com.apple.dock launchanim -bool false
+
+defaults write com.apple.dock expose-animation-duration -float 0.1
+
+defaults write com.apple.Dock autohide-delay -float 0
+
 # restart to apply settings
 killall Finder
 killall Dock
