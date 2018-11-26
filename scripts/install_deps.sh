@@ -10,6 +10,5 @@ if [[ $PLATFORM == 'Darwin' ]]; then
   brew cask install font-fira-code react-native-debugger
   brew install gnu-sed --with-default-names
 else
-  echo "OS not supported... exiting..."
-  exit 1
+  echo "OS not supported... skipping..."
 fi

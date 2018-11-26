@@ -16,11 +16,12 @@ rm -rf ~/.myclirc
 rm -rf ~/.pgclirc
 rm -rf ~/.ctags
 rm -rf ~/bin
+rm -rf ~/.config/nvim
 
 echo "creating new symlinks"
 ln -s ~/dotfiles/zsh            ~/.zsh
 ln -s ~/dotfiles/vim            ~/.vim
-ln -s ~/dotfiles/vim            ~/.config/.nvim
+ln -s ~/dotfiles/vim            ~/.config/nvim
 ln -s ~/dotfiles/tmux           ~/.tmux
 ln -s ~/dotfiles/zsh/zshrc      ~/.zshrc
 ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
