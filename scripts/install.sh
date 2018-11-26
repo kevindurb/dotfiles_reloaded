@@ -12,15 +12,6 @@ echo "setting zsh to default..."
 CURRENT_USER=`whoami`
 sudo chsh -s $(which zsh) $CURRENT_USER
 
-echo "Installing nvm..."
-curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-echo "Installing node..."
-nvm install lts/*
-nvm alias default lts/*
-
 echo "Setting up repo..."
 cd ~/dotfiles
 git submodule init
