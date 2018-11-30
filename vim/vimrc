@@ -36,7 +36,6 @@ Plug 'pangloss/vim-javascript'          " js syntax
 Plug 'mxw/vim-jsx'                      " jsx syntax
 Plug 'leafgarland/typescript-vim'       " typescript syntax
 Plug 'alvan/vim-closetag'               " autoclose tags
-Plug 'Quramy/vim-js-pretty-template'    " syntax highlight js template strings
 
 Plug 'SirVer/ultisnips'                 " snippet engine
 Plug 'honza/vim-snippets'               " snippets
@@ -102,10 +101,6 @@ let g:vdebug_features = {
 
 " autoclose jsx
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb,*.jsx,*.js"
-
-" template string syntax
-call jspretmpl#register_tag('html', 'html')
-autocmd FileType javascript.jsx JsPreTmpl html
 
 " }}}
 
