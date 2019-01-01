@@ -15,7 +15,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-sensible'               " a good place to start
 
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+" Plug 'altercation/vim-colors-solarized'
+Plug 'jnurmine/Zenburn'
+" Plug 'haishanh/night-owl.vim'
 
 Plug 'kevindurb/vim-splits'             " split settings and keymaps
 Plug 'kevindurb/vim-whiteout'           " show trailing whitespace
@@ -32,6 +35,8 @@ Plug 'tpope/vim-unimpaired'             " mappings for things with '['
 Plug 'tpope/vim-vinegar'                " browse directories with -
 Plug 'tpope/vim-dispatch'               " add backgrounding
 
+Plug 'keith/swift.vim'                  " swift
+Plug 'cespare/vim-toml'                 " rust config files
 Plug 'rust-lang/rust.vim'               " rust syntax
 Plug 'pangloss/vim-javascript'          " js syntax
 Plug 'mxw/vim-jsx'                      " jsx syntax
@@ -135,8 +140,8 @@ set noeb vb t_vb=               " turn off the most annoying thing ever
 " }}}
 
 " {{{ Colorscheme
-set background=light
-colorscheme gruvbox
+set background=dark
+colorscheme zenburn
 
 set t_ZH=[3m
 set t_ZR=[23m
